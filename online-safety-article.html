@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Learn how to protect your M-Pesa, WhatsApp, and personal information from scammers in Kenya. A simple, plain-language safety guide for older adults."/>
+<meta name="keywords" content="online safety Kenya, M-Pesa scams Kenya, WhatsApp safety Kenya, online safety older adults Kenya"/>
+<meta property="og:title" content="How to Stay Safe Online in Kenya — A Simple Guide for Older Adults"/>
+<meta property="og:description" content="Protect your M-Pesa, WhatsApp and personal information from scammers in Kenya."/>
+<meta property="og:url" content="https://seniorcitizenstechhaven.netlify.app/online-safety"/>
+<title>How to Stay Safe Online in Kenya | Senior Citizens Tech Haven</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1F4MQJKSG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z1F4MQJKSG');</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0f2044;
+  --navy-mid:#1a3566;
+  --blue-accent:#4a7fd4;
+  --gold:#c9962a;
+  --gold-light:#e8b84b;
+  --gold-pale:#fdf3dc;
+  --cream:#f8f6f0;
+  --warm-white:#fdfcf9;
+  --charcoal:#1a1a2e;
+  --mid-grey:#555;
+  --soft-grey:#e4e2da;
+  --red:#c0392b;
+  --red-light:#fdf0f0;
+  --green:#16a34a;
+  --green-light:#f0fdf4;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Source Serif 4',Georgia,serif;
+  background:var(--warm-white);
+  color:var(--charcoal);
+  font-size:18px;
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+/* ── NAV ── */
+.article-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:60px;
+  box-shadow:0 2px 20px rgba(0,0,0,0.3);
+}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--navy);}
+.nav-site-name{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;letter-spacing:0.02em;}
+.nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;transition:color 0.2s;}
+.nav-back:hover{color:#fff;}
+
+/* ── HERO ── */
+.article-hero{
+  margin-top:60px;
+  position:relative;
+  height:70vh;
+  min-height:480px;
+  overflow:hidden;
+}
+.hero-img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(15,32,68,0.3) 0%, rgba(15,32,68,0.55) 50%, rgba(15,32,68,0.92) 100%);
+}
+.hero-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:3rem 2rem 2.5rem;
+  max-width:860px;margin:0 auto;
+}
+.article-category{
+  display:inline-block;
+  background:var(--gold);color:var(--navy);
+  font-family:'DM Sans',sans-serif;
+  font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  padding:0.35rem 1rem;border-radius:50px;
+  margin-bottom:1rem;
+}
+.hero-content h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,4.5vw,3rem);
+  font-weight:900;color:#fff;
+  line-height:1.2;margin-bottom:0.75rem;
+}
+.hero-meta{
+  display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+  font-family:'DM Sans',sans-serif;font-size:0.8rem;
+  color:rgba(255,255,255,0.65);
+}
+.hero-meta span{display:flex;align-items:center;gap:0.4rem;}
+
+/* ── LAYOUT ── */
+.article-layout{
+  max-width:860px;margin:0 auto;
+  padding:0 1.5rem 5rem;
+}
+
+/* ── INTRO BOX ── */
+.intro-box{
+  background:var(--navy);
+  border-radius:16px;padding:2rem 2.5rem;
+  margin:2.5rem 0;
+}
+.intro-box h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--gold-light);
+  margin-bottom:1rem;
+}
+.intro-box ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.intro-box li{
+  display:flex;align-items:flex-start;gap:0.75rem;
+  font-size:0.92rem;color:rgba(255,255,255,0.85);
+  font-family:'DM Sans',sans-serif;
+}
+.intro-box li::before{content:"✓";color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.1rem;}
+
+/* ── HOOK ── */
+.hook-text{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.1rem,2.5vw,1.3rem);
+  font-style:italic;
+  color:var(--navy);
+  line-height:1.7;
+  border-left:4px solid var(--gold);
+  padding:1.25rem 1.75rem;
+  margin:2rem 0;
+  background:var(--gold-pale);
+  border-radius:0 12px 12px 0;
+}
+
+/* ── BODY TEXT ── */
+.body-text{
+  font-size:1rem;line-height:1.85;
+  color:#2a2a3e;margin:1rem 0;
+}
+.body-text strong{color:var(--navy);}
+
+/* ── SECTION HEADINGS ── */
+.section-divider{
+  display:flex;align-items:center;gap:1rem;
+  margin:3rem 0 1.5rem;
+}
+.section-num{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--navy);color:var(--gold);
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.section-title-text{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.3rem,3vw,1.75rem);
+  font-weight:700;color:var(--navy);
+  line-height:1.25;
+}
+h3.subsection{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--gold);margin:2rem 0 0.75rem;
+}
+
+/* ── ARTICLE IMAGE ── */
+.article-image{
+  width:100%;border-radius:16px;
+  overflow:hidden;margin:2rem 0;
+  box-shadow:0 8px 40px rgba(0,0,0,0.12);
+  position:relative;
+}
+.article-image img{width:100%;display:block;object-fit:cover;}
+.img-caption{
+  background:var(--navy);padding:0.75rem 1.25rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.75rem;color:rgba(255,255,255,0.6);
+  font-style:italic;
+}
+
+/* ── DUAL IMAGE ── */
+.dual-image{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin:2rem 0;
+}
+.dual-image .article-image{margin:0;}
+
+/* ── WARNING BOX ── */
+.warning-box{
+  background:var(--red-light);
+  border-left:5px solid var(--red);
+  border-radius:0 12px 12px 0;
+  padding:1.25rem 1.5rem;
+  margin:1.5rem 0;
+}
+.warning-box .wb-title{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:700;color:var(--red);
+  margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;
+}
+.warning-box ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.warning-box li{
+  font-family:'DM Sans',sans-serif;font-size:0.88rem;
+  color:#7a1515;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;
+}
+.warning-box li::before{content:"⚠";flex-shrink:0;}
+
+/* ── TIP BOX ── */
+.tip-box{
+  background:var(--gold-pale);
+  border-left:5px solid var(--gold);
+  border-radius:0 12px 12px 0;
+  padding:1.25rem 1.5rem;
+  margin:1.5rem 0;
+}
+.tip-box .tb-title{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:700;color:var(--gold);
+  margin-bottom:0.6rem;
+}
+.tip-box p,.tip-box li{
+  font-family:'DM Sans',sans-serif;font-size:0.88rem;
+  color:#5a4010;line-height:1.6;
+}
+.tip-box ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.tip-box li::before{content:"💡 ";margin-right:0.2rem;}
+
+/* ── SUCCESS BOX ── */
+.success-box{
+  background:var(--green-light);
+  border-left:5px solid var(--green);
+  border-radius:0 12px 12px 0;
+  padding:1.25rem 1.5rem;
+  margin:1.5rem 0;
+}
+.success-box .sb-title{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:700;color:var(--green);
+  margin-bottom:0.6rem;
+}
+.success-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.6;}
+
+/* ── STEPS ── */
+.steps-list{
+  list-style:none;display:flex;flex-direction:column;gap:0.85rem;
+  margin:1rem 0;
+}
+.steps-list li{
+  display:flex;align-items:flex-start;gap:1rem;
+  font-family:'DM Sans',sans-serif;font-size:0.92rem;
+  color:var(--charcoal);line-height:1.55;
+}
+.step-num{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--navy);color:var(--gold);
+  font-weight:700;font-size:0.85rem;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:0.1rem;
+}
+
+/* ── BULLET LIST ── */
+.bullet-list{
+  list-style:none;display:flex;flex-direction:column;gap:0.6rem;
+  margin:1rem 0;
+}
+.bullet-list li{
+  display:flex;align-items:flex-start;gap:0.75rem;
+  font-family:'DM Sans',sans-serif;font-size:0.92rem;
+  color:var(--charcoal);line-height:1.55;
+}
+.bullet-list li::before{content:"•";color:var(--gold);font-weight:900;font-size:1.2rem;flex-shrink:0;line-height:1.2;}
+
+/* ════════════════════════════════════════
+   INFOGRAPHICS — ALL EMBEDDED
+════════════════════════════════════════ */
+
+/* ── INFOGRAPHIC WRAPPER ── */
+.infographic{
+  border-radius:16px;overflow:hidden;
+  margin:2rem 0;
+  box-shadow:0 8px 40px rgba(0,0,0,0.12);
+}
+
+/* ── IG1: QUOTE CARD ── */
+.ig-quote{
+  background:linear-gradient(145deg,#0a1628 0%,#0f2044 50%,#0d1d3a 100%);
+  padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden;
+}
+.ig-quote::before{content:'';position:absolute;top:-60px;left:-60px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,42,0.15) 0%,transparent 70%);}
+.ig-quote::after{content:'';position:absolute;bottom:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(74,127,212,0.1) 0%,transparent 70%);}
+.ig-quote .qm{font-family:'Playfair Display',serif;font-size:6rem;color:rgba(201,150,42,0.2);line-height:0.5;margin-bottom:1rem;position:relative;z-index:1;}
+.ig-quote h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:#fff;line-height:1.35;margin-bottom:1rem;position:relative;z-index:1;}
+.ig-quote h2 em{color:var(--gold-light);font-style:italic;}
+.ig-quote .qdiv{width:50px;height:3px;background:var(--gold);margin:0 auto 1rem;position:relative;z-index:1;}
+.ig-quote p{font-family:'DM Sans',sans-serif;font-size:0.92rem;color:rgba(255,255,255,0.6);position:relative;z-index:1;}
+.ig-brand{font-family:'DM Sans',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.2);letter-spacing:0.15em;text-transform:uppercase;margin-top:1.5rem;position:relative;z-index:1;}
+
+/* ── IG2: MPESA SCAMS ── */
+.ig-scams{background:var(--navy);padding:2.5rem 2rem;}
+.ig-scams .ig-header{text-align:center;margin-bottom:1.75rem;}
+.ig-scams .ig-badge{display:inline-block;background:rgba(201,150,42,0.2);border:1px solid var(--gold);color:var(--gold-light);font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:50px;margin-bottom:0.75rem;}
+.ig-scams h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.4rem;line-height:1.3;}
+.ig-scams h2 em{color:var(--gold-light);font-style:normal;}
+.scam-items{display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.5rem;}
+.scam-item{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:1.1rem 1.25rem;display:flex;gap:0.9rem;position:relative;overflow:hidden;}
+.scam-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);}
+.scam-num{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;font-size:0.95rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.scam-content h3{font-family:'Playfair Display',serif;color:#fff;font-size:0.95rem;margin-bottom:0.25rem;}
+.scam-content p{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.5;margin-bottom:0.4rem;}
+.scam-tag{display:inline-block;background:rgba(192,57,43,0.25);border:1px solid rgba(192,57,43,0.4);color:#ff9999;font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:700;padding:0.18rem 0.6rem;border-radius:50px;}
+.scam-cta{background:var(--gold);border-radius:10px;padding:0.9rem 1.25rem;display:flex;align-items:center;gap:0.75rem;}
+.scam-cta-text{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--navy);font-weight:600;line-height:1.4;}
+
+/* ── IG3: WHATSAPP CHECKLIST ── */
+.ig-checklist{background:#fff;overflow:hidden;}
+.ig-checklist .cl-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:1.75rem 2rem;display:flex;align-items:center;gap:1rem;}
+.wa-circle{width:50px;height:50px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
+.cl-header-text h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.15rem;margin-bottom:0.15rem;}
+.cl-header-text p{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.6);}
+.cl-body{padding:1.5rem 2rem;}
+.cl-items{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.25rem;}
+.cl-item{display:flex;align-items:flex-start;gap:0.8rem;padding:0.8rem 1rem;border-radius:10px;background:#f8f9fa;border:1px solid #eee;}
+.cl-check{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;}
+.cl-text{font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--charcoal);line-height:1.5;}
+.cl-text strong{color:var(--navy);}
+.cl-footer{background:#25D366;padding:0.9rem 1.5rem;display:flex;align-items:center;gap:0.75rem;}
+.cl-footer p{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:#fff;font-weight:600;line-height:1.4;}
+
+/* ── IG4: FAKE NEWS ── */
+.ig-fakenews{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 100%);padding:2.5rem 2rem;}
+.ig-fakenews .fn-top{text-align:center;margin-bottom:1.75rem;}
+.ig-fakenews .fn-top .magnify{font-size:3.5rem;display:block;margin-bottom:0.6rem;}
+.ig-fakenews h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.3rem;line-height:1.3;margin-bottom:0.4rem;}
+.ig-fakenews .fn-sub{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.5);}
+.q-grid{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:1.5rem;}
+.q-item{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:0.9rem 1.1rem;display:flex;gap:0.9rem;align-items:flex-start;}
+.q-n{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--gold);line-height:1;flex-shrink:0;width:26px;}
+.q-t{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.85);line-height:1.5;}
+.q-t strong{color:#fff;}
+.fn-rule{background:var(--gold);border-radius:10px;padding:1rem 1.25rem;text-align:center;}
+.fn-rule p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--navy);font-weight:700;line-height:1.5;}
+
+/* ── IG5: EMERGENCY CARD ── */
+.ig-emergency{background:#fff;border:3px solid var(--red);border-radius:16px;overflow:hidden;}
+.em-header{background:var(--red);padding:1.4rem 2rem;text-align:center;}
+.em-header h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.35rem;margin-bottom:0.2rem;}
+.em-header p{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.8);}
+.em-body{padding:1.5rem 2rem;}
+.em-items{display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.25rem;}
+.em-item{border-radius:10px;overflow:hidden;border:1px solid #eee;}
+.em-item-header{background:#fff5f5;padding:0.65rem 1.1rem;display:flex;align-items:center;gap:0.65rem;border-bottom:1px solid #ffcccc;}
+.em-item-icon{font-size:1.2rem;}
+.em-item-title{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:700;color:var(--red);}
+.em-item-body{padding:0.75rem 1.1rem;}
+.em-action{display:flex;align-items:flex-start;gap:0.55rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--charcoal);padding:0.25rem 0;line-height:1.4;}
+.em-arrow{color:var(--gold);font-weight:700;flex-shrink:0;}
+.em-hotline{background:var(--navy);border-radius:10px;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.hotline-left .hl-label{font-family:'DM Sans',sans-serif;font-size:0.65rem;color:rgba(255,255,255,0.4);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2rem;}
+.hotline-left .hl-num{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);font-weight:700;}
+.hotline-left .hl-desc{font-family:'DM Sans',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.4);}
+.hl-badge{background:var(--gold);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:700;padding:0.35rem 0.8rem;border-radius:50px;white-space:nowrap;}
+
+/* ── IG6: WARNING CARD ── */
+.ig-warning{
+  background:linear-gradient(145deg,#7a1515 0%,var(--red) 50%,#7a1515 100%);
+  padding:2.75rem 2.5rem;text-align:center;position:relative;overflow:hidden;
+}
+.ig-warning::before{content:'';position:absolute;top:-50px;left:-50px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.05);}
+.ig-warning::after{content:'';position:absolute;bottom:-35px;right:-35px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04);}
+.ig-warning .w-icon{font-size:3rem;margin-bottom:0.9rem;display:block;position:relative;z-index:1;}
+.ig-warning h2{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3.5vw,1.8rem);font-weight:900;color:#fff;line-height:1.25;margin-bottom:0.9rem;position:relative;z-index:1;}
+.ig-warning h2 em{color:#ffcccc;font-style:italic;}
+.w-divider{width:40px;height:3px;background:rgba(255,255,255,0.3);margin:0 auto 1rem;position:relative;z-index:1;}
+.w-points{display:flex;flex-direction:column;gap:0.55rem;margin-bottom:0;position:relative;z-index:1;}
+.w-point{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:0.6rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:#fff;display:flex;align-items:center;gap:0.6rem;text-align:left;}
+
+/* ── FAQ ── */
+.faq-section{background:var(--cream);border-radius:16px;padding:2.5rem 2rem;margin:2.5rem 0;}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem;}
+.faq-item{border-bottom:1px solid var(--soft-grey);padding:1.1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Source Serif 4',serif;font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.faq-q::after{content:"▾";color:var(--gold);flex-shrink:0;}
+.faq-a{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--mid-grey);line-height:1.65;}
+
+/* ── SHARE BANNER ── */
+.share-banner{
+  background:var(--navy);border-radius:16px;padding:2.5rem 2rem;
+  text-align:center;margin:2.5rem 0;
+}
+.share-banner h2{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold-light);font-style:italic;margin-bottom:0.75rem;}
+.share-banner p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.65);margin-bottom:1.25rem;}
+.share-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.share-btn{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:0.6rem 1.25rem;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;text-decoration:none;transition:all 0.2s;}
+.share-btn:hover{background:rgba(255,255,255,0.18);}
+
+/* ── PODCAST ── */
+.podcast-box{
+  background:var(--green-light);border-left:5px solid #25D366;
+  border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;
+  display:flex;align-items:center;gap:1rem;
+}
+.podcast-box .pod-icon{font-size:1.8rem;flex-shrink:0;}
+.podcast-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.5;}
+.podcast-box a{color:var(--green);font-weight:700;}
+
+/* ── AUTHOR ── */
+.author-box{
+  display:flex;align-items:center;gap:1.25rem;
+  background:var(--cream);border-radius:14px;padding:1.5rem;
+  margin:2rem 0;border:1px solid var(--soft-grey);
+}
+.author-avatar{width:60px;height:60px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;}
+.author-info h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.2rem;}
+.author-info p{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--mid-grey);line-height:1.5;}
+
+/* ── TOC ── */
+.toc{background:var(--cream);border-radius:14px;padding:1.5rem 2rem;margin:2rem 0;border:1px solid var(--soft-grey);}
+.toc h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:1rem;}
+.toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;}
+.toc li{font-family:'DM Sans',sans-serif;font-size:0.85rem;}
+.toc a{color:var(--navy);text-decoration:none;font-weight:500;}
+.toc a:hover{color:var(--gold);}
+
+/* ── SEO META ── */
+.seo-meta{
+  background:#f0f0f0;border-radius:10px;padding:1.25rem 1.5rem;
+  margin:2rem 0;border:1px solid #ddd;
+}
+.seo-meta h4{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:700;color:#999;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem;}
+.seo-meta p{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#666;margin-bottom:0.35rem;line-height:1.5;}
+.seo-meta strong{color:#444;}
+
+/* ── FOOTER NAV ── */
+.article-footer-nav{
+  background:var(--navy);padding:2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-brand{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.4);}
+.footer-link{color:var(--gold-light);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .article-hero{height:55vh;min-height:380px;}
+  .hero-content h1{font-size:1.6rem;}
+  .dual-image{grid-template-columns:1fr;}
+  .article-layout{padding:0 1rem 4rem;}
+  .ig-quote,.ig-scams,.ig-fakenews,.ig-warning{padding:2rem 1.25rem;}
+  .ig-checklist .cl-header,.ig-emergency .em-body,.ig-checklist .cl-body{padding:1.25rem;}
+  .share-btns{flex-direction:column;align-items:center;}
+  .author-box{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="article-nav">
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="nav-brand">
+    <div class="nav-logo">S</div>
+    <span class="nav-site-name">Senior Citizens Tech Haven</span>
+  </a>
+  <a href="https://seniorcitizenstechhaven.netlify.app/#learn" class="nav-back">← All Articles</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="images/extracted/online-safety-article-1.webp" alt="Older Kenyan woman studying technology at a digital literacy class in Kenya" class="hero-img"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="article-category">🛡️ Online Safety · Updated April 2026</span>
+    <h1>How to Stay Safe Online in Kenya — A Simple Guide for Older Adults</h1>
+    <div class="hero-meta">
+      <span>✍️ Kevin Jonathan Otieno</span>
+      <span>📅 April 2026</span>
+      <span>⏱️ 12 min read</span>
+      <span>🇰🇪 Nakuru, Kenya</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-layout">
+
+  <!-- AUTHOR -->
+  <div class="author-box">
+    <div class="author-avatar">K</div>
+    <div class="author-info">
+      <h3>Kevin Jonathan Otieno</h3>
+      <p>Founder, Senior Citizens Tech Haven · Digital literacy advocate for older Kenyans · Based in Nakuru, Kenya · 📞 0115 258 958</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 In This Article</h3>
+    <ol>
+      <li><a href="#passwords">Your Secret Word — Passwords</a></li>
+      <li><a href="#mpesa">M-Pesa Tricks — How Criminals Steal Your Money</a></li>
+      <li><a href="#whatsapp">Staying Safe on WhatsApp and Facebook</a></li>
+      <li><a href="#fakenews">Fake News — Truth vs Lies Online</a></li>
+      <li><a href="#email">Email Safety</a></li>
+      <li><a href="#emergency">What to Do If Something Goes Wrong</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+
+  <!-- HOOK -->
+  <p class="body-text">Mama Akinyi is 67 years old. She lives in Kisumu and recently got her first smartphone — a gift from her daughter in Nairobi.</p>
+  <p class="body-text">One evening, she received a message on WhatsApp: <strong>"Congratulations! You have won KES 50,000 from Safaricom. Send your M-Pesa PIN to claim your prize."</strong></p>
+  <p class="body-text">She almost sent it. Her daughter called at exactly the right moment and stopped her. But millions of older Kenyans are not that lucky.</p>
+
+  <div class="hook-text">"This is not just a technology problem. It is a family problem — and it is happening every single day in Kenya."</div>
+
+  <!-- WHAT YOU WILL LEARN -->
+  <div class="intro-box">
+    <h2>📚 What You Will Learn in This Article</h2>
+    <ul>
+      <li>How to create a strong secret word (password) that protects your accounts</li>
+      <li>How to spot tricks that criminals use to steal your M-Pesa money</li>
+      <li>How to stay safe on WhatsApp and Facebook</li>
+      <li>How to protect yourself from fake news and online lies</li>
+      <li>What to do if something goes wrong — with emergency numbers</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Before You Read</div>
+    <p>This article is written for you — in plain, simple language. Every technical word is explained the moment it appears. Read at your own pace. There is no rush.</p>
+  </div>
+
+  <!-- CLASSROOM IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/online-safety-article-2.webp" alt="Older Kenyan adults learning technology in a classroom setting in Kenya"/>
+    <div class="img-caption">Older Kenyans learning digital skills at a community technology class in Kenya. This is exactly why Senior Citizens Tech Haven exists.</div>
+  </div>
+
+  <!-- ════ SECTION 1 — PASSWORDS ════ -->
+  <div class="section-divider" id="passwords">
+    <div class="section-num">1</div>
+    <div class="section-title-text">Your Secret Word — What Is a Password and Why Does It Matter?</div>
+  </div>
+
+  <p class="body-text">A <strong>password</strong> is your secret word or phrase that protects your account. Think of it like the key to your house. If someone gets your key, they can walk in and take everything.</p>
+  <p class="body-text">On your phone and on the internet, a weak password is like leaving your front door wide open. Criminals look for easy targets — and a simple password is exactly that.</p>
+
+  <!-- PASSWORD IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/online-safety-article-3.webp" alt="Illustration showing weak password versus strong password using padlock imagery with older Kenyan adults"/>
+    <div class="img-caption">A weak password leaves you wide open. A strong password locks criminals out — permanently.</div>
+  </div>
+
+  <h3 class="subsection">What Makes a Strong Password?</h3>
+  <ul class="bullet-list">
+    <li>Use at least 8 characters — the longer the better</li>
+    <li>Mix numbers, letters, and symbols like @, #, or !</li>
+    <li>Never use your name, date of birth, or phone number</li>
+    <li>Never use obvious patterns like "123456" or "password"</li>
+    <li>Use a different password for each account</li>
+  </ul>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ IMPORTANT — Never Share Your Password With Anyone</div>
+    <ul>
+      <li>Safaricom will NEVER call you and ask for your M-Pesa PIN</li>
+      <li>Your bank will NEVER send you a message asking for your password</li>
+      <li>Your family members should not know your M-Pesa PIN — even your children</li>
+      <li>If anyone asks for your PIN or password — it is a trick. End the call immediately</li>
+    </ul>
+  </div>
+
+  <h3 class="subsection">A Simple Way to Create a Strong Password</h3>
+  <p class="body-text">Think of a sentence that means something to you. For example: <em>"I moved to Nakuru in 1985 with my family."</em></p>
+  <p class="body-text">Now take the first letter of each word: <strong>ImtNi1985wmf</strong></p>
+  <p class="body-text">Add a symbol at the end: <strong>ImtNi1985wmf#</strong></p>
+  <p class="body-text">That is a strong password that is easy for you to remember but very hard for a criminal to guess.</p>
+
+  <!-- IG: QUOTE CARD -->
+  <div class="infographic">
+    <div class="ig-quote">
+      <div class="qm">"</div>
+      <h2>Your M-Pesa PIN is private.<br><em>Not even Safaricom needs it.</em></h2>
+      <div class="qdiv"></div>
+      <p>If anyone asks for your PIN — it is a trick. Always.</p>
+      <div class="ig-brand">Senior Citizens Tech Haven · seniorcitizenstechhaven.netlify.app</div>
+    </div>
+  </div>
+
+  <!-- ════ SECTION 2 — MPESA SCAMS ════ -->
+  <div class="section-divider" id="mpesa">
+    <div class="section-num">2</div>
+    <div class="section-title-text">M-Pesa Tricks — How Criminals Try to Steal Your Money</div>
+  </div>
+
+  <p class="body-text">M-Pesa has made life easier for millions of Kenyans. But it has also attracted criminals who try to trick people into sending them money or sharing their PIN.</p>
+  <p class="body-text">These tricks are called <strong>scams</strong> (tricks designed to steal from you). Here are the most common ones happening in Kenya right now.</p>
+
+  <!-- DUAL IMAGE — woman + mzee at M-Pesa -->
+  <div class="dual-image">
+    <div class="article-image">
+      <img src="images/extracted/online-safety-article-4.webp" alt="Older Kenyan woman smiling while using her smartphone at home in Kenya" style="height:280px;object-fit:cover;"/>
+      <div class="img-caption">Learning to use technology safely at home</div>
+    </div>
+    <div class="article-image">
+      <img src="images/extracted/online-safety-article-5.webp" alt="Older Kenyan man outside an M-Pesa agent shop in Kenya" style="height:280px;object-fit:cover;object-position:right center;"/>
+      <div class="img-caption">Outside an M-Pesa agent — know your rights</div>
+    </div>
+  </div>
+
+  <!-- IG: MPESA SCAMS -->
+  <div class="infographic">
+    <div class="ig-scams">
+      <div class="ig-header">
+        <div class="ig-badge">⚠️ Kenya Safety Alert 2026</div>
+        <h2>3 M-Pesa Tricks <em>Happening Right Now</em></h2>
+      </div>
+      <div class="scam-items">
+        <div class="scam-item">
+          <div class="scam-num">1</div>
+          <div class="scam-content">
+            <h3>🏆 The Prize Trick</h3>
+            <p>"You have won KES 50,000! Send your M-Pesa PIN to claim your prize."</p>
+            <span class="scam-tag">Always a lie — ignore and delete immediately</span>
+          </div>
+        </div>
+        <div class="scam-item">
+          <div class="scam-num">2</div>
+          <div class="scam-content">
+            <h3>📱 The Wrong Number Trick</h3>
+            <p>Someone sends money to your M-Pesa then asks you to send it back. The original transaction is fake.</p>
+            <span class="scam-tag">Call Safaricom 100 first — never send money back</span>
+          </div>
+        </div>
+        <div class="scam-item">
+          <div class="scam-num">3</div>
+          <div class="scam-content">
+            <h3>👤 The Fake Safaricom Call</h3>
+            <p>"I am from Safaricom. There is a problem with your account. Please give me your PIN."</p>
+            <span class="scam-tag">Safaricom NEVER asks for your PIN — hang up now</span>
+          </div>
+        </div>
+      </div>
+      <div class="scam-cta">
+        <span style="font-size:1.3rem">📞</span>
+        <div class="scam-cta-text">If you suspect a scam — call Safaricom immediately on <strong>100</strong>. Free call, available 24 hours a day.</div>
+      </div>
+      <div class="ig-brand" style="text-align:center;margin-top:1.25rem;font-size:0.6rem;color:rgba(255,255,255,0.2);letter-spacing:0.12em;text-transform:uppercase;">Senior Citizens Tech Haven · seniorcitizenstechhaven.netlify.app</div>
+    </div>
+  </div>
+
+  <!-- ════ SECTION 3 — WHATSAPP ════ -->
+  <div class="section-divider" id="whatsapp">
+    <div class="section-num">3</div>
+    <div class="section-title-text">Staying Safe on WhatsApp and Facebook</div>
+  </div>
+
+  <p class="body-text">WhatsApp and Facebook are wonderful tools for staying connected with family and friends. But they also attract people who want to trick or harm you.</p>
+
+  <!-- TRAINING IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/online-safety-article-6.webp" alt="Tech trainer helping older Kenyan adults learn to use smartphones and laptops at a digital literacy workshop in Kenya"/>
+    <div class="img-caption">A Tech For Elders Kenya trainer helping older adults learn to use technology safely — exactly the kind of support SCTH provides online.</div>
+  </div>
+
+  <h3 class="subsection">WhatsApp Safety Rules</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Never send your M-Pesa PIN, ID number, or bank details on WhatsApp — even to family members</li>
+    <li><div class="step-num">2</div>Do not open links (blue clickable text) sent by people you do not know</li>
+    <li><div class="step-num">3</div>If someone you know sends you a strange message asking for money — call them first to confirm it is really them</li>
+    <li><div class="step-num">4</div>Do not share your WhatsApp verification code (the 6-digit number WhatsApp sends you) with anyone</li>
+    <li><div class="step-num">5</div>Set up two-step verification — an extra security step — on your WhatsApp (instructions below)</li>
+  </ol>
+
+  <!-- IG: WHATSAPP CHECKLIST -->
+  <div class="infographic">
+    <div class="ig-checklist">
+      <div class="cl-header">
+        <div class="wa-circle">💬</div>
+        <div class="cl-header-text">
+          <h2>WhatsApp Safety Checklist</h2>
+          <p>5 things every older Kenyan should do today</p>
+        </div>
+      </div>
+      <div class="cl-body">
+        <div class="cl-items">
+          <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Two-step verification is ON</strong> — the extra PIN lock that protects your account</div></div>
+          <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Profile set to "My Contacts"</strong> — strangers cannot see your photo or information</div></div>
+          <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Never share your 6-digit verification code</strong> — not even with family</div></div>
+          <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Unknown links — never click</strong> — blue clickable text from strangers is dangerous</div></div>
+          <div class="cl-item"><div class="cl-check">✓</div><div class="cl-text"><strong>Money requests — always call first</strong> — even if the message appears to be from family</div></div>
+        </div>
+      </div>
+      <div class="cl-footer">
+        <span style="font-size:1.3rem">✅</span>
+        <p>Screenshot this checklist and save it on your phone as a daily reminder.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="subsection">How to Set Up Two-Step Verification on WhatsApp</h3>
+  <p class="body-text"><strong>Two-step verification</strong> is an extra lock on your WhatsApp. Even if someone gets your phone number, they cannot access your WhatsApp without a secret PIN that only you know.</p>
+
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Open WhatsApp on your phone</li>
+    <li><div class="step-num">2</div>Tap the three dots (⋮) in the top right corner</li>
+    <li><div class="step-num">3</div>Tap "Settings"</li>
+    <li><div class="step-num">4</div>Tap "Account"</li>
+    <li><div class="step-num">5</div>Tap "Two-step verification"</li>
+    <li><div class="step-num">6</div>Tap "Enable"</li>
+    <li><div class="step-num">7</div>Enter a 6-digit PIN that you will remember</li>
+    <li><div class="step-num">8</div>Enter your email address to help recover your account</li>
+    <li><div class="step-num">9</div>Tap "Save" — you are now protected ✅</li>
+  </ol>
+
+  <div class="success-box">
+    <div class="sb-title">✅ Well Done!</div>
+    <p>Setting up two-step verification is one of the best things you can do to protect yourself on WhatsApp. It takes less than 5 minutes and works 24 hours a day.</p>
+  </div>
+
+  <!-- ════ SECTION 4 — FAKE NEWS ════ -->
+  <div class="section-divider" id="fakenews">
+    <div class="section-num">4</div>
+    <div class="section-title-text">Fake News — How to Tell Truth From Lies Online</div>
+  </div>
+
+  <p class="body-text">Kenya has a serious problem with fake news — false stories shared on WhatsApp, Facebook, and other platforms. These stories can look very real and can cause fear and confusion.</p>
+
+  <!-- IG: FAKE NEWS -->
+  <div class="infographic">
+    <div class="ig-fakenews">
+      <div class="fn-top">
+        <span class="magnify">🔍</span>
+        <h2>Before You Share Anything Online<br>Ask These 5 Questions</h2>
+        <p class="fn-sub">Fake news spreads because people share without thinking first</p>
+      </div>
+      <div class="q-grid">
+        <div class="q-item"><div class="q-n">1</div><div class="q-t"><strong>Where did it come from?</strong> Is it from Nation, Standard, or KBC? Or just a WhatsApp forward with no source?</div></div>
+        <div class="q-item"><div class="q-n">2</div><div class="q-t"><strong>When was it written?</strong> Old news shared as new news is one of the most common tricks in Kenya.</div></div>
+        <div class="q-item"><div class="q-n">3</div><div class="q-t"><strong>Does it make you feel very angry or afraid?</strong> Fake news is designed to make you emotional so you share without thinking.</div></div>
+        <div class="q-item"><div class="q-n">4</div><div class="q-t"><strong>Can you find it on another trusted website?</strong> If only one source is reporting it — be very suspicious.</div></div>
+        <div class="q-item"><div class="q-n">5</div><div class="q-t"><strong>Does it say "share urgently"?</strong> Real news never demands you share immediately.</div></div>
+      </div>
+      <div class="fn-rule">
+        <p>When in doubt — do not share. Pause. Verify. Protect your family from lies.</p>
+      </div>
+      <div style="text-align:center;margin-top:1.25rem;font-family:'DM Sans',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.2);letter-spacing:0.12em;text-transform:uppercase;">Senior Citizens Tech Haven · seniorcitizenstechhaven.netlify.app</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tb-title">Trusted Kenyan News Sources</div>
+    <ul>
+      <li>Nation Media Group — nation.africa</li>
+      <li>Standard Media — standardmedia.co.ke</li>
+      <li>Kenya Broadcasting Corporation — kbc.co.ke</li>
+      <li>Communications Authority of Kenya — ca.go.ke</li>
+    </ul>
+  </div>
+
+  <!-- ════ SECTION 5 — EMAIL ════ -->
+  <div class="section-divider" id="email">
+    <div class="section-num">5</div>
+    <div class="section-title-text">Email Safety — How to Spot a Dangerous Message</div>
+  </div>
+
+  <p class="body-text">An <strong>email</strong> is a message sent through the internet — like a letter but instant. Criminals send fake emails that look like they come from real companies — banks, M-Pesa, government offices.</p>
+  <p class="body-text">These fake emails are called <strong>phishing emails</strong> (tricks designed to steal your information by pretending to be someone you trust).</p>
+
+  <h3 class="subsection">Warning Signs of a Fake Email</h3>
+  <ul class="bullet-list">
+    <li>It creates urgency — "Your account will be closed in 24 hours!"</li>
+    <li>It asks for your PIN, password, or ID number</li>
+    <li>It has spelling mistakes or strange language</li>
+    <li>The email address looks almost right but not quite — like "safaricom@gmail.com" instead of the real Safaricom address</li>
+    <li>It has a link asking you to "verify" your account</li>
+    <li>It promises you money, prizes, or gifts</li>
+  </ul>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ Golden Rule for Emails</div>
+    <ul>
+      <li>If an email asks you to click a link and enter your details — do not do it</li>
+      <li>Go directly to the website yourself by typing the address into your browser</li>
+      <li>When in doubt, call the company directly using a phone number from their official website</li>
+    </ul>
+  </div>
+
+  <!-- IG: WARNING CARD -->
+  <div class="infographic">
+    <div class="ig-warning">
+      <span class="w-icon">🚨</span>
+      <h2>Nobody Should Ever Ask<br>For Your <em>M-Pesa PIN.</em><br>Nobody.</h2>
+      <div class="w-divider"></div>
+      <div class="w-points">
+        <div class="w-point"><span>❌</span> Not Safaricom staff calling you</div>
+        <div class="w-point"><span>❌</span> Not someone who sent you money "by mistake"</div>
+        <div class="w-point"><span>❌</span> Not a prize claim agent</div>
+        <div class="w-point"><span>❌</span> Not even your own family members</div>
+      </div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.2);letter-spacing:0.12em;text-transform:uppercase;margin-top:1.5rem;">Senior Citizens Tech Haven · seniorcitizenstechhaven.netlify.app</div>
+    </div>
+  </div>
+
+  <!-- ════ SECTION 6 — EMERGENCY ════ -->
+  <div class="section-divider" id="emergency">
+    <div class="section-num">6</div>
+    <div class="section-title-text">What to Do If Something Goes Wrong</div>
+  </div>
+
+  <p class="body-text">If you think you have been tricked or someone has accessed your account — do not panic. Act quickly and follow these steps.</p>
+
+  <!-- IG: EMERGENCY CARD -->
+  <div class="infographic">
+    <div class="ig-emergency">
+      <div class="em-header">
+        <h2>⚠️ Emergency Action Card</h2>
+        <p>Save this on your phone — share with your entire family</p>
+      </div>
+      <div class="em-body">
+        <div class="em-items">
+          <div class="em-item">
+            <div class="em-item-header"><span class="em-item-icon">💸</span><span class="em-item-title">M-Pesa Stolen or Scammed</span></div>
+            <div class="em-item-body">
+              <div class="em-action"><span class="em-arrow">→</span>Call Safaricom immediately on <strong>100</strong> (free call, 24 hours)</div>
+              <div class="em-action"><span class="em-arrow">→</span>Dial <strong>*234#</strong> on your phone to change your M-Pesa PIN</div>
+              <div class="em-action"><span class="em-arrow">→</span>Visit your nearest Safaricom shop with your national ID</div>
+            </div>
+          </div>
+          <div class="em-item">
+            <div class="em-item-header"><span class="em-item-icon">📱</span><span class="em-item-title">WhatsApp Account Taken Over</span></div>
+            <div class="em-item-body">
+              <div class="em-action"><span class="em-arrow">→</span>Open WhatsApp and re-register your phone number</div>
+              <div class="em-action"><span class="em-arrow">→</span>Enter the 6-digit verification code sent to your phone</div>
+              <div class="em-action"><span class="em-arrow">→</span>Turn on two-step verification immediately after recovering your account</div>
+            </div>
+          </div>
+          <div class="em-item">
+            <div class="em-item-header"><span class="em-item-icon">📵</span><span class="em-item-title">Phone Stolen</span></div>
+            <div class="em-item-body">
+              <div class="em-action"><span class="em-arrow">→</span>Call Safaricom on <strong>100</strong> from any phone to block your SIM and M-Pesa</div>
+              <div class="em-action"><span class="em-arrow">→</span>Report to your nearest police station</div>
+              <div class="em-action"><span class="em-arrow">→</span>Have your national ID ready to verify your identity</div>
+            </div>
+          </div>
+        </div>
+        <div class="em-hotline">
+          <div class="hotline-left">
+            <div class="hl-label">Safaricom Helpline</div>
+            <div class="hl-num">100</div>
+            <div class="hl-desc">Free call · Available 24 hours · 7 days a week</div>
+          </div>
+          <div class="hl-badge">📞 Free Call</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="success-box">
+    <div class="sb-title">✅ You Are Not Alone</div>
+    <p>Thousands of Kenyans are tricked every year — including educated, experienced people. It is not your fault. These criminals are professional tricksters. The most important thing is to act quickly and report immediately.</p>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="section-divider">
+    <div class="section-num" style="background:var(--gold);color:var(--navy);">★</div>
+    <div class="section-title-text">Key Takeaways — What to Remember</div>
+  </div>
+  <ul class="bullet-list">
+    <li><strong>Your M-Pesa PIN is private.</strong> Never share it with anyone — not even Safaricom staff.</li>
+    <li><strong>If something sounds too good to be true — it is a trick.</strong> Always.</li>
+    <li><strong>Set up two-step verification on WhatsApp today.</strong> It takes 5 minutes.</li>
+    <li><strong>Never send money because of a WhatsApp or phone message alone.</strong> Call the person first.</li>
+    <li><strong>Fake news makes you feel emotional.</strong> Pause before you share anything.</li>
+    <li><strong>If something goes wrong — call Safaricom on 100 immediately.</strong> It is free.</li>
+  </ul>
+
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">Someone called me claiming to be from Safaricom and asked for my PIN. What should I do?</div>
+      <div class="faq-a">Hang up immediately. Safaricom will never call you to ask for your PIN. This is a scam. Call Safaricom directly on 100 to report the number that called you.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I received money on M-Pesa from a stranger and they are asking me to send it back. What do I do?</div>
+      <div class="faq-a">Do not send any money. This is a common trick called the "wrong number scam." The original transaction may be reversed and you will lose your own money. Call Safaricom on 100 to report and verify immediately.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">My grandchild set up my WhatsApp. How do I know it is safe?</div>
+      <div class="faq-a">Ask your grandchild to show you how to turn on two-step verification. This adds an extra PIN to your WhatsApp that only you know. Also check that your profile is set to "My Contacts" only so strangers cannot see your information.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I accidentally clicked a link in a WhatsApp message. What should I do?</div>
+      <div class="faq-a">Do not enter any information on the page that opened. Close it immediately. Change your WhatsApp and M-Pesa PIN as a precaution. If you entered any details, call Safaricom on 100 straight away.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I know if a news story on WhatsApp is real or fake?</div>
+      <div class="faq-a">Check if the story appears on Nation, Standard, or KBC news websites. If you cannot find it there, it is likely fake. Remember — fake news always makes you feel very emotional or urgent. Take a breath before you share anything.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">My phone was stolen. What do I do about my M-Pesa?</div>
+      <div class="faq-a">Call Safaricom on 100 immediately from any phone. They can block your M-Pesa and SIM card so no one can access your money. You will need your ID number to verify your identity.</div>
+    </div>
+  </div>
+
+  <!-- SHARE BANNER -->
+  <div class="share-banner">
+    <h2>"Did this article help you? Share it with a family member who might need it."</h2>
+    <p>You could protect someone you love from losing their money today. Sharing takes 5 seconds.</p>
+    <div class="share-btns">
+      <a href="https://wa.me/?text=How%20to%20Stay%20Safe%20Online%20in%20Kenya%20-%20A%20Simple%20Guide%20for%20Older%20Adults%20https://seniorcitizenstechhaven.netlify.app" target="_blank" class="share-btn">📲 Share on WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://seniorcitizenstechhaven.netlify.app" target="_blank" class="share-btn">📘 Share on Facebook</a>
+      <a href="https://twitter.com/intent/tweet?text=How%20to%20Stay%20Safe%20Online%20in%20Kenya%20-%20A%20guide%20for%20older%20adults%20by%20%40FinallyKayvoh&url=https://seniorcitizenstechhaven.netlify.app" target="_blank" class="share-btn">𝕏 Share on X</a>
+    </div>
+  </div>
+
+  <!-- PODCAST -->
+  <div class="podcast-box">
+    <span class="pod-icon">🎧</span>
+    <p>Prefer listening? Hear this topic on the <strong>Senior Citizens Tech Haven Podcast</strong> — Episode 2: Online Safety & Smartphones. Available on <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank">Spotify</a>. Search "Senior Citizens Tech Haven."</p>
+  </div>
+
+  <!-- SEO META -->
+  </div>
+
+<!-- FOOTER NAV -->
+<div class="article-footer-nav">
+  <span class="footer-brand">© 2026 Senior Citizens Tech Haven · Kevin Jonathan Otieno · Nakuru, Kenya</span>
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="footer-link">← Back to Home</a>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  const a = q.nextElementSibling;
+  a.style.display = 'none';
+  q.addEventListener('click', () => {
+    const isOpen = a.style.display === 'block';
+    document.querySelectorAll('.faq-a').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.faq-q').forEach(el => el.style.after = '▾');
+    a.style.display = isOpen ? 'none' : 'block';
+  });
+});
+// Show first FAQ by default
+const firstA = document.querySelector('.faq-a');
+if(firstA) firstA.style.display = 'block';
+</script>
+</body>
+</html>

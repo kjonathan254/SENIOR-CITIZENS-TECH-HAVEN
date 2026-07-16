@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="How to use M-Pesa, mobile banking, digital savings and online payments safely in Kenya. A plain language financial technology guide for older adults. Updated 2026."/>
+<meta name="keywords" content="M-Pesa guide older adults Kenya, mobile banking Kenya elderly, digital payments older Kenyans, KCB app Kenya older adults, Equity Bank app Kenya, M-Shwari guide Kenya, financial technology older adults Kenya 2026"/>
+<meta property="og:title" content="Financial Technology Guide for Older Adults in Kenya | Senior Citizens Tech Haven"/>
+<meta property="og:description" content="Navigate M-Pesa, mobile banking, and digital payments safely. A plain language guide for older Kenyans."/>
+<meta property="og:url" content="https://seniorcitizenstechhaven.netlify.app/financial-technology-guide.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:creator" content="@FinallyKayvoh"/>
+<title>Financial Technology Guide for Older Adults in Kenya | Senior Citizens Tech Haven</title>
+<meta name="google-adsense-account" content="ca-pub-8403238740627289">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8403238740627289" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1F4MQJKSG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z1F4MQJKSG');</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0f2044;--navy-mid:#1a3566;
+  --gold:#c9962a;--gold-light:#e8b84b;--gold-pale:#fdf3dc;
+  --cream:#f8f6f0;--warm-white:#fdfcf9;
+  --charcoal:#1a1a2e;--mid-grey:#555;--soft-grey:#e4e2da;
+  --red:#c0392b;--red-light:#fdf0f0;
+  --green:#16a34a;--green-light:#f0fdf4;
+  --mpesa-green:#00a650;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--warm-white);color:var(--charcoal);font-size:18px;line-height:1.75;overflow-x:hidden;}
+
+/* NAV */
+.article-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px;box-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--navy);}
+.nav-site-name{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;letter-spacing:0.02em;}
+.nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;transition:color 0.2s;}
+.nav-back:hover{color:#fff;}
+
+/* HERO */
+.article-hero{margin-top:60px;position:relative;height:72vh;min-height:500px;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,32,68,0.15) 0%,rgba(15,32,68,0.45) 45%,rgba(15,32,68,0.94) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:3rem 2rem 2.5rem;max-width:900px;margin:0 auto;}
+.article-category{display:inline-block;background:var(--mpesa-green);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:50px;margin-bottom:1rem;}
+.hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:0.75rem;}
+.hero-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-family:'DM Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.65);}
+
+/* LAYOUT */
+.article-layout{max-width:880px;margin:0 auto;padding:0 1.5rem 5rem;}
+
+/* AUTHOR */
+.author-box{display:flex;align-items:center;gap:1.25rem;background:var(--cream);border-radius:14px;padding:1.5rem;margin:2.5rem 0;border:1px solid var(--soft-grey);}
+.author-avatar{width:60px;height:60px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;}
+.author-info h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.2rem;}
+.author-info p{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--mid-grey);line-height:1.5;}
+
+/* TOC */
+.toc{background:var(--cream);border-radius:14px;padding:1.5rem 2rem;margin:0 0 2rem;border:1px solid var(--soft-grey);}
+.toc h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:1rem;}
+.toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;}
+.toc li{font-family:'DM Sans',sans-serif;font-size:0.85rem;}
+.toc a{color:var(--navy);text-decoration:none;font-weight:500;}
+.toc a:hover{color:var(--gold);}
+
+/* HOOK */
+.hook-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2.5vw,1.25rem);font-style:italic;color:var(--navy);line-height:1.7;border-left:4px solid var(--gold);padding:1.25rem 1.75rem;margin:2rem 0;background:var(--gold-pale);border-radius:0 12px 12px 0;}
+
+/* BODY */
+.body-text{font-size:1rem;line-height:1.85;color:#2a2a3e;margin:1rem 0;}
+.body-text strong{color:var(--navy);}
+
+/* SECTIONS */
+.section-divider{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;}
+.section-num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.section-title-text{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:var(--navy);line-height:1.25;}
+h3.subsection{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);margin:2rem 0 0.75rem;}
+
+/* BOXES */
+.intro-box{background:var(--navy);border-radius:16px;padding:2rem 2.5rem;margin:2rem 0;}
+.intro-box h2{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:1rem;}
+.intro-box ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.intro-box li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.92rem;color:rgba(255,255,255,0.85);font-family:'DM Sans',sans-serif;}
+.intro-box li::before{content:"✓";color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.1rem;}
+
+.warning-box{background:var(--red-light);border-left:5px solid var(--red);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.warning-box .wb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--red);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.warning-box ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.warning-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#7a1515;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;}
+.warning-box li::before{content:"⚠";flex-shrink:0;}
+
+.tip-box{background:var(--gold-pale);border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.tip-box .tb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:0.6rem;}
+.tip-box p,.tip-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#5a4010;line-height:1.6;}
+.tip-box ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.tip-box li::before{content:"💡 ";}
+
+.success-box{background:var(--green-light);border-left:5px solid var(--green);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.success-box .sb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--green);margin-bottom:0.6rem;}
+.success-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.6;}
+
+.info-box{background:#eef3fb;border-left:5px solid var(--navy-mid);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.info-box .ib-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.6rem;}
+.info-box p,.info-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e3a6e;line-height:1.6;}
+.info-box ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.info-box li::before{content:"→ ";color:var(--navy);font-weight:700;}
+
+/* STEPS */
+.steps-list{list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin:1rem 0;}
+.steps-list li{display:flex;align-items:flex-start;gap:1rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--charcoal);line-height:1.55;}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;}
+
+/* BULLETS */
+.bullet-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin:1rem 0;}
+.bullet-list li{display:flex;align-items:flex-start;gap:0.75rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--charcoal);line-height:1.55;}
+.bullet-list li::before{content:"•";color:var(--gold);font-weight:900;font-size:1.2rem;flex-shrink:0;line-height:1.2;}
+
+/* IMAGES */
+.article-image{width:100%;border-radius:16px;overflow:hidden;margin:2rem 0;box-shadow:0 8px 40px rgba(0,0,0,0.12);}
+.article-image img{width:100%;display:block;object-fit:cover;}
+.img-caption{background:var(--navy);padding:0.75rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.65);font-style:italic;}
+
+/* MPESA PAYMENT CARD */
+.mpesa-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:16px;padding:2.5rem 2rem;margin:2rem 0;}
+.mpesa-card h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.3rem;margin-bottom:0.5rem;text-align:center;}
+.mpesa-card .sub{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);text-align:center;margin-bottom:2rem;}
+.mpesa-steps{display:flex;flex-direction:column;gap:0.85rem;}
+.mpesa-step{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.25rem;display:flex;gap:1rem;align-items:flex-start;}
+.mpesa-step-num{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:0.95rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.mpesa-step-text{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.88);line-height:1.55;}
+.mpesa-step-text strong{color:var(--gold-light);}
+
+/* USSD TABLE */
+.ussd-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'DM Sans',sans-serif;}
+.ussd-table th{background:var(--navy);color:var(--gold-light);padding:0.85rem 1.1rem;text-align:left;font-size:0.82rem;font-weight:700;letter-spacing:0.05em;}
+.ussd-table td{padding:0.85rem 1.1rem;border-bottom:1px solid var(--soft-grey);font-size:0.88rem;color:var(--charcoal);vertical-align:top;line-height:1.55;}
+.ussd-table tr:nth-child(even) td{background:#f4f4f8;}
+.ussd-table td:first-child{font-family:'Space Mono',monospace;font-weight:700;color:var(--navy);font-size:0.9rem;}
+
+/* SAVINGS TABLE */
+.savings-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'DM Sans',sans-serif;}
+.savings-table th{background:var(--navy);color:var(--gold-light);padding:0.85rem 1.1rem;text-align:left;font-size:0.82rem;font-weight:700;letter-spacing:0.05em;}
+.savings-table td{padding:0.85rem 1.1rem;border-bottom:1px solid var(--soft-grey);font-size:0.85rem;color:var(--charcoal);vertical-align:top;line-height:1.55;}
+.savings-table tr:nth-child(even) td{background:#f4f4f8;}
+.savings-table td:first-child{font-weight:700;color:var(--navy);}
+
+/* BANK CARDS */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.feature-card{background:#fff;border:1px solid var(--soft-grey);border-radius:14px;padding:1.25rem;transition:all 0.2s;position:relative;overflow:hidden;}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);}
+.feature-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.08);}
+.feature-icon{font-size:2rem;margin-bottom:0.6rem;display:block;}
+.feature-card h3{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--navy);margin-bottom:0.35rem;}
+.feature-card p{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:var(--mid-grey);line-height:1.5;}
+
+/* NAVY BANNER */
+.navy-banner{background:var(--navy);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center;}
+.navy-banner p{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);font-style:italic;line-height:1.5;}
+
+/* FAQ */
+.faq-section{background:var(--cream);border-radius:16px;padding:2.5rem 2rem;margin:2.5rem 0;}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem;}
+.faq-item{border-bottom:1px solid var(--soft-grey);padding:1.1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Source Serif 4',serif;font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.faq-q::after{content:"▾";color:var(--gold);flex-shrink:0;}
+.faq-a{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--mid-grey);line-height:1.65;display:none;}
+.faq-a.open{display:block;}
+
+/* SHARE */
+.share-banner{background:var(--navy);border-radius:16px;padding:2.5rem 2rem;text-align:center;margin:2.5rem 0;}
+.share-banner h2{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold-light);font-style:italic;margin-bottom:0.75rem;}
+.share-banner p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.65);margin-bottom:1.25rem;}
+.share-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.share-btn{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:0.6rem 1.25rem;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;text-decoration:none;transition:all 0.2s;}
+.share-btn:hover{background:rgba(255,255,255,0.18);}
+
+/* PODCAST */
+.podcast-box{background:var(--green-light);border-left:5px solid #25D366;border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;display:flex;align-items:center;gap:1rem;}
+.podcast-box .pod-icon{font-size:1.8rem;flex-shrink:0;}
+.podcast-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.5;}
+.podcast-box a{color:var(--green);font-weight:700;}
+
+/* READ NEXT */
+.read-next{background:var(--cream);border-radius:14px;padding:1.5rem 2rem;margin:2rem 0;border:1px solid var(--soft-grey);}
+.read-next h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.75rem;}
+.read-next ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.read-next li a{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--navy);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:0.5rem;}
+.read-next li a::before{content:"→";color:var(--gold);font-weight:700;}
+.read-next li a:hover{color:var(--gold);}
+
+/* FOOTER */
+.article-footer-nav{background:var(--navy);padding:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.4);}
+.footer-link{color:var(--gold-light);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;}
+
+@media(max-width:640px){
+  .article-hero{height:58vh;min-height:400px;}
+  .hero-content h1{font-size:1.6rem;}
+  .article-layout{padding:0 1rem 4rem;}
+  .author-box{flex-direction:column;text-align:center;}
+  .cards-grid{grid-template-columns:1fr 1fr;}
+  .ussd-table,.savings-table{font-size:0.78rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="article-nav">
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="nav-brand">
+    <div class="nav-logo">S</div>
+    <span class="nav-site-name">Senior Citizens Tech Haven</span>
+  </a>
+  <a href="https://seniorcitizenstechhaven.netlify.app/#learn" class="nav-back">← All Articles</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="images/extracted/financial-technology-guide-1.webp" alt="Older Kenyan couple smiling while using Lipa na M-Pesa at a Naivas supermarket cashier in Nairobi Kenya" class="hero-img"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="article-category">💳 Financial Technology · Updated April 2026</span>
+    <h1>Empowering Older Adults Through Financial Technology in Kenya</h1>
+    <div class="hero-meta">
+      <span>✍️ Kevin Jonathan Otieno</span>
+      <span>📅 April 2026</span>
+      <span>⏱️ 12 min read</span>
+      <span>🇰🇪 Nakuru, Kenya</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="article-layout">
+
+  <!-- AUTHOR -->
+  <div class="author-box">
+    <div class="author-avatar">K</div>
+    <div class="author-info">
+      <h3>Kevin Jonathan Otieno</h3>
+      <p>Founder, Senior Citizens Tech Haven · Digital literacy advocate for older Kenyans · Based in Nakuru, Kenya · 📞 0115 258 958</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 In This Article</h3>
+    <ol>
+      <li><a href="#why">Why Financial Technology Matters for Older Adults</a></li>
+      <li><a href="#mpesa">How to Use M-Pesa Safely</a></li>
+      <li><a href="#lipampesa">Lipa na M-Pesa — Paying for Goods and Services</a></li>
+      <li><a href="#bills">Paying Bills Using M-Pesa</a></li>
+      <li><a href="#ussd">Useful USSD Codes Every Older Adult Should Know</a></li>
+      <li><a href="#banking">Mobile Banking Apps</a></li>
+      <li><a href="#savings">Digital Savings Accounts</a></li>
+      <li><a href="#agent">Staying Safe at an M-Pesa Agent</a></li>
+      <li><a href="#scams">Protecting Yourself from Financial Scams</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+
+  <!-- INTRO -->
+  <p class="body-text">Kenya has led the world in mobile money for over a decade. M-Pesa, Lipa na M-Pesa, M-Shwari, KCB M-Pesa, digital banking apps — these tools have transformed how Kenyans manage money. They save time, reduce travel, and put financial control directly in your hands.</p>
+  <p class="body-text">For older adults, the benefits are especially significant. No more travelling to a bank branch. No more queuing at a pay point. Your money is accessible from anywhere in Kenya, at any hour, from the phone in your pocket.</p>
+  <p class="body-text">This guide walks you through each financial technology tool available to you — in plain language, step by step.</p>
+
+  <div class="hook-text">"Your money, your future. Financial technology puts powerful tools in your hands — and the knowledge to use them safely is your best protection."</div>
+
+  <!-- WHAT YOU WILL LEARN -->
+  <div class="intro-box">
+    <h2>📚 What You Will Learn in This Article</h2>
+    <ul>
+      <li>How to use M-Pesa to send, receive, and manage money safely</li>
+      <li>How to pay for goods and services using Lipa na M-Pesa</li>
+      <li>How to pay electricity, water, and other bills from your phone</li>
+      <li>The most important USSD codes every older Kenyan should know</li>
+      <li>How to use mobile banking apps for KCB, Equity, and Co-op Bank</li>
+      <li>Digital savings accounts that earn you interest from M-Pesa</li>
+      <li>How to stay safe at an M-Pesa agent and avoid scams</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Before You Read</div>
+    <p>This guide is written for older adults and their families. All tools mentioned are free or very low cost and work on basic Android smartphones widely available in Kenya. If you need hands-on help, visit your nearest Huduma Centre or Safaricom shop.</p>
+  </div>
+
+  <!-- SECTION 1 — WHY -->
+  <div class="section-divider" id="why">
+    <div class="section-num">1</div>
+    <div class="section-title-text">Why Financial Technology Matters for Older Adults</div>
+  </div>
+
+  <p class="body-text">Managing money used to mean physical trips — to the bank, to the pay point, to the post office. For older adults with mobility challenges, those living far from towns, or those who find long queues exhausting, this was a real burden.</p>
+  <p class="body-text">Financial technology changes this completely. Today, an older adult in Homa Bay can pay their Kenya Power electricity bill, check their NSSF pension balance, send money to a grandchild in Nairobi, and save for an emergency — all from a basic smartphone, without leaving home.</p>
+
+  <div class="cards-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🏠</span>
+      <h3>No Travel Needed</h3>
+      <p>Pay bills, send money, and check balances from home — no bank visits, no queues.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">⏰</span>
+      <h3>Available 24 Hours</h3>
+      <p>M-Pesa and banking apps work at any hour of the day or night, every day of the year.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🔒</span>
+      <h3>Safer Than Cash</h3>
+      <p>Carrying less cash reduces the risk of theft. Your money stays safely in your M-Pesa account.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">📊</span>
+      <h3>Full Financial Record</h3>
+      <p>Every M-Pesa transaction is recorded automatically — giving you a complete history of your money.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 — MPESA -->
+  <div class="section-divider" id="mpesa">
+    <div class="section-num">2</div>
+    <div class="section-title-text">How to Use M-Pesa Safely</div>
+  </div>
+
+  <p class="body-text">M-Pesa is Kenya's most widely used financial tool. It allows you to send money, receive money, pay for goods and services, pay bills, save, and access credit — all from your Safaricom phone.</p>
+  <p class="body-text">You access M-Pesa by dialling <strong>*334#</strong> on your Safaricom phone, or through the M-Pesa app if your phone supports it.</p>
+
+  <div class="article-image">
+    <img src="images/extracted/financial-technology-guide-2.webp" alt="Older Kenyan woman using M-Pesa on her smartphone at a market stall in Kenya with Safaricom M-Pesa branding visible" style="height:420px;object-fit:cover;object-position:center 20%;"/>
+    <div class="img-caption">An older Kenyan adult using M-Pesa at a market in Kenya. M-Pesa is now available at over 176,000 agent locations across the country.</div>
+  </div>
+
+  <div class="mpesa-card">
+    <h2>💚 How to Send Money on M-Pesa</h2>
+    <p class="sub">The most commonly used M-Pesa service — follow these steps exactly</p>
+    <div class="mpesa-steps">
+      <div class="mpesa-step"><div class="mpesa-step-num">1</div><div class="mpesa-step-text">Dial <strong>*334#</strong> on your Safaricom phone or open the M-Pesa app</div></div>
+      <div class="mpesa-step"><div class="mpesa-step-num">2</div><div class="mpesa-step-text">Select <strong>"Send Money"</strong> from the menu</div></div>
+      <div class="mpesa-step"><div class="mpesa-step-num">3</div><div class="mpesa-step-text">Enter the <strong>recipient's phone number</strong> carefully — double-check before continuing</div></div>
+      <div class="mpesa-step"><div class="mpesa-step-num">4</div><div class="mpesa-step-text">Enter the <strong>amount</strong> you want to send in Kenyan Shillings</div></div>
+      <div class="mpesa-step"><div class="mpesa-step-num">5</div><div class="mpesa-step-text">Enter your <strong>M-Pesa PIN</strong> — your secret 4-digit number</div></div>
+      <div class="mpesa-step"><div class="mpesa-step-num">6</div><div class="mpesa-step-text">Press <strong>OK</strong>. You will receive an SMS confirmation. Keep it for your records.</div></div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ Always Check the Phone Number Before Sending</div>
+    <ul>
+      <li>One wrong digit sends your money to a stranger. Always read the number back before pressing OK.</li>
+      <li>If you sent money to the wrong number, call Safaricom immediately on 100. Do it within minutes for the best chance of recovery.</li>
+      <li>Your M-Pesa PIN is your most important secret. Never share it with anyone under any circumstances.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3 — LIPA NA MPESA -->
+  <div class="section-divider" id="lipampesa">
+    <div class="section-num">3</div>
+    <div class="section-title-text">Lipa na M-Pesa — Paying for Goods and Services</div>
+  </div>
+
+  <p class="body-text">Lipa na M-Pesa allows you to pay for goods and services at shops, supermarkets, hospitals, schools, and markets directly from your M-Pesa — without using cash. You will see the green and white Lipa na M-Pesa sign at most business premises across Kenya.</p>
+  <p class="body-text">There are two ways to pay using Lipa na M-Pesa: Pay Bill (for businesses with a Paybill number) and Buy Goods (for businesses with a Till number).</p>
+
+  <h3 class="subsection">How to Pay Using Lipa na M-Pesa</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Dial <strong>*334#</strong> or open the M-Pesa app on your phone</li>
+    <li><div class="step-num">2</div>Select <strong>"Lipa na M-Pesa"</strong></li>
+    <li><div class="step-num">3</div>Select <strong>"Pay Bill"</strong> for a Paybill number or <strong>"Buy Goods"</strong> for a Till number</li>
+    <li><div class="step-num">4</div>Enter the <strong>business number</strong> shown on the Lipa na M-Pesa sign at the business</li>
+    <li><div class="step-num">5</div>Enter the <strong>account number</strong> if required — this is usually your phone number or account reference</li>
+    <li><div class="step-num">6</div>Enter the <strong>exact amount</strong> to pay</li>
+    <li><div class="step-num">7</div>Enter your <strong>M-Pesa PIN</strong> and press OK</li>
+    <li><div class="step-num">8</div>You will receive a confirmation SMS. Show it to the cashier as proof of payment.</li>
+  </ol>
+
+  <div class="success-box">
+    <div class="sb-title">✅ Where You Can Pay with Lipa na M-Pesa</div>
+    <p>Naivas, Quickmart, Carrefour and most supermarkets. Hospitals and pharmacies. Schools and colleges. Government offices including Huduma Centres. Fuel stations. Restaurants and hotels. Most market stalls and small shops displaying the green M-Pesa sign.</p>
+  </div>
+
+  <!-- SECTION 4 — BILLS -->
+  <div class="section-divider" id="bills">
+    <div class="section-num">4</div>
+    <div class="section-title-text">Paying Bills Using M-Pesa</div>
+  </div>
+
+  <p class="body-text">One of the most time-saving uses of M-Pesa is paying utility bills from home. No more queuing at Kenya Power offices or water company pay points. Here are the most common bills you can pay directly from M-Pesa.</p>
+
+  <table class="savings-table">
+    <tr>
+      <th>Bill Type</th>
+      <th>How to Pay</th>
+      <th>Paybill Number</th>
+    </tr>
+    <tr>
+      <td>Kenya Power electricity</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your meter number as account</td>
+      <td>888880</td>
+    </tr>
+    <tr>
+      <td>Nairobi Water</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your account number</td>
+      <td>888861</td>
+    </tr>
+    <tr>
+      <td>Safaricom Postpaid</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your phone number</td>
+      <td>200200</td>
+    </tr>
+    <tr>
+      <td>DSTV subscription</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your SmartCard number</td>
+      <td>345700</td>
+    </tr>
+    <tr>
+      <td>ZUKU internet</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your account number</td>
+      <td>802200</td>
+    </tr>
+    <tr>
+      <td>KRA taxes</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your PIN as account</td>
+      <td>572572</td>
+    </tr>
+    <tr>
+      <td>NHIF / SHIF contributions</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your ID number</td>
+      <td>200222</td>
+    </tr>
+    <tr>
+      <td>NSSF contributions</td>
+      <td>Lipa na M-Pesa → Pay Bill → Enter your NSSF number</td>
+      <td>333200</td>
+    </tr>
+  </table>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Save Your Paybill Numbers</div>
+    <p>Write down the Paybill numbers you use most often on a small piece of paper and keep it near your phone. This saves you having to remember them each time. Your electricity token number, water account number, and SHIF membership number are worth writing down too.</p>
+  </div>
+
+  <!-- SECTION 5 — USSD -->
+  <div class="section-divider" id="ussd">
+    <div class="section-num">5</div>
+    <div class="section-title-text">Useful USSD Codes Every Older Adult Should Know</div>
+  </div>
+
+  <p class="body-text">USSD codes are short number sequences you dial on your phone like a regular call. They work without internet, without an app, and on even the most basic Safaricom phone. These are essential tools — especially when your internet is not working.</p>
+
+  <table class="ussd-table">
+    <tr>
+      <th>Dial This Code</th>
+      <th>What It Does</th>
+    </tr>
+    <tr>
+      <td>*334#</td>
+      <td>Opens the full M-Pesa menu — send money, pay bills, check balance, everything</td>
+    </tr>
+    <tr>
+      <td>*234#</td>
+      <td>Change your M-Pesa PIN — use this immediately if you think someone knows your PIN</td>
+    </tr>
+    <tr>
+      <td>*234*1#</td>
+      <td>Check your M-Pesa balance without opening the full menu</td>
+    </tr>
+    <tr>
+      <td>*234*0#</td>
+      <td>Check your last 5 M-Pesa transactions — useful for verifying payments</td>
+    </tr>
+    <tr>
+      <td>*544#</td>
+      <td>Access M-Shwari — check your savings balance and apply for a loan</td>
+    </tr>
+    <tr>
+      <td>*654#</td>
+      <td>Access KCB M-Pesa savings and loan services</td>
+    </tr>
+    <tr>
+      <td>*254#</td>
+      <td>Access Hustler Fund — Kenya Government digital savings and loan fund</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>Call Safaricom customer care — free, available 24 hours, for all M-Pesa issues</td>
+    </tr>
+  </table>
+
+  <div class="info-box">
+    <div class="ib-title">ℹ️ Important — No Internet Required</div>
+    <p>All USSD codes above work without internet or mobile data. They use Safaricom's network directly. This means they work even in areas with poor internet signal, when your data bundle is finished, or on a basic phone without smartphone features.</p>
+  </div>
+
+  <!-- SECTION 6 — MOBILE BANKING -->
+  <div class="section-divider" id="banking">
+    <div class="section-num">6</div>
+    <div class="section-title-text">Mobile Banking Apps</div>
+  </div>
+
+  <p class="body-text">Most major Kenyan banks now have smartphone apps that let you check your balance, transfer money, pay bills, and manage your account without visiting a branch. If you have a bank account, ask your bank to help you set up their mobile app during your next visit.</p>
+
+  <div class="cards-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🏦</span>
+      <h3>KCB App</h3>
+      <p>Check your KCB balance, pay bills, transfer money, and apply for KCB M-Pesa loans. Free on Google Play.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🏦</span>
+      <h3>Equity Mobile</h3>
+      <p>Full Equity Bank services on your phone. Check balance, send money to M-Pesa, and manage your account anywhere.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🏦</span>
+      <h3>Co-op MCo-opCash</h3>
+      <p>Cooperative Bank mobile banking. Transfer money, pay bills, and check your account from your phone.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🏦</span>
+      <h3>Absa Kenya App</h3>
+      <p>Full Absa Mobile Banking for account holders. Transfers, bill payments, and account management.</p>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Setting Up Your Bank App Safely</div>
+    <p>Visit your bank branch in person to register for mobile banking. Bring your national ID and the phone you will use. Bank staff will set up the app securely and show you how to use it. Never set up mobile banking by following instructions sent by SMS or WhatsApp — always go to the branch in person.</p>
+  </div>
+
+  <!-- SECTION 7 — SAVINGS -->
+  <div class="section-divider" id="savings">
+    <div class="section-num">7</div>
+    <div class="section-title-text">Digital Savings Accounts</div>
+  </div>
+
+  <p class="body-text">Digital savings accounts accessible through M-Pesa allow you to earn interest on your savings and access emergency credit when needed — without ever visiting a bank.</p>
+
+  <table class="savings-table">
+    <tr>
+      <th>Product</th>
+      <th>What It Does</th>
+      <th>How to Access</th>
+      <th>Important Note</th>
+    </tr>
+    <tr>
+      <td>M-Shwari</td>
+      <td>Savings account with interest plus small emergency loans</td>
+      <td>Dial *544# or M-Pesa menu → M-Shwari</td>
+      <td>Minimum save any amount. Interest paid monthly.</td>
+    </tr>
+    <tr>
+      <td>KCB M-Pesa</td>
+      <td>Savings plus loans from KES 500 to KES 1,000,000</td>
+      <td>Dial *654# or M-Pesa menu → KCB M-Pesa</td>
+      <td>Loan amount depends on your M-Pesa usage history.</td>
+    </tr>
+    <tr>
+      <td>Hustler Fund</td>
+      <td>Government-backed digital savings and loan fund</td>
+      <td>Dial *254# on Safaricom</td>
+      <td>25% of every loan goes to your savings automatically.</td>
+    </tr>
+    <tr>
+      <td>Fuliza</td>
+      <td>M-Pesa overdraft for when your balance runs short</td>
+      <td>Automatically activated during M-Pesa transactions</td>
+      <td>Use with caution — interest charges accumulate daily.</td>
+    </tr>
+  </table>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ A Serious Warning About Fuliza</div>
+    <ul>
+      <li>Fuliza charges daily interest that accumulates quickly. A small Fuliza balance can grow significantly if not repaid promptly.</li>
+      <li>Many older adults have found themselves in unexpected debt from Fuliza. Only use it for genuine emergencies.</li>
+      <li>To check your Fuliza balance, dial *234# and select Fuliza. Repay it as soon as money enters your M-Pesa account.</li>
+      <li>You can opt out of Fuliza by calling Safaricom on 100 if you prefer not to have it active on your account.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 8 — AGENT SAFETY -->
+  <div class="section-divider" id="agent">
+    <div class="section-num">8</div>
+    <div class="section-title-text">Staying Safe at an M-Pesa Agent</div>
+  </div>
+
+  <p class="body-text">M-Pesa agents are found across Kenya — in shops, kiosks, and market stalls displaying the green M-Pesa sign. They help you deposit cash into your M-Pesa, withdraw cash, and register new accounts. Here is how to use an agent safely.</p>
+
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Only use <strong>official M-Pesa agents</strong> displaying the current green and white Safaricom M-Pesa signage. If a sign looks old, faded, or unofficial, find another agent.</li>
+    <li><div class="step-num">2</div><strong>Never hand your phone to the agent.</strong> You should always enter your own PIN. A legitimate agent will never need to touch your phone to complete a transaction.</li>
+    <li><div class="step-num">3</div><strong>Cover the screen with your hand or body</strong> when entering your PIN. Be aware of people standing behind or beside you.</li>
+    <li><div class="step-num">4</div><strong>Count your cash carefully</strong> before leaving the agent. Once you walk away, it is difficult to dispute the amount.</li>
+    <li><div class="step-num">5</div><strong>Wait for your confirmation SMS</strong> before leaving. If you do not receive one within two minutes, call Safaricom on 100 before leaving the agent's location.</li>
+    <li><div class="step-num">6</div>If an agent asks for your PIN or claims there is a "problem with the system" that requires your PIN — <strong>leave immediately</strong> and call Safaricom on 100.</li>
+  </ol>
+
+  <div class="success-box">
+    <div class="sb-title">✅ Your Rights as an M-Pesa Customer</div>
+    <p>You have the right to refuse any agent who asks for your PIN. You have the right to count your money before leaving. You have the right to call Safaricom's free helpline (100) at any time if something feels wrong. A legitimate agent will never make you feel rushed or pressured.</p>
+  </div>
+
+  <!-- SECTION 9 — SCAMS -->
+  <div class="section-divider" id="scams">
+    <div class="section-num">9</div>
+    <div class="section-title-text">Protecting Yourself from Financial Scams</div>
+  </div>
+
+  <p class="body-text">Financial scams targeting older Kenyans are increasing. Here is what you must know to protect your money.</p>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ Golden Rules — Never Break These</div>
+    <ul>
+      <li><strong>NEVER share your M-Pesa PIN with anyone</strong> — not your children, not a Safaricom agent, not a bank officer. No legitimate person will ever ask for your PIN.</li>
+      <li>Never send money to someone claiming you have won a prize. This is always a trick.</li>
+      <li>Ignore messages saying your M-Pesa account has been suspended and you must call a number. Call Safaricom's official line on 100 or 0722 000100 only.</li>
+      <li>Never reverse a transaction for a stranger who "accidentally" sent you money. Call Safaricom first and let them handle it.</li>
+      <li>Do not click links in SMS messages claiming to be from your bank or Safaricom. Always go directly to the official app or call the official number.</li>
+      <li>Never give your bank card number, CVV number, or internet banking password to anyone over the phone or on WhatsApp.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 If You Think You Have Been Scammed</div>
+    <ul>
+      <li>Call Safaricom immediately on 100 (free) — they may be able to reverse the transaction if you act within minutes</li>
+      <li>Call your bank's 24-hour helpline immediately to freeze your account if needed</li>
+      <li>Report to your nearest police station or call the DCI on 0800 722 203 (toll-free)</li>
+      <li>Tell a trusted family member immediately so they can help you take action quickly</li>
+      <li>Report to the Communications Authority of Kenya on 0800 722 227 (free)</li>
+    </ul>
+  </div>
+
+  <div class="navy-banner">
+    <p>"Your money, your future. Technology puts powerful financial tools in your hands — and the knowledge to use them safely is your best protection."</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">I forgot my M-Pesa PIN. What do I do?</div>
+      <div class="faq-a">Dial *234# on your Safaricom phone and select "Change PIN." You will be asked to enter a new PIN of your choice. If you are unable to reset it yourself, visit your nearest Safaricom shop with your national ID card and they will reset it for you at no charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I check how much money is in my M-Pesa?</div>
+      <div class="faq-a">Dial *234*1# on your Safaricom phone. You will receive an SMS showing your M-Pesa balance. You can also dial *334#, select My Account, then Balance. Your balance is shown for free without any charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Someone sent money to my M-Pesa by mistake and is asking me to send it back. What do I do?</div>
+      <div class="faq-a">Do not send any money back directly. This is a common trick. The original transaction may be fake or reversed later, meaning you would lose your own money. Call Safaricom on 100 immediately, explain the situation, and let Safaricom handle the reversal through their official process. Never send money to a stranger for any reason.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is it safe to use mobile banking apps on my phone?</div>
+      <div class="faq-a">Yes — when set up correctly and used carefully. Always download your bank's app only from the official Google Play Store. Never download banking apps from links sent by SMS or WhatsApp. Set a strong PIN or fingerprint lock on your phone. Never use banking apps on someone else's phone. If your phone is lost or stolen, call your bank immediately to freeze the app.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the difference between M-Shwari and KCB M-Pesa?</div>
+      <div class="faq-a">Both are digital savings and loan products accessible through M-Pesa. M-Shwari is operated by NCBA Bank through Safaricom. KCB M-Pesa is operated by KCB Bank through Safaricom. Both let you save money and earn interest. KCB M-Pesa tends to offer larger loan amounts for users with strong M-Pesa usage history. You can have both active at the same time.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">My children want to help me manage my finances digitally but I am worried about giving them access to my accounts. Is this safe?</div>
+      <div class="faq-a">Your concern is valid. You should never share your M-Pesa PIN or banking passwords with anyone, including family members. Instead, ask your children to sit with you and guide you through transactions rather than doing them on your behalf. If you genuinely need someone to manage your finances, speak to your bank about formal arrangements like a mandate or power of attorney — these are safer and more accountable than sharing passwords.</div>
+    </div>
+
+  </div>
+
+  <!-- SHARE BANNER -->
+  <div class="share-banner">
+    <h2>"Financial independence, powered by technology."</h2>
+    <p>Share this guide with a parent or grandparent who wants to manage their finances more independently and safely.</p>
+    <div class="share-btns">
+      <a href="https://wa.me/?text=Financial%20technology%20guide%20for%20older%20adults%20in%20Kenya%3A%20https%3A%2F%2Fseniorcitizenstechhaven.netlify.app%2Ffinancial-technology-guide.html" target="_blank" class="share-btn">📲 Share on WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://seniorcitizenstechhaven.netlify.app/financial-technology-guide.html" target="_blank" class="share-btn">📘 Share on Facebook</a>
+      <a href="https://twitter.com/intent/tweet?text=Financial%20technology%20guide%20for%20older%20adults%20in%20Kenya%20by%20%40FinallyKayvoh&url=https://seniorcitizenstechhaven.netlify.app/financial-technology-guide.html" target="_blank" class="share-btn">𝕏 Share on X</a>
+    </div>
+  </div>
+
+  <!-- PODCAST -->
+  <div class="podcast-box">
+    <span class="pod-icon">🎧</span>
+    <p>Prefer listening? The Senior Citizens Tech Haven Podcast covers M-Pesa, mobile banking, and financial technology for older Kenyans. Available on <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank">Spotify</a>. Search "Senior Citizens Tech Haven."</p>
+  </div>
+
+  <!-- READ NEXT -->
+  <div class="read-next">
+    <h3>📖 Read Next</h3>
+    <ul>
+      <li><a href="./online-safety-article.html">How to Stay Safe Online in Kenya — A Guide for Older Adults</a></li>
+      <li><a href="./ecitizen-kenya-guide.html">How to Use eCitizen Kenya Step by Step — A Guide for Older Adults</a></li>
+      <li><a href="./tech-mental-health.html">How Technology Improves Mental Health and Wellbeing for Older Adults in Kenya</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="article-footer-nav">
+  <span class="footer-brand">© 2026 Senior Citizens Tech Haven · Kevin Jonathan Otieno · Nakuru, Kenya</span>
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="footer-link">← Back to Home</a>
+</div>
+
+<script>
+function toggleFaq(el) {
+  var answer = el.nextElementSibling;
+  var allAnswers = document.querySelectorAll('.faq-a');
+  allAnswers.forEach(function(a) { if (a !== answer) { a.classList.remove('open'); } });
+  answer.classList.toggle('open');
+}
+var first = document.querySelector('.faq-a');
+if (first) { first.classList.add('open'); }
+</script>
+</body>
+</html>

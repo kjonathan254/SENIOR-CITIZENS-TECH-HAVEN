@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenya Senior Digital Health Readiness Index 2026 | Senior Citizens Tech Haven</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1F4MQJKSG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z1F4MQJKSG');</script>
+  <meta name="description" content="Kenya scores 2.8/10 on the Senior Digital Health Readiness Index 2026. A research-based report on digital literacy, telemedicine, AI healthcare, and ageing in Kenya.">
+  <meta property="og:title" content="Kenya Senior Digital Health Readiness Index 2026">
+  <meta property="og:description" content="Kenya scores 2.8/10. Critical gaps in digital health access for older adults. Published by Senior Citizens Tech Haven (SCTH), Nakuru, Kenya.">
+  <meta property="og:image" content="https://seniorcitizenstechhaven.netlify.app/images/older-woman-learning-smartphone-kenya.png...">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #0f2044;
+      --forest-mid: #1a3566;
+      --leaf: #4a7fd4;
+      --gold: #c9962a;
+      --gold-light: #e8b84b;
+      --cream: #f8f6f0;
+      --warm-white: #fdfcf9;
+      --charcoal: #1a1a2e;
+      --mid-grey: #5a5a6a;
+      --soft-grey: #e4e2da;
+      --red-accent: #b8340a;
+      --score-critical: #c0392b;
+      --score-low: #d68910;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--forest); color: var(--cream); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(15,32,68,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,150,42,0.2);
+    }
+    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+    .nav-cta {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--gold); color: var(--forest); padding: 0.5rem 1.2rem;
+      border: none; cursor: pointer; text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; position: relative; overflow: hidden;
+    }
+    .hero-image-side {
+      position: relative; height: 100vh; overflow: hidden;
+    }
+    .hero-image-side img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+      filter: brightness(0.75) saturate(0.9);
+    }
+    .hero-image-side::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--forest) 100%),
+                  linear-gradient(to bottom, transparent 70%, rgba(15,32,68,0.6) 100%);
+    }
+    .hero-image-caption {
+      position: absolute; bottom: 1.5rem; left: 1.2rem; z-index: 5;
+      font-size: 0.65rem; color: rgba(255,255,255,0.5); font-style: italic;
+      max-width: 280px; line-height: 1.4;
+    }
+    .hero-text-side { padding: 8rem 4rem 4rem 3rem; position: relative; z-index: 2; }
+    .hero-label {
+      display: inline-block; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--gold); padding: 0.3rem 0.8rem; margin-bottom: 2rem;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      font-weight: 700; line-height: 1.12; color: #fff; margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease 0.25s both;
+    }
+    .hero-title em { font-style: italic; color: var(--gold-light); }
+    .hero-subtitle {
+      font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,0.78);
+      font-weight: 300; max-width: 480px; margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+    .hero-meta { display: flex; gap: 2rem; align-items: center; margin-bottom: 2.5rem; animation: fadeUp 0.8s ease 0.5s both; }
+    .hero-meta-item { display: flex; flex-direction: column; }
+    .meta-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.15rem; }
+    .meta-value { font-size: 0.88rem; color: rgba(255,255,255,0.85); }
+    .hero-divider { width: 40px; height: 1px; background: rgba(201,150,42,0.4); }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.6s both; }
+    .btn-primary {
+      background: var(--gold); color: var(--forest); padding: 0.85rem 2rem; font-size: 0.8rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 0.85rem 2rem; font-size: 0.8rem;
+      font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; background: transparent;
+      cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
+
+    /* ── SCORE BADGE ── */
+    .score-badge {
+      display: inline-flex; flex-direction: column; align-items: center;
+      background: var(--score-critical); border: 2px solid rgba(255,255,255,0.15);
+      padding: 0.8rem 1.4rem; margin-bottom: 2rem;
+      animation: fadeUp 0.8s ease 0.35s both;
+    }
+    .score-badge .score-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: #fff; line-height: 1;
+    }
+    .score-badge .score-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.8); margin-top: 0.2rem; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip { background: var(--gold); padding: 1.2rem 4rem; display: flex; gap: 0; overflow: hidden; }
+    .stat-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center; padding: 0 2rem;
+      border-right: 1px solid rgba(15,32,68,0.25);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: var(--forest); line-height: 1; }
+    .stat-desc { font-size: 0.72rem; color: var(--forest); font-weight: 500; text-align: center; margin-top: 0.3rem; max-width: 120px; line-height: 1.4; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 6rem 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 4rem; }
+    .section-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 2rem; }
+
+    /* ── ABOUT ── */
+    .about-section { background: var(--forest-mid); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-text p { font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 1.2rem; }
+    .about-text p strong { color: var(--gold-light); font-weight: 500; }
+    .concept-box {
+      background: rgba(15,32,68,0.6); border-left: 3px solid var(--gold); padding: 1.5rem 1.8rem; margin-top: 2rem;
+    }
+    .concept-box .term { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--gold-light); margin-bottom: 0.5rem; }
+    .concept-box p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.75); margin: 0; }
+
+    /* ── SCORECARD SECTION ── */
+    .scorecard-section { background: var(--forest); }
+    .scorecard-img-wrap {
+      margin-top: 3rem; border: 1px solid rgba(201,150,42,0.2);
+      overflow: hidden;
+    }
+    .scorecard-img-wrap img { width: 100%; display: block; }
+    .scorecard-note { font-size: 0.72rem; color: rgba(255,255,255,0.4); font-style: italic; margin-top: 0.8rem; text-align: center; }
+
+    /* ── DIMENSIONS GRID ── */
+    .dimensions-section { background: var(--forest-mid); }
+    .dim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .dim-card {
+      border: 1px solid rgba(201,150,42,0.2); padding: 1.8rem;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .dim-card:hover { border-color: rgba(201,150,42,0.6); background: rgba(255,255,255,0.03); }
+    .dim-number { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: rgba(201,150,42,0.3); font-weight: 700; line-height: 1; margin-bottom: 0.8rem; }
+    .dim-title { font-size: 0.88rem; font-weight: 500; color: #fff; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .dim-score {
+      display: inline-block; font-size: 0.75rem; font-weight: 600;
+      padding: 0.15rem 0.6rem; margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+    }
+    .dim-score.critical { background: rgba(192,57,43,0.25); color: #e87465; border: 1px solid rgba(192,57,43,0.4); }
+    .dim-score.low { background: rgba(214,137,16,0.25); color: #f0c040; border: 1px solid rgba(214,137,16,0.4); }
+    .dim-desc { font-size: 0.82rem; line-height: 1.6; color: rgba(255,255,255,0.6); }
+    .dim-hard-truth {
+      margin-top: 1rem; padding: 0.8rem; background: rgba(184,52,10,0.12);
+      border-left: 2px solid var(--red-accent); font-size: 0.78rem;
+      color: rgba(255,255,255,0.65); line-height: 1.5;
+    }
+    .dim-hard-truth strong { color: var(--red-accent); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.3rem; }
+
+    /* ── IMAGE BREAK SECTIONS ── */
+    .image-break { position: relative; overflow: hidden; height: 420px; }
+    .image-break img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.7) saturate(0.85); }
+    .image-break-overlay {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 3rem 4rem;
+      background: linear-gradient(to top, rgba(15,32,68,0.85) 0%, transparent 60%);
+    }
+    .image-break-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.5rem; }
+    .image-break-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem,2.5vw,2rem); font-weight: 700; color: #fff; max-width: 700px; line-height: 1.25; }
+    .image-break-caption { font-size: 0.65rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem; font-style: italic; }
+
+    /* ── TABLE SECTION ── */
+    .table-section { background: var(--charcoal); }
+    .contrast-table { width: 100%; border-collapse: collapse; margin-top: 2.5rem; }
+    .contrast-table th { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); padding: 0.8rem 1.2rem; text-align: left; border-bottom: 1px solid rgba(201,150,42,0.3); }
+    .contrast-table td { font-size: 0.85rem; padding: 0.8rem 1.2rem; color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+    .contrast-table tr:hover td { background: rgba(255,255,255,0.03); }
+    .td-bold { font-weight: 500; color: rgba(255,255,255,0.95); }
+    .td-gap { color: var(--red-accent) !important; font-weight: 500; }
+
+    /* ── ROADMAP ── */
+    .roadmap-section { background: var(--forest); }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 3rem; }
+    .roadmap-item {
+      border: 1px solid rgba(201,150,42,0.15); padding: 1.8rem;
+      transition: border-color 0.2s;
+    }
+    .roadmap-item:hover { border-color: rgba(201,150,42,0.4); }
+    .roadmap-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(201,150,42,0.15); font-weight: 700; line-height: 1; margin-bottom: 0.6rem; }
+    .roadmap-title { font-size: 0.88rem; font-weight: 500; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .roadmap-desc { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0.8rem; }
+    .roadmap-target { font-size: 0.75rem; color: rgba(255,255,255,0.45); padding-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .roadmap-target strong { color: var(--leaf); }
+
+    /* ── EMAIL GATE ── */
+    .email-section { background: var(--charcoal); }
+    .email-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .email-copy .section-title { margin-bottom: 1rem; }
+    .email-copy p { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+    .email-form { display: flex; flex-direction: column; gap: 1rem; }
+    .email-form input {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; padding: 0.9rem 1.2rem; font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem; outline: none; transition: border-color 0.2s;
+    }
+    .email-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .email-form input:focus { border-color: var(--gold); }
+    .form-privacy { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: -0.3rem; }
+    .form-divider { display: flex; align-items: center; gap: 1rem; color: rgba(255,255,255,0.3); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .form-divider::before, .form-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.12); }
+    .btn-read { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); padding: 0.85rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.2s; }
+    .btn-read:hover { border-color: #fff; color: #fff; }
+    .success-msg { display: none; background: rgba(74,127,212,0.15); border: 1px solid var(--leaf); padding: 1rem 1.2rem; font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    .whitepaper-cover {
+      background: linear-gradient(145deg, #0f2044, #1a3566); border: 1px solid rgba(201,150,42,0.3);
+      padding: 3rem 2.5rem; position: relative; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .cover-deco { position: absolute; top: 0; right: 0; width: 120px; height: 120px; background: rgba(201,150,42,0.08); border-left: 1px solid rgba(201,150,42,0.2); border-bottom: 1px solid rgba(201,150,42,0.2); }
+    .cover-tag { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.5rem; }
+    .cover-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 0.8rem; }
+    .cover-subtitle { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 2rem; line-height: 1.5; }
+    .cover-meta { font-size: 0.72rem; color: rgba(255,255,255,0.45); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
+    .cover-pages { position: absolute; bottom: 1.5rem; right: 1.5rem; font-size: 0.65rem; color: var(--gold); opacity: 0.7; }
+
+    /* ── AUTHOR ── */
+    .author-section { background: var(--forest); border-top: 1px solid rgba(201,150,42,0.15); }
+    .author-grid { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; }
+    .author-initials {
+      width: 80px; height: 80px; background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: var(--forest); flex-shrink: 0;
+    }
+    .author-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .author-role { font-size: 0.78rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
+    .author-bio { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.65); max-width: 560px; }
+    .author-links { display: flex; gap: 1.5rem; margin-top: 1.2rem; }
+    .author-link { font-size: 0.75rem; color: var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(201,150,42,0.3); padding-bottom: 1px; transition: border-color 0.2s; }
+    .author-link:hover { border-color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer { background: rgba(0,0,0,0.4); padding: 2rem 4rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+    .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.3); }
+    .share-bar { display: flex; gap: 1rem; align-items: center; }
+    .share-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.4); }
+    .share-btn { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.7rem; cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .share-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-image-side { height: 55vh; }
+      .hero-text-side { padding: 3rem 1.5rem 3rem; }
+      .about-grid, .email-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .dim-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .stats-strip { flex-wrap: wrap; gap: 1rem; padding: 1.5rem; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(15,32,68,0.2); padding-bottom: 1rem; }
+      .container { padding: 0 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .image-break { height: 280px; }
+      .image-break-overlay { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="https://seniorcitizenstechhaven.netlify.app" class="nav-brand">SCTH Research</a>
+    <a href="#get-report" class="nav-cta">Get the Report</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image-side">
+      <img src="images/extracted/kenya-digital-health-readiness-2.webp" alt="Older Kenyan woman using a Safaricom smartphone near an M-Pesa agent shop — symbolic image representing digital access challenges for older adults in Kenya">
+      <div class="hero-image-caption">Symbolic image: AI-generated for illustrative purposes. Not attributed to any real individual or institution.</div>
+    </div>
+    <div class="hero-text-side">
+      <div class="hero-label">Research Report · June 2026</div>
+      <div class="score-badge">
+        <span class="score-num">2.8<span style="font-size:1.6rem">/10</span></span>
+        <span class="score-label">Overall Readiness Score — Critical Gaps</span>
+      </div>
+      <h1 class="hero-title">Kenya Senior<br><em>Digital Health</em><br>Readiness Index</h1>
+      <p class="hero-subtitle">Kenya has built Africa's most celebrated mobile economy — but for Kenyans aged 60 and above, the digital health revolution has not arrived. This index documents the gap.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="meta-label">Author</span>
+          <span class="meta-value">Kevin Jonathan Otieno</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item">
+          <span class="meta-label">Platform</span>
+          <span class="meta-value">Senior Citizens Tech Haven</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item">
+          <span class="meta-label">Location</span>
+          <span class="meta-value">Nakuru, Kenya</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#get-report" class="btn-primary">Download the Report</a>
+        <a href="https://seniorcitizenstechhaven.netlify.app" class="btn-outline">Visit SCTH →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-number">2.8</span>
+      <span class="stat-desc">out of 10 — overall readiness score</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">45%</span>
+      <span class="stat-desc">of Kenyan seniors have no formal education</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">&lt;5</span>
+      <span class="stat-desc">in 10 Kenyans over 70 own a phone</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">0</span>
+      <span class="stat-desc">formal geriatric training pathways in Kenya</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">14%</span>
+      <span class="stat-desc">of older persons hold health insurance</span>
+    </div>
+  </div>
+
+  <!-- ABOUT / THE PROBLEM -->
+  <section class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">The Problem</div>
+          <h2 class="section-title">Kenya's Digital Health Revolution Has Left Older Adults Behind.</h2>
+          <p>Kenya has earned global recognition as the "Silicon Savannah." Mobile money, expanding internet infrastructure, and digital government services have placed it at the forefront of Africa's digital transformation. But <strong>digital progress has not been distributed equally.</strong></p>
+          <p>This report evaluates Kenya's readiness to support older adults — those aged 60 and above — through digital health technologies, telemedicine services, artificial intelligence applications, and age-friendly healthcare systems. The findings reveal a <strong>structural implementation gap</strong> between national ambitions and community realities.</p>
+          <p>While policy frameworks exist, including the Digital Health Act (2023), the National eHealth Policy (2016–2030), and the Healthy Ageing and Older Persons' Health Strategy (2021–2026), the benefits on the ground remain critically limited.</p>
+        </div>
+        <div>
+          <div class="concept-box">
+            <div class="term">"Managed Dependency"</div>
+            <p>The condition of being statistically included in digital systems while remaining practically dependent on younger relatives for navigation. Kenya reports strong mobile penetration figures — but many older adults who are "counted" cannot independently send money, check a balance, book a health appointment, or use eCitizen services. They are counted. They are not empowered.</p>
+          </div>
+          <div class="concept-box" style="margin-top:1rem; border-left-color: var(--leaf);">
+            <div class="term" style="color:var(--leaf);">Why This Report Matters</div>
+            <p>Digital health readiness is not a technical metric — it is a public health issue, a social protection issue, and a national development issue. As Kenya's population of older adults grows, exclusion from digital health tools will compound inequality in access to healthcare services and outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORECARD IMAGE -->
+  <section class="section scorecard-section">
+    <div class="container">
+      <div class="section-label">The Index</div>
+      <h2 class="section-title">Six Dimensions. Six Critical Gaps.</h2>
+      <p style="font-size:1rem; color:rgba(255,255,255,0.7); line-height:1.7; max-width:660px; margin-bottom:1rem;">The Kenya Senior Digital Health Readiness Index evaluates six dimensions critical to digital health participation among older adults. Scores are qualitative advocacy indicators benchmarked against policy availability, implementation maturity, and measurable outcomes.</p>
+      <div class="scorecard-img-wrap">
+        <img src="images/extracted/kenya-digital-health-readiness-3.webp" alt="Kenya Senior Digital Health Readiness Index 2026 Scorecard showing scores across six dimensions: Digital Literacy 2.5, Internet Access 4.0, Telemedicine Access 3.0, Senior-Friendly Healthcare 2.0, AI Adoption in Healthcare 3.5, Digital Accessibility 2.0. Overall readiness score: 2.8/10 — Critical Gaps.">
+      </div>
+      <p class="scorecard-note">Source: SCTH Research 2026. Scores compiled from Kenya Ministry of Health Strategy (2024), Statista, Nation Media, and digital health reports. Scoring is qualitative based on available data and policy analysis.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK 1: Global vs Local -->
+  <div class="image-break">
+    <img src="images/extracted/kenya-digital-health-readiness-4.webp" alt="Side-by-side comparison: advanced predictive AI care in a modern European facility versus older Kenyans waiting in a queue at an underfunded public health clinic in Nakuru County — symbolic image illustrating the global healthcare technology divide">
+    <div class="image-break-overlay">
+      <div class="image-break-label">The Global Gap</div>
+      <div class="image-break-text">"While the Global North builds AI-powered predictive care, Kenyan seniors wait in queues at underfunded dispensaries."</div>
+      <div class="image-break-caption">Symbolic image: AI-generated for illustrative purposes. Not attributed to any real institution or individual.</div>
+    </div>
+  </div>
+
+  <!-- SIX DIMENSIONS -->
+  <section class="section dimensions-section">
+    <div class="container">
+      <div class="section-label">Detailed Findings</div>
+      <h2 class="section-title">The Six Dimensions of Readiness</h2>
+      <div class="dim-grid">
+
+        <div class="dim-card">
+          <div class="dim-number">01</div>
+          <div class="dim-title">Digital Literacy</div>
+          <div class="dim-score critical">2.5 / 10</div>
+          <div class="dim-desc">Kenya's Ajira Digital programme has trained 50,000 freelancers but targets youth, women, refugees, and ASAL communities. There is no mention of older adults in its curriculum. The Ministry of Health's Healthy Ageing Strategy (2021–2026) acknowledges that "data on ageing and health is limited." Globally, elderly digital literacy is approximately 40% lower than youth levels (OECD, 2023).</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>Kenya has no national, senior-focused digital literacy programme. Older adults remain largely invisible in the national digital transformation agenda.</div>
+        </div>
+
+        <div class="dim-card">
+          <div class="dim-number">02</div>
+          <div class="dim-title">Internet Access</div>
+          <div class="dim-score low">4.0 / 10</div>
+          <div class="dim-desc">National mobile phone ownership stands at 53.7% (CA/KNBS 2023/24), but disaggregated by age the picture shifts dramatically. UN Women Kenya data shows mobile ownership peaks at 85% for ages 35–39 but falls to just 45% for Kenyans aged 70+. Within that bracket, women face even deeper exclusion. Additionally, 11.3% of Kenyans use phones without owning them — highlighting shared-device inequality.</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>For every 10 Kenyans over 70, fewer than 5 own a phone. The devices powering modern digital health are simply not in older adults' hands.</div>
+        </div>
+
+        <div class="dim-card">
+          <div class="dim-number">03</div>
+          <div class="dim-title">Telemedicine Access</div>
+          <div class="dim-score low">3.0 / 10</div>
+          <div class="dim-desc">Kenya's Digital Health Act (2023) established the Digital Health Agency and deployed the Electronic Community Health Information System (eCHIS) — equipping 107,000 Community Health Promoters with devices by mid-2024. However, an investigative report by Nation Media (December 2025) and reports from Living Goods exposed deep operational failures: devices that freeze and crash, data costs paid out of pocket, and nationwide system outages that forced a fallback to paper tools for nearly two consecutive months in early 2025.</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>Kenya has policies and distributed devices. But the infrastructure, technical support, and connectivity to make telemedicine operational for rural older adults do not exist at scale.</div>
+        </div>
+
+        <div class="dim-card">
+          <div class="dim-number">04</div>
+          <div class="dim-title">Senior-Friendly Healthcare</div>
+          <div class="dim-score critical">2.0 / 10</div>
+          <div class="dim-desc">Kenya has zero formal training pathways for geriatric medicine or gerontology in medical colleges. No specialised care units for older persons exist within public health facilities. Only 14% of older persons hold health insurance, and most insurance frameworks strictly exclude chronic non-communicable diseases — which account for over 50% of Kenyan hospital admissions. The Inua Jamii safety net pays KES 2,000 per month, unadjusted for inflation in over a decade.</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>While the constitution guarantees elder care, Kenya lacks geriatric training, specialised hospital units, chronic disease coverage, and social protection sufficient to fund healthcare.</div>
+        </div>
+
+        <div class="dim-card">
+          <div class="dim-number">05</div>
+          <div class="dim-title">AI Adoption in Healthcare</div>
+          <div class="dim-score low">3.5 / 10</div>
+          <div class="dim-desc">Kenya hosts a genuinely innovative AI cluster including IBM Research Africa (epidemiological tracking), Wazi AI (mental health chatbots), Medic Mobile (patient monitoring), and LifeBank Kenya (blood supply chain optimisation). The AI in Health Kenya Convergence 2026 formalised a Community of Practice. However, a critical gap remains: zero senior-specific AI health applications. The tech ecosystem does not view older adults as a viable user group.</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>Kenya has exceptional local AI talent. But older adults are entirely excluded from predictive care, fall detection, or vocal health tools designed for their needs.</div>
+        </div>
+
+        <div class="dim-card">
+          <div class="dim-number">06</div>
+          <div class="dim-title">Digital Accessibility</div>
+          <div class="dim-score critical">2.0 / 10</div>
+          <div class="dim-desc">In May 2022, KEBS launched Africa's first Inclusivity ICT Standards (DKS 2952-1:2021). In May 2025, President Ruto signed the Persons with Disabilities Act 2025. However, implementation is bound to a slow 5-year rollout into 2027–2030. Current health applications remain English-centric and lack support for low vision, hearing impairments, or low dexterity. There are no active enforcement mechanisms or senior design panels.</div>
+          <div class="dim-hard-truth"><strong>The Hard Truth</strong>Accessibility standards exist within government gazettes. But active market enforcement and age-inclusive UX design have not begun.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK 2: The Digital Divide -->
+  <div class="image-break">
+    <img src="images/extracted/kenya-digital-health-readiness-5.webp" alt="Side-by-side comparison: a young Kenyan professional coding in a modern Nairobi office (the Ajira Digital demographic) versus an older Kenyan rural woman using a smartphone at a homestead (the excluded generation) — symbolic image illustrating Kenya's age-based digital divide">
+    <div class="image-break-overlay">
+      <div class="image-break-label">The Age Divide</div>
+      <div class="image-break-text">"Kenya's digital economy was built for the young. The generation that built the country was not included in the blueprint."</div>
+      <div class="image-break-caption">Symbolic image: AI-generated for illustrative purposes. Not attributed to any real individual or institution.</div>
+    </div>
+  </div>
+
+  <!-- CONTRAST TABLE -->
+  <section class="section table-section">
+    <div class="container">
+      <div class="section-label">Why Global Models Fail Here</div>
+      <h2 class="section-title">The Assumptions That Don't Hold in Kenya</h2>
+      <table class="contrast-table">
+        <thead>
+          <tr>
+            <th>Assumption</th>
+            <th>Global North Reality</th>
+            <th>Kenya Reality</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-bold">Primary device</td>
+            <td>Laptop or tablet</td>
+            <td class="td-gap">Smartphone (often shared, hand-me-down)</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Internet access</td>
+            <td>Home broadband (fixed-line)</td>
+            <td class="td-gap">Mobile data — expensive, unreliable, metered</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Literacy baseline</td>
+            <td>Basic literacy assumed</td>
+            <td class="td-gap">45% of Kenyan seniors have no formal education</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Trust model</td>
+            <td>Institutional (banks, government)</td>
+            <td class="td-gap">Personal (family, church, community leader)</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Language</td>
+            <td>English only</td>
+            <td class="td-gap">Kiswahili, English, 40+ local languages</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Geriatric care</td>
+            <td>Specialised training pathways</td>
+            <td class="td-gap">Zero certified geriatric specialists in public sector</td>
+          </tr>
+          <tr>
+            <td class="td-bold">Economic model</td>
+            <td>Government or corporate funded</td>
+            <td class="td-gap">Cost of data, devices, and time must be absorbed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK 3: AI Tools -->
+  <div class="image-break">
+    <img src="images/extracted/kenya-digital-health-readiness-6.webp" alt="Symbolic image: older Kenyan woman using a smartphone with AI-generated overlay of voice recognition and digital health icons including microphone, magnifier, and the Kiswahili word 'Kusikiza Sauti' (Voice Listening) — representing the potential of voice-first AI tools for older adults">
+    <div class="image-break-overlay">
+      <div class="image-break-label">The Opportunity</div>
+      <div class="image-break-text">"Voice-first, Swahili-native AI health tools could bridge the gap — but none have been built yet."</div>
+      <div class="image-break-caption">Symbolic image: AI-generated for illustrative purposes. Not attributed to any real individual or institution.</div>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <section class="section roadmap-section">
+    <div class="container">
+      <div class="section-label">The Path Forward</div>
+      <h2 class="section-title">Strategic Milestones to 2028</h2>
+      <p style="font-size:1rem; color:rgba(255,255,255,0.7); line-height:1.7; max-width:660px; margin-bottom:1rem;">Moving Kenya's score from a critical 2.8 to a baseline 5.0 requires targeted, measurable action across all six pillars. The following milestones define the minimum threshold for meaningful inclusion.</p>
+      <div class="roadmap-grid">
+        <div class="roadmap-item">
+          <div class="roadmap-num">01</div>
+          <div class="roadmap-title">Digital Literacy</div>
+          <div class="roadmap-desc">Partner with Ajira Digital to establish elder-specific cohorts and deploy voice-first Kiswahili learning modules across county adult literacy hubs.</div>
+          <div class="roadmap-target"><strong>Target:</strong> 50,000 digitally literate older adults by 2028</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">02</div>
+          <div class="roadmap-title">Internet Access</div>
+          <div class="roadmap-desc">Introduce smartphone subsidies paired with zero-rated senior data bundles via Safaricom and Airtel, integrated into Inua Jamii distribution channels.</div>
+          <div class="roadmap-target"><strong>Target:</strong> 70% device ownership among persons aged 70+</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">03</div>
+          <div class="roadmap-title">Telemedicine Infrastructure</div>
+          <div class="roadmap-desc">Formalise localised technical helpdesks, mandate county budgets for CHP device upgrades, and compensate data costs for eCHIS synchronisation.</div>
+          <div class="roadmap-target"><strong>Target:</strong> Functional telemedicine for 60% of rural older adults</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">04</div>
+          <div class="roadmap-title">Geriatric Healthcare</div>
+          <div class="roadmap-desc">Introduce formal gerontology modules into the Kenya Medical Training College (KMTC) curriculum and establish dedicated elder care units in county referral hubs.</div>
+          <div class="roadmap-target"><strong>Target:</strong> At least 500 certified geriatric care professionals</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">05</div>
+          <div class="roadmap-title">AI Healthcare Alignment</div>
+          <div class="roadmap-desc">Incentivise tech startups to build localised voice-first health diagnostics, Kiswahili-driven conversational agents, and automated medication management systems.</div>
+          <div class="roadmap-target"><strong>Target:</strong> 3 senior-specific AI health tools rolled out nationally</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">06</div>
+          <div class="roadmap-title">Accessibility Enforcement</div>
+          <div class="roadmap-desc">Accelerate enforcement timelines for KEBS DKS 2952-1 standards and require all public health applications to pass senior accessibility audits before deployment.</div>
+          <div class="roadmap-target"><strong>Target:</strong> 100% compliance for public digital health portals by 2028</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BREAK 4: Connectivity Failure -->
+  <div class="image-break">
+    <img src="images/extracted/kenya-digital-health-readiness-7.webp" alt="A smartphone displaying 'Connection Failed: Server Timeout' resting against paper health records on a wooden desk in a rural setting — symbolic image representing the connectivity failures undermining Kenya's community health digital infrastructure">
+    <div class="image-break-overlay">
+      <div class="image-break-label">The Infrastructure Gap</div>
+      <div class="image-break-text">"107,000 Community Health Promoters were given devices. The system went down for two consecutive months."</div>
+      <div class="image-break-caption">Symbolic image: AI-generated for illustrative purposes. Not attributed to any real institution.</div>
+    </div>
+  </div>
+
+  <!-- EMAIL / DOWNLOAD GATE -->
+  <section class="section email-section" id="get-report">
+    <div class="container">
+      <div class="email-wrap">
+        <div class="email-copy">
+          <div class="section-label">Access the Research</div>
+          <h2 class="section-title">Read the Full Report</h2>
+          <p>The complete Kenya Senior Digital Health Readiness Index 2026 includes detailed source citations, the full scoring methodology, policy analysis across all six dimensions, and the complete strategic roadmap to 2028. It is designed for policymakers, NGOs, journalists, healthcare practitioners, and advocates working on digital inclusion for older adults in Kenya and across Africa.</p>
+          <p style="color:rgba(255,255,255,0.5); font-size:0.8rem;">Free to read. Enter your email below to receive a PDF copy. Or read the full document online at the link below.</p>
+          <div class="email-form">
+            <input type="email" id="emailInput" placeholder="your@email.com">
+            <button class="btn-primary" onclick="handleEmail()" style="width:100%;">Send Me the PDF</button>
+            <p class="form-privacy">No spam. Your email is used only to send this report.</p>
+            <div class="success-msg" id="successMsg">✓ Done! Check your inbox. You can also read the full report online below.</div>
+            <div class="form-divider">or</div>
+            <a href="./Kenya-Senior-Digital-Health-Readiness-Index-2026.pdf" target="_blank" class="btn-read">Read the Full PDF →</a>
+          </div>
+        </div>
+        <div class="email-visual">
+          <div class="whitepaper-cover">
+            <div class="cover-deco"></div>
+            <div class="cover-tag">Research Report · Senior Citizens Tech Haven · 2026</div>
+            <div class="cover-title">Kenya Senior Digital Health Readiness Index 2026</div>
+            <div class="cover-subtitle">A Research-Based Assessment of Digital Health Access, Inclusion, and Readiness for Older Adults in Kenya</div>
+            <div class="cover-meta">
+              Kevin Jonathan Otieno · Nakuru, Kenya<br>
+              6 Dimensions · Policy Analysis · Strategic Roadmap to 2028
+            </div>
+            <div class="cover-pages">SCTH · 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="section author-section">
+    <div class="container">
+      <div class="section-label">About the Author</div>
+      <div class="author-grid">
+        <div class="author-initials">KJO</div>
+        <div>
+          <div class="author-name">Kevin Jonathan Otieno</div>
+          <div class="author-role">Founder, Senior Citizens Tech Haven · Nakuru, Kenya</div>
+          <div class="author-bio">Kevin holds a Diploma in Television Programmes Production and a BA in Communications and Public Administration. He founded Senior Citizens Tech Haven (SCTH) — a digital literacy platform for older Kenyans — and rebuilt it in 2026 as a full Progressive Web App with AI companion Elsah. He is also the creator of SautiSahihi Civic Edition, a civic technology PWA for Kenyan seniors, and the founder of Elmac Communications Limited, an AI-powered digital presence agency for Kenyan SMEs.</div>
+          <div class="author-links">
+            <a href="https://seniorcitizenstechhaven.netlify.app" class="author-link">SCTH Website</a>
+            <a href="https://sauti-sahihi-civic-edu-app.vercel.app" class="author-link">SautiSahihi Civic</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Senior Citizens Tech Haven · Nakuru, Kenya · Est. 2024</div>
+    <div class="share-bar">
+      <span class="share-label">Share</span>
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text=Kenya+scores+2.8/10+on+the+Senior+Digital+Health+Readiness+Index+2026.+Critical+gaps+in+digital+health+access+for+older+adults.&url=https://seniorcitizenstechhaven.netlify.app/kenya-digital-health-readiness.html" target="_blank" title="X / Twitter">𝕏</a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://seniorcitizenstechhaven.netlify.app/kenya-digital-health-readiness.html" target="_blank" title="LinkedIn">in</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://seniorcitizenstechhaven.netlify.app/kenya-digital-health-readiness.html" target="_blank" title="Facebook">f</a>
+    </div>
+    <div class="footer-copy">© 2026 Kevin Jonathan Otieno · Senior Citizens Tech Haven</div>
+  </footer>
+
+  <script>
+    function handleEmail() {
+      const email = document.getElementById('emailInput').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('emailInput').style.borderColor = '#b8340a';
+        return;
+      }
+      document.getElementById('emailInput').style.borderColor = 'rgba(74,127,212,0.6)';
+      document.getElementById('successMsg').style.display = 'block';
+      console.log('Email captured:', email);
+      setTimeout(() => {
+        window.open('./Kenya-Senior-Digital-Health-Readiness-Index-2026.pdf', '_blank');
+      }, 800);
+    }
+
+    // Scroll-triggered fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.dim-card, .roadmap-item, .concept-box, .author-grid').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
