@@ -12,11 +12,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Tech Haven">
   <meta name="msapplication-TileColor" content="#0f2044">
-  <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+  <meta name="msapplication-TileImage" content="/icon/icon-144x144.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="/icon/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon/icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icon/icon-72x72.png">
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!--  END PWA TAGS                                                 -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -1222,7 +1222,7 @@
   <div class="container">
     <div class="section-label">Learn</div>
     <h2 class="section-title" id="learn-heading">Articles &amp; Guides</h2>
-    <p class="section-intro">14 free guides covering everything a Kenyan senior needs to navigate the digital world — updated for 2026.</p>
+    <p class="section-intro">15 free guides covering everything a Kenyan senior needs to navigate the digital world — updated for 2026.</p>
 
     <div class="articles-tabs" role="tablist" aria-label="Filter articles by topic">
       <button class="tab-btn active" onclick="filterArticles('all', this)" role="tab" aria-selected="true">All Topics</button>
@@ -1641,7 +1641,7 @@
       <p>We use Google AdSense to display advertisements on our website. Google AdSense uses cookies to serve ads based on your prior visits to our website or other websites. You can opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" style="color:#0f2044;">Google Ads Settings</a>. Our use of advertising helps us keep all content on Senior Citizens Tech Haven free of charge.</p>
 
       <h3 style="font-family:'Playfair Display',serif; color:#0f2044; margin: 1.75rem 0 0.6rem;">6. Elsah AI Assistant</h3>
-      <p>Our Elsah AI chat feature is powered by BytePlus ModelArk. Questions you type into the chat are processed securely via our server and sent to ModelArk's AI service to generate responses. We do not store your chat conversations on our servers. Please do not share sensitive personal information such as your ID number, M-Pesa PIN, or bank details through the chat.</p>
+      <p>Our Elsah AI chat feature is powered by Groq (GroqCloud). Questions you type into the chat are processed securely via our server and sent to Groq's AI service to generate responses. We do not store your chat conversations on our servers. Please do not share sensitive personal information such as your ID number, M-Pesa PIN, or bank details through the chat.</p>
 
       <h3 style="font-family:'Playfair Display',serif; color:#0f2044; margin: 1.75rem 0 0.6rem;">7. Third Party Links</h3>
       <p>Our website contains links to external websites including Google Sites, Spotify, LinkedIn, and X (Twitter). We are not responsible for the privacy practices of these external sites. We encourage you to read their privacy policies when you visit them.</p>
@@ -1714,7 +1714,7 @@
     });
   }
 
-  // Elsah chat — connected to /api/elsah (Netlify function → ModelArk)
+  // Elsah chat — connected to /api/elsah (Netlify function → Groq)
   let elsahHistory = [];
   let elsahBusy = false;
 
@@ -1779,13 +1779,13 @@
       loading.classList.remove('visible');
       const errBubble = document.createElement('div');
       errBubble.className = 'chat-msg elsah';
-      errBubble.textContent = "I'm taking a short break right now, but I'll be back soon! In the meantime, you can:
+      errBubble.textContent = `I'm taking a short break right now, but I'll be back soon! In the meantime, you can:
 
 • Browse our free guides below
 • Listen to our podcast episodes
 • Call us on 0115 258 958 for immediate help
 
-Thank you for your patience! 🙏";
+Thank you for your patience! 🙏`;
       messages.appendChild(errBubble);
     }
 
@@ -2063,9 +2063,6 @@ function updateTTSButton(icon, text) {
 function updateTTSStatus(message) {
   const btnText = document.getElementById('tts-hero-text');
   if (btnText) btnText.textContent = message;
-}
-
-
 }
 
 function getReadableText() {
