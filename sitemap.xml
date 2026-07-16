@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  HOMEPAGE                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  GETTING STARTED ARTICLES                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/phone-settings-seniors.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/smartphones-tablets-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/email-account-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/articles.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/sim-swap-fraud-protection-guide.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/africa-aging-population-healthcare-technology-families.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/tech-revolution-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  GOVERNMENT SERVICES                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/ecitizen-kenya-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  ONLINE SAFETY ARTICLES                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/online-safety-article.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  HEALTH & WELLNESS ARTICLES                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/health-wellness-tools.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/tech-mental-health.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/kenya-digital-health-readiness.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  FINANCE & M-PESA ARTICLES                                 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/financial-technology-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/digital-business-50-plus.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  AI & FUTURE TECH ARTICLES                                 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/ai-rise-kenya-guide.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/ai-advantage-kenya-business.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  TOOLS & SPECIAL FEATURES                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/the-empty-room.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  NEW ARTICLES (2026)                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/whatsapp-mastery-seniors-kenya.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

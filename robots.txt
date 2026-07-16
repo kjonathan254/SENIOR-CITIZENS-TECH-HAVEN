@@ -1,0 +1,9 @@
+# robots.txt — Senior Citizens Tech Haven
+# https://seniorcitizenstechhaven.netlify.app
+
+User-agent: *
+Allow: /
+Disallow: /api/          # Elsah AI backend — no need to crawl
+Disallow: /scth-content-generator.html  # internal tool, not public content
+
+Sitemap: https://seniorcitizenstechhaven.netlify.app/sitemap.xml
