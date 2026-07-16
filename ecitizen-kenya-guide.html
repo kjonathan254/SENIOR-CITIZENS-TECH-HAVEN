@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Learn how to use eCitizen Kenya step by step. Create your account, apply for a passport, birth certificate, driving licence and more. A plain language guide for older adults in Kenya."/>
+<meta name="keywords" content="eCitizen Kenya how to use, eCitizen Kenya step by step, eCitizen Kenya older adults, government services Kenya online, Huduma Centre Kenya, passport application Kenya, eCitizen 2026"/>
+<meta property="og:title" content="How to Use eCitizen Kenya Step by Step — A Guide for Older Adults"/>
+<meta property="og:description" content="Access government services from your phone or computer. No more long queues. A plain language guide for older Kenyans."/>
+<meta property="og:url" content="https://seniorcitizenstechhaven.netlify.app/ecitizen-kenya-guide.html"/>
+<title>How to Use eCitizen Kenya Step by Step | Senior Citizens Tech Haven</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1F4MQJKSG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z1F4MQJKSG');</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0f2044;
+  --navy-mid:#1a3566;
+  --gold:#c9962a;
+  --gold-light:#e8b84b;
+  --gold-pale:#fdf3dc;
+  --cream:#f8f6f0;
+  --warm-white:#fdfcf9;
+  --charcoal:#1a1a2e;
+  --mid-grey:#555;
+  --soft-grey:#e4e2da;
+  --red:#c0392b;
+  --red-light:#fdf0f0;
+  --green:#16a34a;
+  --green-light:#f0fdf4;
+  --kenya-red:#be0027;
+  --kenya-green:#006600;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--warm-white);color:var(--charcoal);font-size:18px;line-height:1.75;overflow-x:hidden;}
+
+/* NAV */
+.article-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px;box-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-logo{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--navy);}
+.nav-site-name{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:700;color:#fff;letter-spacing:0.02em;}
+.nav-back{color:rgba(255,255,255,0.7);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;display:flex;align-items:center;gap:0.4rem;transition:color 0.2s;}
+.nav-back:hover{color:#fff;}
+
+/* HERO */
+.article-hero{margin-top:60px;position:relative;height:72vh;min-height:500px;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,32,68,0.25) 0%,rgba(15,32,68,0.55) 45%,rgba(15,32,68,0.94) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:3rem 2rem 2.5rem;max-width:900px;margin:0 auto;}
+.article-category{display:inline-block;background:var(--kenya-red);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:50px;margin-bottom:1rem;}
+.hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:0.75rem;}
+.hero-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-family:'DM Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.65);}
+.hero-meta span{display:flex;align-items:center;gap:0.4rem;}
+
+/* LAYOUT */
+.article-layout{max-width:880px;margin:0 auto;padding:0 1.5rem 5rem;}
+
+/* AUTHOR BOX */
+.author-box{display:flex;align-items:center;gap:1.25rem;background:var(--cream);border-radius:14px;padding:1.5rem;margin:2.5rem 0;border:1px solid var(--soft-grey);}
+.author-avatar{width:60px;height:60px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);flex-shrink:0;}
+.author-info h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.2rem;}
+.author-info p{font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--mid-grey);line-height:1.5;}
+
+/* TOC */
+.toc{background:var(--cream);border-radius:14px;padding:1.5rem 2rem;margin:0 0 2rem;border:1px solid var(--soft-grey);}
+.toc h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:1rem;}
+.toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;}
+.toc li{font-family:'DM Sans',sans-serif;font-size:0.85rem;}
+.toc a{color:var(--navy);text-decoration:none;font-weight:500;}
+.toc a:hover{color:var(--gold);}
+
+/* HOOK */
+.hook-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2.5vw,1.25rem);font-style:italic;color:var(--navy);line-height:1.7;border-left:4px solid var(--gold);padding:1.25rem 1.75rem;margin:2rem 0;background:var(--gold-pale);border-radius:0 12px 12px 0;}
+
+/* BODY TEXT */
+.body-text{font-size:1rem;line-height:1.85;color:#2a2a3e;margin:1rem 0;}
+.body-text strong{color:var(--navy);}
+
+/* SECTION DIVIDERS */
+.section-divider{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;}
+.section-num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.section-title-text{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:var(--navy);line-height:1.25;}
+h3.subsection{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);margin:2rem 0 0.75rem;}
+
+/* IMAGES */
+.article-image{width:100%;border-radius:16px;overflow:hidden;margin:2rem 0;box-shadow:0 8px 40px rgba(0,0,0,0.12);position:relative;}
+.article-image img{width:100%;display:block;object-fit:cover;}
+.img-caption{background:var(--navy);padding:0.75rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.65);font-style:italic;}
+.dual-image{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+.dual-image .article-image{margin:0;}
+.logo-img{max-width:340px;margin:1.5rem auto;display:block;}
+
+/* BOXES */
+.intro-box{background:var(--navy);border-radius:16px;padding:2rem 2.5rem;margin:2rem 0;}
+.intro-box h2{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:1rem;}
+.intro-box ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+.intro-box li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.92rem;color:rgba(255,255,255,0.85);font-family:'DM Sans',sans-serif;}
+.intro-box li::before{content:"✓";color:var(--gold);font-weight:700;flex-shrink:0;margin-top:0.1rem;}
+
+.warning-box{background:var(--red-light);border-left:5px solid var(--red);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.warning-box .wb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--red);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.warning-box ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.warning-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#7a1515;display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;}
+.warning-box li::before{content:"⚠";flex-shrink:0;}
+
+.tip-box{background:var(--gold-pale);border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.tip-box .tb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:0.6rem;}
+.tip-box p,.tip-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#5a4010;line-height:1.6;}
+.tip-box ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.tip-box li::before{content:"💡 ";margin-right:0.2rem;}
+
+.success-box{background:var(--green-light);border-left:5px solid var(--green);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.success-box .sb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--green);margin-bottom:0.6rem;}
+.success-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.6;}
+
+.info-box{background:#eef3fb;border-left:5px solid var(--navy-mid);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;}
+.info-box .ib-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.6rem;}
+.info-box p,.info-box li{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#1e3a6e;line-height:1.6;}
+.info-box ul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;}
+.info-box li::before{content:"→ ";color:var(--navy);font-weight:700;}
+
+/* STEPS */
+.steps-list{list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin:1rem 0;}
+.steps-list li{display:flex;align-items:flex-start;gap:1rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--charcoal);line-height:1.55;}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;}
+
+/* BULLETS */
+.bullet-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin:1rem 0;}
+.bullet-list li{display:flex;align-items:flex-start;gap:0.75rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--charcoal);line-height:1.55;}
+.bullet-list li::before{content:"•";color:var(--gold);font-weight:900;font-size:1.2rem;flex-shrink:0;line-height:1.2;}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin:1.5rem 0;}
+.service-card{background:#fff;border:1px solid var(--soft-grey);border-radius:14px;padding:1.25rem;transition:all 0.2s;position:relative;overflow:hidden;}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.08);}
+.service-icon{font-size:2rem;margin-bottom:0.6rem;display:block;}
+.service-card h3{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--navy);margin-bottom:0.35rem;}
+.service-card p{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:var(--mid-grey);line-height:1.5;}
+.service-fee{display:inline-block;background:var(--gold-pale);color:var(--gold);font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:50px;margin-top:0.5rem;}
+
+/* PAYMENT INFOGRAPHIC */
+.payment-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:16px;padding:2.5rem 2rem;margin:2rem 0;}
+.payment-card h2{font-family:'Playfair Display',serif;color:#fff;font-size:1.3rem;margin-bottom:0.5rem;text-align:center;}
+.payment-card .pay-sub{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.55);text-align:center;margin-bottom:2rem;}
+.payment-steps{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.75rem;}
+.pay-step{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.25rem;display:flex;gap:1rem;align-items:flex-start;}
+.pay-step-num{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:0.95rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pay-step-text{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.88);line-height:1.55;}
+.pay-step-text strong{color:var(--gold-light);}
+.paybill-highlight{background:var(--gold);border-radius:12px;padding:1.25rem 1.5rem;text-align:center;}
+.paybill-highlight .pb-label{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.35rem;}
+.paybill-highlight .pb-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--navy);margin-bottom:0.2rem;}
+.paybill-highlight .pb-desc{font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(15,32,68,0.7);}
+
+/* PROBLEMS TABLE */
+.problems-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-family:'DM Sans',sans-serif;font-size:0.88rem;}
+.problems-table th{background:var(--navy);color:var(--gold-light);padding:0.75rem 1rem;text-align:left;font-weight:700;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;}
+.problems-table td{padding:0.85rem 1rem;border-bottom:1px solid var(--soft-grey);vertical-align:top;line-height:1.55;}
+.problems-table tr:nth-child(even) td{background:#f8f9fa;}
+.problems-table .prob-col{color:var(--red);font-weight:600;}
+.problems-table .sol-col{color:var(--green);}
+
+/* EMERGENCY CONTACTS */
+.contacts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.contact-card{background:var(--navy);border-radius:12px;padding:1.25rem;text-align:center;}
+.contact-icon{font-size:1.8rem;margin-bottom:0.5rem;display:block;}
+.contact-name{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.35rem;}
+.contact-num{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold-light);font-weight:700;margin-bottom:0.2rem;}
+.contact-desc{font-family:'DM Sans',sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);}
+
+/* FAQ */
+.faq-section{background:var(--cream);border-radius:16px;padding:2.5rem 2rem;margin:2.5rem 0;}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem;}
+.faq-item{border-bottom:1px solid var(--soft-grey);padding:1.1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Source Serif 4',serif;font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.faq-q::after{content:"▾";color:var(--gold);flex-shrink:0;}
+.faq-a{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--mid-grey);line-height:1.65;}
+
+/* SHARE BANNER */
+.share-banner{background:var(--navy);border-radius:16px;padding:2.5rem 2rem;text-align:center;margin:2.5rem 0;}
+.share-banner h2{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold-light);font-style:italic;margin-bottom:0.75rem;}
+.share-banner p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.65);margin-bottom:1.25rem;}
+.share-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.share-btn{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);padding:0.6rem 1.25rem;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;text-decoration:none;transition:all 0.2s;}
+.share-btn:hover{background:rgba(255,255,255,0.18);}
+
+/* PODCAST */
+.podcast-box{background:var(--green-light);border-left:5px solid #25D366;border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin:1.5rem 0;display:flex;align-items:center;gap:1rem;}
+.podcast-box .pod-icon{font-size:1.8rem;flex-shrink:0;}
+.podcast-box p{font-family:'DM Sans',sans-serif;font-size:0.88rem;color:#14532d;line-height:1.5;}
+.podcast-box a{color:var(--green);font-weight:700;}
+
+/* NAVY BANNER */
+.navy-banner{background:var(--navy);border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;text-align:center;}
+.navy-banner p{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);font-style:italic;line-height:1.5;}
+
+/* FOOTER NAV */
+.article-footer-nav{background:var(--navy);padding:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:'DM Sans',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.4);}
+.footer-link{color:var(--gold-light);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .article-hero{height:58vh;min-height:400px;}
+  .hero-content h1{font-size:1.6rem;}
+  .dual-image{grid-template-columns:1fr;}
+  .article-layout{padding:0 1rem 4rem;}
+  .payment-card{padding:1.75rem 1.25rem;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .contacts-grid{grid-template-columns:1fr 1fr;}
+  .author-box{flex-direction:column;text-align:center;}
+  .problems-table{font-size:0.78rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="article-nav">
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="nav-brand">
+    <div class="nav-logo">S</div>
+    <span class="nav-site-name">Senior Citizens Tech Haven</span>
+  </a>
+  <a href="https://seniorcitizenstechhaven.netlify.app/#learn" class="nav-back">← All Articles</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="images/extracted/ecitizen-kenya-guide-1.webp" alt="Older Kenyan man and daughter using a laptop together to access eCitizen government services in Nairobi Kenya" class="hero-img"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="article-category">🏛️ Government Services · Updated April 2026</span>
+    <h1>How to Use eCitizen Kenya Step by Step — A Simple Guide for Older Adults</h1>
+    <div class="hero-meta">
+      <span>✍️ Kevin Jonathan Otieno</span>
+      <span>📅 April 2026</span>
+      <span>⏱️ 15 min read</span>
+      <span>🇰🇪 Nakuru, Kenya</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-layout">
+
+  <!-- AUTHOR -->
+  <div class="author-box">
+    <div class="author-avatar">K</div>
+    <div class="author-info">
+      <h3>Kevin Jonathan Otieno</h3>
+      <p>Founder, Senior Citizens Tech Haven · Digital literacy advocate for older Kenyans · Based in Nakuru, Kenya · 📞 0115 258 958</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 In This Article</h3>
+    <ol>
+      <li><a href="#what-is-ecitizen">What is eCitizen?</a></li>
+      <li><a href="#what-you-need">What You Need Before You Start</a></li>
+      <li><a href="#create-account">How to Create Your eCitizen Account</a></li>
+      <li><a href="#login">How to Log In</a></li>
+      <li><a href="#services">8 Most Useful Services for Older Adults</a></li>
+      <li><a href="#payment">How to Pay Using M-Pesa</a></li>
+      <li><a href="#track">How to Track Your Application</a></li>
+      <li><a href="#problems">Common Problems and Solutions</a></li>
+      <li><a href="#contacts">Help and Emergency Contacts</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+
+  <!-- OPENING HOOK -->
+  <p class="body-text">Imagine your father or mother travelling from <em>dala</em> (home) — from Kisumu, Kakamega, or Meru — all the way to Nairobi just to renew their passport. They wake up before dawn. They board a matatu. They travel for hours. They arrive at Nyayo House.</p>
+  <p class="body-text">And then they are told: <strong>"We no longer process that here. You have to go online."</strong></p>
+  <p class="body-text">They stand there, tired from the journey, and have no idea what "go online" even means.</p>
+  <p class="body-text">This is happening to thousands of older Kenyans every single week. And it is completely unnecessary — because with eCitizen, your parent or grandparent can access over 5,000 government services from home. No matatu. No queue. No wasted day.</p>
+
+  <div class="hook-text">"eCitizen exists so that you never have to travel to a government office again. This article will show you exactly how to use it — step by step, in plain language."</div>
+
+  <!-- WHAT YOU WILL LEARN -->
+  <div class="intro-box">
+    <h2>📚 What You Will Learn in This Article</h2>
+    <ul>
+      <li>What eCitizen is and why it matters for you</li>
+      <li>How to create your account in less than 10 minutes</li>
+      <li>The 8 most important services available for older adults</li>
+      <li>How to pay safely using M-Pesa with the correct Paybill number</li>
+      <li>How to track your application after you apply</li>
+      <li>What to do when something goes wrong</li>
+    </ul>
+  </div>
+
+  <!-- HUDUMA WAITING ROOM IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/ecitizen-kenya-guide-2.webp" alt="Older Kenyans waiting at a Huduma Centre government service centre in Nairobi Kenya" style="height:420px;object-fit:cover;object-position:center;"/>
+    <div class="img-caption">Older Kenyans waiting at a Huduma Centre. With eCitizen, this journey becomes unnecessary for most services — you can apply from home.</div>
+  </div>
+
+  <!-- SECTION 1 — WHAT IS ECITIZEN -->
+  <div class="section-divider" id="what-is-ecitizen">
+    <div class="section-num">1</div>
+    <div class="section-title-text">What is eCitizen? Why Does It Matter for You?</div>
+  </div>
+
+  <p class="body-text">eCitizen is the Government of Kenya's official online platform. It is a website where you can apply for government documents and services — from your phone or computer — without leaving your home.</p>
+  <p class="body-text">Think of it like a government office that is open 24 hours a day, 7 days a week, and never has a queue.</p>
+  <p class="body-text">You can find it at <strong>www.ecitizen.go.ke</strong> on any phone or computer with internet. It is free to create an account. You only pay when you apply for a specific service.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🛂</span>
+      <h3>Passport</h3>
+      <p>Apply for or renew your Kenyan passport without visiting immigration offices.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📋</span>
+      <h3>Birth Certificate</h3>
+      <p>Apply for a birth certificate or get a replacement copy online.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚗</span>
+      <h3>Driving Licence</h3>
+      <p>Renew your driving licence through NTSA without visiting their offices.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏛️</span>
+      <h3>Good Conduct Certificate</h3>
+      <p>Apply for a police clearance certificate for employment or travel.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💰</span>
+      <h3>KRA PIN</h3>
+      <p>Register for your KRA PIN or update your tax information online.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏥</span>
+      <h3>SHIF (formerly NHIF)</h3>
+      <p>Access your health insurance information and make contributions.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">👴</span>
+      <h3>NSSF</h3>
+      <p>Check your pension contributions and access retirement benefits.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏡</span>
+      <h3>Land Services</h3>
+      <p>Do a land search, apply for title deeds and pay land rent online.</p>
+    </div>
+  </div>
+
+  <!-- LOGOS IMAGE -->
+  <img src="images/extracted/ecitizen-kenya-guide-3.webp" alt="Republic of Kenya coat of arms and Huduma Kenya service excellence logo" class="logo-img"/>
+
+  <!-- SECTION 2 — WHAT YOU NEED -->
+  <div class="section-divider" id="what-you-need">
+    <div class="section-num">2</div>
+    <div class="section-title-text">What You Need Before You Start</div>
+  </div>
+
+  <p class="body-text">Before you create your eCitizen account, make sure you have these four things ready. Do not start without them.</p>
+
+  <ul class="bullet-list">
+    <li><strong>Your National ID card</strong> — you will need your ID number exactly as it appears on the card</li>
+    <li><strong>An email address</strong> — this is where eCitizen will send you important messages. If you do not have one, ask a family member to help you create a Gmail account first</li>
+    <li><strong>A phone number</strong> — your Safaricom, Airtel, or other Kenyan number. eCitizen will send a one-time code (OTP) to verify it is really you</li>
+    <li><strong>M-Pesa on your phone</strong> — for paying fees when you apply for services</li>
+  </ul>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Good to Know Before You Start</div>
+    <ul>
+      <li>Creating an account is completely free. You only pay when applying for a specific service</li>
+      <li>Registration takes less than 10 minutes</li>
+      <li>You only need to create an account once. After that, you use the same account for all services</li>
+      <li>If you need help, go to your nearest Huduma Centre — the staff will assist you for free</li>
+    </ul>
+  </div>
+
+  <!-- HUDUMA COUNTERS IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/ecitizen-kenya-guide-4.webp" alt="Huduma Kenya service counters showing adult education services and police abstract services at a Huduma Centre in Kenya" style="height:380px;object-fit:cover;"/>
+    <div class="img-caption">A Huduma Centre in Kenya. If you struggle with eCitizen, walk into any Huduma Centre near you. The staff are there to help you free of charge.</div>
+  </div>
+
+  <!-- SECTION 3 — CREATE ACCOUNT -->
+  <div class="section-divider" id="create-account">
+    <div class="section-num">3</div>
+    <div class="section-title-text">How to Create Your eCitizen Account — Step by Step</div>
+  </div>
+
+  <p class="body-text">Follow these steps carefully. Take your time. There is no rush.</p>
+
+  <h3 class="subsection">Step 1: Open the eCitizen Website</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Open the app you use to search the internet (Google Chrome, Firefox, or any browser) on your phone or computer</li>
+    <li><div class="step-num">2</div>Type this address exactly: <strong>www.ecitizen.go.ke</strong> and press Enter or Go</li>
+    <li><div class="step-num">3</div>You will see the official eCitizen Kenya homepage with the Kenyan flag colours</li>
+  </ol>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ Important — Make Sure You Are on the Right Website</div>
+    <ul>
+      <li>The real eCitizen website is <strong>www.ecitizen.go.ke</strong> — note the ".go.ke" at the end</li>
+      <li>Fake websites may look similar but have different addresses</li>
+      <li>Never enter your ID number on a website that does not have ".go.ke" in the address</li>
+    </ul>
+  </div>
+
+  <h3 class="subsection">Step 2: Click "Create Account"</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>On the homepage, look for a button that says <strong>"Create Account"</strong> or <strong>"Register"</strong></li>
+    <li><div class="step-num">2</div>Click or tap it</li>
+    <li><div class="step-num">3</div>You will be asked what type of user you are. Select <strong>"Kenyan Citizen"</strong></li>
+  </ol>
+
+  <h3 class="subsection">Step 3: Fill in Your Personal Details</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Enter your <strong>National ID number</strong> exactly as it appears on your card</li>
+    <li><div class="step-num">2</div>Enter your <strong>first name</strong> as it appears on your ID</li>
+    <li><div class="step-num">3</div>Enter your <strong>year of birth</strong> as shown on your ID</li>
+    <li><div class="step-num">4</div>Enter your <strong>email address</strong></li>
+    <li><div class="step-num">5</div>Enter your <strong>phone number</strong></li>
+    <li><div class="step-num">6</div>Double-check everything before continuing — details must match your ID exactly</li>
+  </ol>
+
+  <h3 class="subsection">Step 4: Create Your Password</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Choose a strong password (your secret word) — mix letters, numbers and symbols</li>
+    <li><div class="step-num">2</div>Type it again to confirm</li>
+    <li><div class="step-num">3</div>Write it down somewhere safe at home — do not share it with anyone</li>
+  </ol>
+
+  <h3 class="subsection">Step 5: Verify Your Account</h3>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Check your email — eCitizen will send you a verification link. Click on that link to confirm your email address</li>
+    <li><div class="step-num">2</div>Check your phone — eCitizen will also send a 6-digit code (OTP) to your phone number. Type that code into the box on the website</li>
+    <li><div class="step-num">3</div>Your account is now active. You are ready to use eCitizen</li>
+  </ol>
+
+  <div class="success-box">
+    <div class="sb-title">✅ Congratulations!</div>
+    <p>You have created your eCitizen account. You will never need to create it again. From now on, you simply log in with your email and password whenever you need a government service.</p>
+  </div>
+
+  <!-- MZEE LAPTOP IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/ecitizen-kenya-guide-5.webp" alt="Older Kenyan man smiling while using a laptop in Nairobi to access government services online" style="height:400px;object-fit:cover;object-position:center 30%;"/>
+    <div class="img-caption">An older Kenyan adult accessing government services online from Nairobi. With eCitizen, this is now possible for every Kenyan — from any location.</div>
+  </div>
+
+  <!-- SECTION 4 — LOG IN -->
+  <div class="section-divider" id="login">
+    <div class="section-num">4</div>
+    <div class="section-title-text">How to Log In After You Have Registered</div>
+  </div>
+
+  <p class="body-text">Once your account is created, here is how to log in every time you want to use eCitizen.</p>
+
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Go to <strong>www.ecitizen.go.ke</strong> on your phone or computer</li>
+    <li><div class="step-num">2</div>Click <strong>"Log In"</strong> or <strong>"Sign In"</strong></li>
+    <li><div class="step-num">3</div>Enter your email address or ID number</li>
+    <li><div class="step-num">4</div>Enter your password (your secret word)</li>
+    <li><div class="step-num">5</div>eCitizen may send a one-time code to your phone. Enter it when prompted</li>
+    <li><div class="step-num">6</div>You are now inside your eCitizen account. You will see a list of government services available to you</li>
+  </ol>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Forgot Your Password?</div>
+    <p>Click "Forgot Password" on the login page. eCitizen will send a reset link to your email address. Follow the instructions in that email to create a new password. If you need help, call a family member or visit your nearest Huduma Centre.</p>
+  </div>
+
+  <!-- SECTION 5 — SERVICES -->
+  <div class="section-divider" id="services">
+    <div class="section-num">5</div>
+    <div class="section-title-text">The 8 Most Useful Services for Older Adults</div>
+  </div>
+
+  <p class="body-text">Once you are logged in, here are the services most commonly needed by older Kenyans and their families — and exactly how to access each one.</p>
+
+  <h3 class="subsection">🛂 1. Passport Application and Renewal</h3>
+  <p class="body-text">You can now apply for or renew your Kenyan ePassport entirely online. You no longer need to visit Nyayo House in Nairobi.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in to eCitizen and search for <strong>"Department of Immigration Services"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"ePassport Application"</strong></li>
+    <li><div class="step-num">3</div>Fill in the online form with your details</li>
+    <li><div class="step-num">4</div>Upload a recent passport-size photo</li>
+    <li><div class="step-num">5</div>Pay the required fee using M-Pesa</li>
+    <li><div class="step-num">6</div>Book an appointment at your nearest immigration office for biometrics (fingerprints and photo)</li>
+    <li><div class="step-num">7</div>Collect your passport when it is ready — you will receive an SMS notification</li>
+  </ol>
+  <div class="info-box">
+    <div class="ib-title">ℹ️ Passport Fees and Timeline</div>
+    <ul>
+      <li>Standard processing: 10 to 14 working days after biometrics</li>
+      <li>You will receive SMS updates throughout the process</li>
+      <li>Check current fees on the official eCitizen portal as these change periodically</li>
+    </ul>
+  </div>
+
+  <h3 class="subsection">📋 2. Birth Certificate</h3>
+  <p class="body-text">If you need a copy of your birth certificate or your child's birth certificate, you can apply through eCitizen without visiting a government office.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"Civil Registration Department"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"Birth Certificate"</strong></li>
+    <li><div class="step-num">3</div>Fill in the required details</li>
+    <li><div class="step-num">4</div>Pay the fee using M-Pesa</li>
+    <li><div class="step-num">5</div>Select where you want to collect the certificate — your nearest Huduma Centre</li>
+  </ol>
+
+  <h3 class="subsection">🏛️ 3. Certificate of Good Conduct (Police Clearance)</h3>
+  <p class="body-text">This certificate proves you do not have a criminal record. It is required for employment, travel, and many other purposes.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"Directorate of Criminal Investigations"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"Good Conduct Certificate"</strong></li>
+    <li><div class="step-num">3</div>Fill in your details and pay the fee</li>
+    <li><div class="step-num">4</div>Book an appointment for fingerprinting at your nearest DCI office — you must appear in person for fingerprints</li>
+    <li><div class="step-num">5</div>Your certificate will be ready within a few weeks. You will get an SMS when it is done</li>
+  </ol>
+
+  <h3 class="subsection">🚗 4. NTSA Driving Licence Renewal</h3>
+  <p class="body-text">You can renew your driving licence online through the National Transport and Safety Authority (NTSA) without queuing at their offices.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"NTSA"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"Driving Licence Renewal"</strong></li>
+    <li><div class="step-num">3</div>Confirm your details</li>
+    <li><div class="step-num">4</div>Pay the renewal fee using M-Pesa</li>
+    <li><div class="step-num">5</div>Your renewed licence will be posted to your address or you can collect from a designated centre</li>
+  </ol>
+
+  <h3 class="subsection">💰 5. KRA PIN Registration</h3>
+  <p class="body-text">Your KRA PIN (Kenya Revenue Authority Personal Identification Number) is required for many transactions in Kenya — opening a bank account, buying property, and more.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"Kenya Revenue Authority"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"KRA PIN Registration"</strong> or <strong>"PIN Certificate"</strong></li>
+    <li><div class="step-num">3</div>Fill in your details</li>
+    <li><div class="step-num">4</div>Your PIN certificate can be downloaded immediately. KRA PIN registration is free</li>
+  </ol>
+
+  <h3 class="subsection">🏥 6. SHIF (Formerly NHIF) — Health Insurance</h3>
+  <p class="body-text">The Social Health Insurance Fund (SHIF) is Kenya's national health insurance. You can check your contributions and access health-related services through eCitizen.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"Social Health Authority"</strong> or <strong>"SHIF"</strong></li>
+    <li><div class="step-num">2</div>Select the service you need — check contributions, download membership card, or update details</li>
+    <li><div class="step-num">3</div>Follow the instructions on screen</li>
+  </ol>
+
+  <h3 class="subsection">👴 7. NSSF — Pension and Retirement</h3>
+  <p class="body-text">The National Social Security Fund (NSSF) manages retirement savings for Kenyan workers. Older adults can check their balance and access benefits through eCitizen.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"NSSF"</strong></li>
+    <li><div class="step-num">2</div>Select <strong>"Member Services"</strong></li>
+    <li><div class="step-num">3</div>Check your contributions, update your details, or initiate a benefits claim</li>
+  </ol>
+
+  <h3 class="subsection">🏡 8. Land Services</h3>
+  <p class="body-text">You can now search land records, check title deed details, and pay land rent online through Ardhisasa — accessed through eCitizen.</p>
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in and search for <strong>"Ardhisasa"</strong> or <strong>"Ministry of Lands"</strong></li>
+    <li><div class="step-num">2</div>Select the land service you need</li>
+    <li><div class="step-num">3</div>Enter the land reference number or title deed number</li>
+    <li><div class="step-num">4</div>Pay any required fees using M-Pesa</li>
+  </ol>
+
+  <!-- HUDUMA BORA IMAGE -->
+  <div class="article-image">
+    <img src="images/extracted/ecitizen-kenya-guide-6.webp" alt="Huduma Bora Kenya government service centre with staff and Huduma Kenya branding" style="height:380px;object-fit:cover;object-position:center 40%;"/>
+    <div class="img-caption">Huduma Bora centres across Kenya provide in-person help for eCitizen services. If you are struggling, walk in and ask for assistance.</div>
+  </div>
+
+  <!-- SECTION 6 — PAYMENT -->
+  <div class="section-divider" id="payment">
+    <div class="section-num">6</div>
+    <div class="section-title-text">How to Pay Using M-Pesa on eCitizen</div>
+  </div>
+
+  <p class="body-text">All eCitizen payments go through M-Pesa. Here is the exact process. Follow it carefully — especially the Paybill number, which changed in 2026.</p>
+
+  <div class="payment-card">
+    <h2>💳 M-Pesa Payment Guide for eCitizen</h2>
+    <p class="pay-sub">Follow these steps exactly every time you pay for a government service</p>
+    <div class="payment-steps">
+      <div class="pay-step">
+        <div class="pay-step-num">1</div>
+        <div class="pay-step-text">Complete your service application on eCitizen. At the end, eCitizen will generate a <strong>unique reference number</strong> for your payment — something like <strong>KLZWBGWR</strong>. Write it down.</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">2</div>
+        <div class="pay-step-text">Open <strong>M-Pesa</strong> on your phone. Select <strong>"Lipa na M-Pesa"</strong> then select <strong>"Pay Bill"</strong>.</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">3</div>
+        <div class="pay-step-text">Enter the Business Number: <strong>222222</strong> (this is the new 2026 Paybill number — the old 206206 no longer works).</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">4</div>
+        <div class="pay-step-text">Enter the Account Number: <strong>your unique reference number</strong> from eCitizen (for example: KLZWBGWR). Type it exactly as shown.</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">5</div>
+        <div class="pay-step-text">Enter the <strong>exact amount</strong> shown on your eCitizen invoice, plus a small convenience fee of <strong>KES 50</strong>.</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">6</div>
+        <div class="pay-step-text">Enter your <strong>M-Pesa PIN</strong> and press <strong>OK</strong>. You will receive an M-Pesa confirmation SMS. Keep it for your records.</div>
+      </div>
+      <div class="pay-step">
+        <div class="pay-step-num">7</div>
+        <div class="pay-step-text">Go back to eCitizen. Your payment will be confirmed automatically within a few minutes. Your application will then be processed.</div>
+      </div>
+    </div>
+    <div class="paybill-highlight">
+      <div class="pb-label">eCitizen M-Pesa Paybill Number (2026)</div>
+      <div class="pb-num">222222</div>
+      <div class="pb-desc">The old number 206206 is no longer valid. Use 222222 for all eCitizen payments.</div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <div class="wb-title">⚠️ Very Important Payment Warning</div>
+    <ul>
+      <li>Always use the reference number generated by eCitizen as your account number — not your ID number or phone number</li>
+      <li>The old Paybill number 206206 no longer works. Always use 222222</li>
+      <li>Never pay anyone who claims they can process eCitizen payments on your behalf — this is a scam</li>
+      <li>Keep your M-Pesa confirmation SMS as proof of payment</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 7 — TRACK -->
+  <div class="section-divider" id="track">
+    <div class="section-num">7</div>
+    <div class="section-title-text">How to Track Your Application</div>
+  </div>
+
+  <p class="body-text">After you apply and pay, you do not have to wonder what is happening. eCitizen will keep you informed.</p>
+
+  <ol class="steps-list">
+    <li><div class="step-num">1</div>Log in to eCitizen at <strong>www.ecitizen.go.ke</strong></li>
+    <li><div class="step-num">2</div>Look for <strong>"My Applications"</strong> or <strong>"Application History"</strong> on your dashboard</li>
+    <li><div class="step-num">3</div>Click on your application to see its current status</li>
+    <li><div class="step-num">4</div>eCitizen will also send you SMS and email updates whenever your application moves to the next stage</li>
+    <li><div class="step-num">5</div>When your document is ready, you will receive an SMS telling you where and when to collect it</li>
+  </ol>
+
+  <div class="tip-box">
+    <div class="tb-title">💡 Processing Times to Expect</div>
+    <ul>
+      <li>Passport: 10 to 14 working days after biometrics appointment</li>
+      <li>Certificate of Good Conduct: 2 to 4 weeks after fingerprinting</li>
+      <li>Birth Certificate: 5 to 10 working days</li>
+      <li>KRA PIN: Immediate — download right away</li>
+      <li>Driving Licence Renewal: 7 to 14 working days</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 8 — PROBLEMS -->
+  <div class="section-divider" id="problems">
+    <div class="section-num">8</div>
+    <div class="section-title-text">Common Problems and How to Fix Them</div>
+  </div>
+
+  <p class="body-text">eCitizen is not always perfect. Here are the most common problems older adults experience — and exactly what to do about each one.</p>
+
+  <table class="problems-table">
+    <tr>
+      <th>The Problem</th>
+      <th>What to Do</th>
+    </tr>
+    <tr>
+      <td class="prob-col">The website is not loading</td>
+      <td class="sol-col">Check your internet connection. Try again using mobile data instead of WiFi. Try a different browser like Chrome or Firefox.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">I forgot my password</td>
+      <td class="sol-col">Click "Forgot Password" on the login page. eCitizen will send a reset link to your email. Check your email and follow the instructions.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">The OTP code did not arrive on my phone</td>
+      <td class="sol-col">Wait 2 minutes and try again. Make sure your phone has network signal. Check that you entered the correct phone number.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">My payment went through but eCitizen did not confirm it</td>
+      <td class="sol-col">Wait 15 minutes — payments sometimes take time to reflect. If it still does not show, call eCitizen on 020 2370230 with your M-Pesa confirmation SMS ready.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">My details do not match what is on the system</td>
+      <td class="sol-col">Visit your nearest Huduma Centre with your original ID card. The staff will help you update your details on the system.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">I cannot upload my photo or documents</td>
+      <td class="sol-col">Make sure the file size is not too large — compress photos before uploading. Use JPG or PDF format. Ask a family member to help if needed.</td>
+    </tr>
+    <tr>
+      <td class="prob-col">The website shows an error message I do not understand</td>
+      <td class="sol-col">Take a screenshot of the error message. Then call eCitizen support on 020 2370230 or visit your nearest Huduma Centre and show them the screenshot.</td>
+    </tr>
+  </table>
+
+  <!-- SECTION 9 — CONTACTS -->
+  <div class="section-divider" id="contacts">
+    <div class="section-num">9</div>
+    <div class="section-title-text">Help and Emergency Contacts</div>
+  </div>
+
+  <p class="body-text">You are never alone with eCitizen. If you get stuck at any point, here are the people who can help you.</p>
+
+  <div class="contacts-grid">
+    <div class="contact-card">
+      <span class="contact-icon">📞</span>
+      <div class="contact-name">eCitizen Support</div>
+      <div class="contact-num">020 237 0230</div>
+      <div class="contact-desc">Mon to Fri · 8am to 5pm</div>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">📧</span>
+      <div class="contact-name">eCitizen Email</div>
+      <div class="contact-num" style="font-size:0.85rem;">support@ecitizen.go.ke</div>
+      <div class="contact-desc">Allow 2 working days for reply</div>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">🏛️</span>
+      <div class="contact-name">Huduma Centre</div>
+      <div class="contact-num" style="font-size:0.85rem;">Nearest to you</div>
+      <div class="contact-desc">Walk in with your ID card</div>
+    </div>
+    <div class="contact-card">
+      <span class="contact-icon">💳</span>
+      <div class="contact-name">M-Pesa Help</div>
+      <div class="contact-num">100</div>
+      <div class="contact-desc">Free · Safaricom · 24 hours</div>
+    </div>
+  </div>
+
+  <div class="navy-banner">
+    <p>"If you are ever unsure, do not guess. Walk into your nearest Huduma Centre. The staff are there specifically to help you — free of charge."</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">Do I need a computer to use eCitizen or can I use my phone?</div>
+      <div class="faq-a">You can use eCitizen on any smartphone with internet access. Open your phone's browser (Google Chrome works best), type www.ecitizen.go.ke, and follow the steps in this article. A computer is not required.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I do not have an email address. Can I still use eCitizen?</div>
+      <div class="faq-a">You need an email address to create an eCitizen account. Ask a family member to help you create a free Gmail account at www.gmail.com. It takes less than 5 minutes. Once your Gmail is ready, you can register on eCitizen.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the correct Paybill number for eCitizen payments in 2026?</div>
+      <div class="faq-a">The correct Paybill number is 222222. The old number 206206 is no longer valid. Always use the reference number generated by eCitizen as your account number when paying.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can my son or daughter apply on eCitizen on my behalf?</div>
+      <div class="faq-a">Yes. A family member can help you create your account and fill in the application using your details. However, some services like passport and Good Conduct Certificate still require you to appear in person for biometrics or fingerprinting.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long does it take to receive my document after applying?</div>
+      <div class="faq-a">It depends on the service. A KRA PIN is instant. A passport takes 10 to 14 working days after your biometrics appointment. A Good Conduct Certificate takes 2 to 4 weeks. eCitizen will send you SMS updates throughout the process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I am in a village with no internet. How can I access eCitizen?</div>
+      <div class="faq-a">You can visit your nearest Huduma Centre, cyber cafe, or ask a family member in town to help you apply. Some Huduma Centres also have computers available for public use. Alternatively, most smartphones can access eCitizen using mobile data.</div>
+    </div>
+  </div>
+
+  <!-- SHARE BANNER -->
+  <div class="share-banner">
+    <h2>"Did this guide help you or someone you love? Share it."</h2>
+    <p>Your parents and grandparents no longer need to travel to Nairobi for government services. Share this article and give them back their time.</p>
+    <div class="share-btns">
+      <a href="https://wa.me/?text=How%20to%20Use%20eCitizen%20Kenya%20Step%20by%20Step%20https://seniorcitizenstechhaven.netlify.app/ecitizen-kenya-guide.html" target="_blank" class="share-btn">📲 Share on WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://seniorcitizenstechhaven.netlify.app/ecitizen-kenya-guide.html" target="_blank" class="share-btn">📘 Share on Facebook</a>
+      <a href="https://twitter.com/intent/tweet?text=How%20to%20Use%20eCitizen%20Kenya%20Step%20by%20Step%20by%20%40FinallyKayvoh&url=https://seniorcitizenstechhaven.netlify.app/ecitizen-kenya-guide.html" target="_blank" class="share-btn">𝕏 Share on X</a>
+    </div>
+  </div>
+
+  <!-- PODCAST -->
+  <div class="podcast-box">
+    <span class="pod-icon">🎧</span>
+    <p>Prefer listening? The Senior Citizens Tech Haven Podcast covers government services and digital skills for older Kenyans. Available on <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank">Spotify</a>. Search "Senior Citizens Tech Haven."</p>
+  </div>
+
+  <!-- LINK TO SAFETY ARTICLE -->
+  <div class="info-box">
+    <div class="ib-title">📖 Read Next</div>
+    <ul>
+      <li><a href="./online-safety-article.html" style="color:var(--navy);font-weight:600;">How to Stay Safe Online in Kenya — A Guide for Older Adults</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER NAV -->
+<div class="article-footer-nav">
+  <span class="footer-brand">© 2026 Senior Citizens Tech Haven · Kevin Jonathan Otieno · Nakuru, Kenya</span>
+  <a href="https://seniorcitizenstechhaven.netlify.app" class="footer-link">← Back to Home</a>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  const a = q.nextElementSibling;
+  a.style.display = 'none';
+  q.addEventListener('click', () => {
+    const isOpen = a.style.display === 'block';
+    document.querySelectorAll('.faq-a').forEach(el => el.style.display = 'none');
+    a.style.display = isOpen ? 'none' : 'block';
+  });
+});
+const firstA = document.querySelector('.faq-a');
+if(firstA) firstA.style.display = 'block';
+</script>
+</body>
+</html>
