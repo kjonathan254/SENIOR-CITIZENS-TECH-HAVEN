@@ -1,13 +1,13 @@
-// Senior Citizens Tech Haven — Service Worker (v3)
-const CACHE_NAME = 'seniors-tech-haven-v3';
+// Senior Citizens Tech Haven — Service Worker (v4)
+const CACHE_NAME = 'seniors-tech-haven-v4';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/offline.html',
   '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
+  '/icon/icon-192x192.png',
+  '/icon/icon-512x512.png',
   '/favicon.ico'
 ];
 
@@ -61,7 +61,7 @@ self.addEventListener('fetch', event => {
         }
         return networkResponse;
       }).catch(() => {
-        if (req.destination === 'image') return caches.match('/icons/icon-192x192.png');
+        if (req.destination === 'image') return caches.match('/icon/icon-192x192.png');
       });
     })
   );
