@@ -91,7 +91,7 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
         'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        model: 'openai/gpt-oss-20b', // Fast, good for this use case
+        model: 'openai/gpt-oss-120b', // Fast, good for this use case
         reasoning_effort: 'low', // GPT-OSS reasoning tokens count toward max_tokens — keep Elsah snappy
         messages: messages,
         temperature: 0.7,
