@@ -12,11 +12,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Tech Haven">
   <meta name="msapplication-TileColor" content="#0f2044">
-  <meta name="msapplication-TileImage" content="/icon/icon-144x144.png">
+  <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="/icon/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/icon/icon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icon/icon-72x72.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72x72.png">
   <!-- ═══════════════════════════════════════════════════════════════ -->
   <!--  END PWA TAGS                                                 -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -35,8 +35,8 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap">
 
   <!-- ── PRIMARY SEO META ───────────────────────── -->
-  <title>Senior Citizens Tech Haven | Empowering Kenya's Seniors in the Digital Age</title>
-  <meta name="description" content="Senior Citizens Tech Haven helps older Kenyans navigate technology with confidence. Free guides on M-Pesa, smartphones, WhatsApp, online safety and more. Based in Nakuru, Kenya." />
+  <title>Empowering Older Adults. Building Evidence. Shaping AgeTech. </title>
+  <meta name="description" content="Senior Citizens Tech Haven empowers older adults with digital skills, online safety, and practical technology guidance while helping build Africa's voice in aging and AgeTech." />
   <meta name="keywords" content="senior citizens technology Kenya, digital literacy seniors Kenya, M-Pesa for seniors, smartphones for elderly Kenya, tech help older adults Kenya, Nakuru digital literacy, senior citizens tech guide Kenya, how to use WhatsApp Kenya seniors" />
   <meta name="author" content="Kevin Jonathan Otieno" />
   <meta name="robots" content="index, follow" />
@@ -1126,7 +1126,6 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#learn">Learn</a></li>
-    <li><a href="./articles.html">Articles</a></li>
     <li><a href="#podcast">Listen</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1143,6 +1142,10 @@
   <div class="hero-inner">
     <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
       <div class="hero-badge">🇰🇪 Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
+      <button id="tts-hero-btn" onclick="toggleHeroTTS()" style="background:transparent; color:rgba(255,255,255,0.85); border:2px solid rgba(255,255,255,0.5); border-radius:6px; padding:0.4rem 0.9rem; font-family:'Source Serif 4',serif; font-size:0.78rem; font-weight:500; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:0.35rem; letter-spacing:0.02em; line-height:1;">
+        <span id="tts-hero-icon" style="font-size:0.9rem;">🔊</span>
+        <span id="tts-hero-text">Listen</span>
+      </button>
     </div>
     <h1>Technology is for <em>Everyone.</em><br>Including You.</h1>
     <p class="hero-tagline">Empowering Kenya's Seniors in the Digital Age</p>
@@ -1235,6 +1238,21 @@
     </div>
 
     <div class="articles-grid" id="articlesGrid">
+
+      <!-- ══ NEW: DIGITAL DIVIDE RESEARCH REPORT ══ -->
+
+      <div class="article-card" data-category="health" style="position:relative; border-color:#c9962a;">
+        <div class="new-badge" aria-label="New article">NEW</div>
+        <div class="article-card-body">
+          <div class="article-category">Digital Divide</div>
+          <h3>The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap</h3>
+          <p>Kenya has 92.9% smartphone penetration but no official data on internet use among the 45+ age group. Thirty years of US aging research (HRS) suggests Kenya can compress a 12-year adoption curve — if training, not infrastructure, becomes the priority.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./digital-divide-then-vs-now.html" class="article-read" aria-label="Read: The Digital Divide, Then vs. Now">Read More →</a>
+          <span class="has-audio">📊 Research Report</span>
+        </div>
+      </div>
 
       <!-- ══ GETTING STARTED ══ -->
 
@@ -1388,6 +1406,18 @@
 
       <div class="article-card" data-category="tools">
         <div class="article-card-body">
+          <div class="article-category">Tools</div>
+          <h3>SCTH Content Generator — AI Writing Tool</h3>
+          <p>An AI-powered tool built for Senior Citizens Tech Haven — generate platform-specific content, guides, and social posts tailored for Kenyan seniors.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./scth-content-generator.html" class="article-read" aria-label="Open SCTH Content Generator">Open Tool →</a>
+          <span class="has-audio">🤖 AI Tool</span>
+        </div>
+      </div>
+
+      <div class="article-card" data-category="tools">
+        <div class="article-card-body">
           <div class="article-category">Special Feature</div>
           <h3>The Empty Room — A Reflection on Technology and Loneliness</h3>
           <p>A thought-provoking read about connection, isolation, and how technology can either bridge or widen the gap for older adults.</p>
@@ -1530,7 +1560,7 @@
           <cite>— Kevin Jonathan Otieno, Founder</cite>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-num">17+</span>
+              <span class="stat-num">35+</span>
               <span class="stat-label">Articles Published</span>
             </div>
             <div class="stat">
@@ -1641,7 +1671,7 @@
       <p>We use Google AdSense to display advertisements on our website. Google AdSense uses cookies to serve ads based on your prior visits to our website or other websites. You can opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" style="color:#0f2044;">Google Ads Settings</a>. Our use of advertising helps us keep all content on Senior Citizens Tech Haven free of charge.</p>
 
       <h3 style="font-family:'Playfair Display',serif; color:#0f2044; margin: 1.75rem 0 0.6rem;">6. Elsah AI Assistant</h3>
-      <p>Our Elsah AI chat feature is powered by Groq (GroqCloud). Questions you type into the chat are processed securely via our server and sent to Groq's AI service to generate responses. We do not store your chat conversations on our servers. Please do not share sensitive personal information such as your ID number, M-Pesa PIN, or bank details through the chat.</p>
+      <p>Our Elsah AI chat feature is powered by BytePlus ModelArk. Questions you type into the chat are processed securely via our server and sent to ModelArk's AI service to generate responses. We do not store your chat conversations on our servers. Please do not share sensitive personal information such as your ID number, M-Pesa PIN, or bank details through the chat.</p>
 
       <h3 style="font-family:'Playfair Display',serif; color:#0f2044; margin: 1.75rem 0 0.6rem;">7. Third Party Links</h3>
       <p>Our website contains links to external websites including Google Sites, Spotify, LinkedIn, and X (Twitter). We are not responsible for the privacy practices of these external sites. We encourage you to read their privacy policies when you visit them.</p>
@@ -1714,7 +1744,7 @@
     });
   }
 
-  // Elsah chat — connected to /api/elsah (Netlify function → Groq)
+  // Elsah chat — connected to /api/elsah (Netlify function → ModelArk)
   let elsahHistory = [];
   let elsahBusy = false;
 
@@ -1779,13 +1809,13 @@
       loading.classList.remove('visible');
       const errBubble = document.createElement('div');
       errBubble.className = 'chat-msg elsah';
-      errBubble.textContent = `I'm taking a short break right now, but I'll be back soon! In the meantime, you can:
+      errBubble.textContent = "I'm taking a short break right now, but I'll be back soon! In the meantime, you can:
 
 • Browse our free guides below
 • Listen to our podcast episodes
 • Call us on 0115 258 958 for immediate help
 
-Thank you for your patience! 🙏`;
+Thank you for your patience! 🙏";
       messages.appendChild(errBubble);
     }
 
@@ -2063,6 +2093,9 @@ function updateTTSButton(icon, text) {
 function updateTTSStatus(message) {
   const btnText = document.getElementById('tts-hero-text');
   if (btnText) btnText.textContent = message;
+}
+
+
 }
 
 function getReadableText() {
