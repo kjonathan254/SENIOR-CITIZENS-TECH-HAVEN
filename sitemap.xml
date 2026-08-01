@@ -50,6 +50,13 @@
   </url>
 
   <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/digital-divide-then-vs-now.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://seniorcitizenstechhaven.netlify.app/africa-aging-population-healthcare-technology-families.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -113,6 +120,13 @@
   <url>
     <loc>https://seniorcitizenstechhaven.netlify.app/financial-technology-guide.html</loc>
     <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://seniorcitizenstechhaven.netlify.app/mpesa-reversal-guide.html</loc>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
