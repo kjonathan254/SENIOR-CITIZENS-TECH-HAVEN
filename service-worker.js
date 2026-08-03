@@ -1,5 +1,5 @@
-// Senior Citizens Tech Haven — Service Worker (v4)
-const CACHE_NAME = 'seniors-tech-haven-v4';
+// Senior Citizens Tech Haven — Service Worker (v5)
+const CACHE_NAME = 'seniors-tech-haven-v5';
 
 const PRECACHE_URLS = [
   '/',
@@ -38,6 +38,20 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
+  // Only handle same-origin http(s) requests. Let the browser handle
+  // everything else natively (browser-extension requests, cross-origin
+  // third-party scripts like AdSense, etc.) — the Cache API throws on
+  // unsupported schemes like chrome-extension:, and intercepting
+  // cross-origin ad/analytics requests here just breaks them.
+  let url;
+  try {
+    url = new URL(req.url);
+  } catch (e) {
+    return;
+  }
+  if (!/^https?:$/.test(url.protocol)) return;
+  if (url.origin !== self.location.origin) return;
+
   const isHTMLPage = req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html');
 
   if (isHTMLPage) {
@@ -62,6 +76,7 @@ self.addEventListener('fetch', event => {
         return networkResponse;
       }).catch(() => {
         if (req.destination === 'image') return caches.match('/icon/icon-192x192.png');
+        return new Response('', { status: 504, statusText: 'Offline' });
       });
     })
   );
