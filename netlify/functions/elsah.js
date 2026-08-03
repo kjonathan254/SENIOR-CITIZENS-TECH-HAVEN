@@ -93,7 +93,7 @@ exports.handler = async (event, context) => {
   
   try {
     // Parse the incoming message
-    const { message, history } = JSON.parse(event.body);
+    const { message, history, stream } = JSON.parse(event.body);
     
     if (!message || message.trim().length === 0) {
       return {
@@ -133,6 +133,26 @@ exports.handler = async (event, context) => {
     if (localMatch) {
       // Found answer in local KB - return immediately (fast, free, works offline)
       console.log(`✅ Found local answer for: "${message.substring(0, 50)}..."`);
+      
+      // If streaming is requested, still stream the local response
+      if (stream) {
+        return {
+          statusCode: 200,
+          headers: {
+            ...headers,
+            'Content-Type': 'text/event-stream',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive'
+          },
+          body: JSON.stringify({ 
+            reply: localMatch.answer,
+            source: 'local',
+            sourceUrl: localMatch.source,
+            confidence: 'high'
+          })
+        };
+      }
+      
       return {
         statusCode: 200,
         headers,
@@ -195,7 +215,7 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
     // Add the current user message
     messages.push({ role: 'user', content: message });
     
-    // Call Groq API
+    // Call Groq API with streaming support
     const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -207,7 +227,8 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
         reasoning_effort: 'low',
         messages: messages,
         temperature: 0.7,
-        max_tokens: 500
+        max_tokens: 500,
+        stream: stream || false
       })
     });
     
@@ -237,6 +258,20 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
           error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on 0115 258 958 for immediate help. Thank you for your patience! 🙏',
           source: 'groq-error'
         })
+      };
+    }
+    
+    // Handle streaming response
+    if (stream && groqResponse.body) {
+      return {
+        statusCode: 200,
+        headers: {
+          ...headers,
+          'Content-Type': 'text/event-stream',
+          'Cache-Control': 'no-cache',
+          'Connection': 'keep-alive'
+        },
+        body: groqResponse.body
       };
     }
     
