@@ -633,12 +633,12 @@
     }
     .chat-messages { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.25rem; }
     .chat-msg {
-      padding: 0.85rem 1.1rem; border-radius: 12px;
-      font-size: 0.88rem; line-height: 1.6; max-width: 90%;
+      padding: 1rem 1.2rem; border-radius: 12px;
+      font-size: 1rem; line-height: 1.6; max-width: 85%;
     }
     .chat-msg.elsah {
       background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.9);
+      color: rgba(255,255,255,0.95);
       border-bottom-left-radius: 4px;
       align-self: flex-start;
     }
@@ -1531,11 +1531,21 @@
           <div class="chat-msg user">How do I send money using M-Pesa?</div>
           <div class="chat-msg elsah">Great question! Here's how to send money on M-Pesa: Go to your phone's M-Pesa menu → Select "Send Money" → Enter the recipient's phone number → Type the amount → Enter your PIN → Press OK. That's it! The money arrives instantly. Would you like me to explain any of these steps in more detail?</div>
         </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;justify-content:center;" id="quickActions">
+          <button onclick="setChatInput('How do I reverse an M-Pesa transaction?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">↩️ Reverse M-Pesa</button>
+          <button onclick="setChatInput('Is this SMS message a scam?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">⚠️ Check SMS Scam</button>
+          <button onclick="setChatInput('How do I increase font size on my phone?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">📱 Larger Text</button>
+          <button onclick="setChatInput('How do I use WhatsApp safely?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">💬 WhatsApp Safety</button>
+        </div>
         <div class="chat-loading" id="chatLoading">
           <div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
         <div class="chat-input-row">
+          <div style="font-size:0.75rem; color:#e74c3c; margin-bottom:0.5rem; text-align:center;">
+            ⚠️ <strong>Safety First:</strong> Never share your M-Pesa PIN, ID number, or bank details here.
+          </div>
           <input type="text" class="chat-input" id="chatInput" placeholder="Ask Elsah a tech question..." />
+          <button class="chat-send" id="voiceInputBtn" title="Speak your question" style="background:#95a5a6;margin-right:5px;" onclick="toggleVoiceInput()">🎤</button>
           <button class="chat-send" onclick="sendMessage()">➤</button>
         </div>
       </div>
@@ -1821,6 +1831,53 @@
   // Elsah chat — connected to /api/elsah (Netlify function → Groq)
   let elsahHistory = [];
   let elsahBusy = false;
+  let isListening = false;
+  let recognition = null;
+
+  // Initialize Speech Recognition
+  if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onstart = () => {
+      isListening = true;
+      document.getElementById('voiceInputBtn').textContent = '🔴';
+      document.getElementById('voiceInputBtn').style.background = '#e74c3c';
+    };
+
+    recognition.onend = () => {
+      isListening = false;
+      document.getElementById('voiceInputBtn').textContent = '🎤';
+      document.getElementById('voiceInputBtn').style.background = '#95a5a6';
+    };
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      document.getElementById('chatInput').value = transcript;
+    };
+
+    recognition.onerror = (event) => {
+      isListening = false;
+      document.getElementById('voiceInputBtn').textContent = '🎤';
+      document.getElementById('voiceInputBtn').style.background = '#95a5a6';
+      alert('Voice input error: ' + event.error + '. Please type your question instead.');
+    };
+  }
+
+  function toggleVoiceInput() {
+    if (!recognition) {
+      alert('Your browser does not support voice input. Please use Chrome or Edge for this feature.');
+      return;
+    }
+    if (isListening) {
+      recognition.stop();
+    } else {
+      recognition.start();
+    }
+  }
 
   async function sendMessage() {
     if (elsahBusy) return;
@@ -1868,7 +1925,7 @@
 
       const elsahBubble = document.createElement('div');
       elsahBubble.className = 'chat-msg elsah';
-      elsahBubble.textContent = reply;
+      elsahBubble.innerHTML = reply + `<button class="tts-btn" onclick="speakResponse(this)" style="margin-top:8px;padding:4px 8px;font-size:0.7rem;background:#95a5a6;border:none;border-radius:4px;cursor:pointer;color:white;">🔊 Read Aloud</button>`;
       messages.appendChild(elsahBubble);
 
       if (data.reply) {
@@ -1896,6 +1953,46 @@ Thank you for your patience! 🙏";
     messages.scrollTop = messages.scrollHeight;
     elsahBusy = false;
     document.querySelector('.chat-send').disabled = false;
+  }
+
+  function speakResponse(btn) {
+    if (!('speechSynthesis' in window)) {
+      alert('Your browser does not support text-to-speech.');
+      return;
+    }
+    
+    window.speechSynthesis.cancel();
+    
+    const bubble = btn.parentElement;
+    const text = bubble.childNodes[0].textContent || bubble.innerText.replace('🔊 Read Aloud', '');
+    
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 0.85;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+    
+    const voices = window.speechSynthesis.getVoices();
+    const englishVoice = voices.find(v => v.lang.includes('en'));
+    if (englishVoice) utterance.voice = englishVoice;
+    
+    btn.textContent = '🔇 Stop';
+    btn.onclick = () => {
+      window.speechSynthesis.cancel();
+      btn.textContent = '🔊 Read Aloud';
+      btn.onclick = () => speakResponse(btn);
+    };
+    
+    utterance.onend = () => {
+      btn.textContent = '🔊 Read Aloud';
+      btn.onclick = () => speakResponse(btn);
+    };
+    
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function setChatInput(text) {
+    document.getElementById('chatInput').value = text;
+    document.getElementById('chatInput').focus();
   }
 
   document.getElementById('chatInput').addEventListener('keypress', e => {
