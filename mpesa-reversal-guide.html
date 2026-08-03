@@ -145,5 +145,24 @@
   <p><a href="https://seniorcitizenstechhaven.netlify.app/">Home</a> · <a href="https://seniorcitizenstechhaven.netlify.app/articles.html">Articles</a> · <a href="https://open.spotify.com/show/[...]">Podcast</a></p>
 </footer>
 
+<script>
+// Add keyboard support for interactive elements
+document.addEventListener('DOMContentLoaded', function() {
+  // Make navigation links keyboard accessible
+  document.querySelectorAll('.site-nav a').forEach(function(link) {
+    if (!link.hasAttribute('tabindex')) {
+      link.setAttribute('tabindex', '0');
+    }
+  });
+  
+  // Make footer links keyboard accessible
+  document.querySelectorAll('.site-footer a').forEach(function(link) {
+    if (!link.hasAttribute('tabindex')) {
+      link.setAttribute('tabindex', '0');
+    }
+  });
+});
+</script>
+
 </body>
 </html>
