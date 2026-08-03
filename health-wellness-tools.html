@@ -204,6 +204,42 @@ h3.subsection{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:
   .contacts-grid{grid-template-columns:1fr 1fr;}
   .content-table{font-size:0.78rem;}
 }
+  /* ── ACCESSIBILITY: Skip Link ─────────────────── */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold, #c9962a);
+    color: var(--forest, #0f2044);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 10000;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--forest, #0f2044);
+    outline-offset: 2px;
+  }
+
+  /* ── ACCESSIBILITY: Focus States ──────────────── */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--gold, #c9962a);
+    outline-offset: 2px;
+  }
+
+  .hamburger:focus-visible {
+    outline: 3px solid var(--gold, #c9962a);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
 </style>
 <script type="application/ld+json">
 {
@@ -289,6 +325,9 @@ h3.subsection{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:
 </script>
 </head>
 <body>
+
+<!-- ACCESSIBILITY: Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="article-nav">
