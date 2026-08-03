@@ -103,6 +103,30 @@ exports.handler = async (event, context) => {
       };
     }
     
+    // STEP 0: Safety Check - Block sensitive personal information
+    const sensitivePatterns = [
+      { name: 'M-Pesa PIN', pattern: /\b\d{4}\b/, description: '4-digit PIN' },
+      { name: 'National ID', pattern: /\b\d{8,9}\b/, description: 'ID number' },
+      { name: 'Phone Number', pattern: /\b(?:\+254|0)?[71]\d{8}\b/, description: 'phone number' },
+      { name: 'Bank Account', pattern: /\b\d{9,18}\b/, description: 'account number' },
+      { name: 'Credit Card', pattern: /\b\d{4}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}\b/, description: 'card number' }
+    ];
+    
+    for (const { name, pattern, description } of sensitivePatterns) {
+      if (pattern.test(message)) {
+        console.warn(`⚠️ Blocked sensitive data (${name}) in message`);
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ 
+            reply: `⚠️ **Important Safety Alert**\n\nI noticed you might be sharing your ${description}. Please **never share** your ${name}, ID number, passwords, or bank details with anyone - including me!\n\nI am an AI and cannot keep secrets. If someone asked you to send this information, it might be a scam.\n\n💡 **What to do instead:**\n- Delete any messages containing personal numbers\n- Never share your M-Pesa PIN with anyone\n- Call your family before sending money to unfamiliar numbers\n- For help, call our helpline: 0115 258 958\n\nYou can ask me tech questions without sharing personal details. How else can I help you today?`,
+            source: 'safety-warning',
+            confidence: 'high'
+          })
+        };
+      }
+    }
+    
     // STEP 1: Search local knowledge base first
     const localMatch = searchKnowledgeBase(message);
     
