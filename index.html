@@ -1904,9 +1904,15 @@
     input.value = '';
     messages.scrollTop = messages.scrollHeight;
 
-    loading.classList.add('visible');
-    messages.appendChild(loading);
+    // Create streaming bubble for Elsah's response
+    const elsahBubble = document.createElement('div');
+    elsahBubble.className = 'chat-msg elsah';
+    elsahBubble.innerHTML = '<span class="streaming-text"></span>';
+    messages.appendChild(elsahBubble);
     messages.scrollTop = messages.scrollHeight;
+
+    const streamingTextSpan = elsahBubble.querySelector('.streaming-text');
+    let fullReply = '';
 
     try {
       const response = await fetch('/api/elsah', {
@@ -1914,40 +1920,73 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: msg,
-          history: elsahHistory
+          history: elsahHistory,
+          stream: true
         })
       });
 
-      const data = await response.json();
-      loading.classList.remove('visible');
+      if (response.ok && response.headers.get('content-type')?.includes('text/event-stream')) {
+        // Handle streaming response
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        loading.classList.remove('visible');
 
-      const reply = data.reply || data.error || "I'm sorry, I had a little trouble with that. Could you try asking again?";
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
 
-      const elsahBubble = document.createElement('div');
-      elsahBubble.className = 'chat-msg elsah';
-      elsahBubble.innerHTML = reply + `<button class="tts-btn" onclick="speakResponse(this)" style="margin-top:8px;padding:4px 8px;font-size:0.7rem;background:#95a5a6;border:none;border-radius:4px;cursor:pointer;color:white;">🔊 Read Aloud</button>`;
-      messages.appendChild(elsahBubble);
+          const chunk = decoder.decode(value);
+          // Parse SSE format: data: {...}
+          const lines = chunk.split('\n');
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              try {
+                const data = JSON.parse(line.slice(6));
+                if (data.choices && data.choices[0]?.delta?.content) {
+                  fullReply += data.choices[0].delta.content;
+                  streamingTextSpan.textContent = fullReply;
+                  messages.scrollTop = messages.scrollHeight;
+                } else if (data.reply) {
+                  // For local KB responses sent as SSE
+                  fullReply = data.reply;
+                  streamingTextSpan.textContent = fullReply;
+                  messages.scrollTop = messages.scrollHeight;
+                }
+              } catch (e) {
+                // Ignore parse errors for incomplete chunks
+              }
+            }
+          }
+        }
+      } else {
+        // Fallback to non-streaming response
+        loading.classList.add('visible');
+        const data = await response.json();
+        loading.classList.remove('visible');
+        fullReply = data.reply || data.error || "I'm sorry, I had a little trouble with that. Could you try asking again?";
+        streamingTextSpan.textContent = fullReply;
+      }
 
-      if (data.reply) {
+      // Add TTS button after streaming completes
+      const ttsBtn = document.createElement('button');
+      ttsBtn.className = 'tts-btn';
+      ttsBtn.textContent = '🔊 Read Aloud';
+      ttsBtn.style.cssText = 'margin-top:8px;padding:4px 8px;font-size:0.7rem;background:#95a5a6;border:none;border-radius:4px;cursor:pointer;color:white;';
+      ttsBtn.onclick = function() { speakResponse(this); };
+      elsahBubble.appendChild(ttsBtn);
+
+      if (fullReply) {
         elsahHistory.push({ role: 'user', content: msg });
-        elsahHistory.push({ role: 'assistant', content: data.reply });
-        if (elsahHistory.length > 20) {
-          elsahHistory = elsahHistory.slice(-20);
+        elsahHistory.push({ role: 'assistant', content: fullReply });
+        // Keep only last 3 exchanges (6 messages total)
+        if (elsahHistory.length > 6) {
+          elsahHistory = elsahHistory.slice(-6);
         }
       }
 
     } catch (e) {
       loading.classList.remove('visible');
-      const errBubble = document.createElement('div');
-      errBubble.className = 'chat-msg elsah';
-      errBubble.textContent = "I'm taking a short break right now, but I'll be back soon! In the meantime, you can:
-
-• Browse our free guides below
-• Listen to our podcast episodes
-• Call us on 0115 258 958 for immediate help
-
-Thank you for your patience! 🙏";
-      messages.appendChild(errBubble);
+      streamingTextSpan.textContent = "I'm taking a short break right now, but I'll be back soon! In the meantime, you can:\n\n• Browse our free guides below\n• Listen to our podcast episodes\n• Call us on 0115 258 958 for immediate help\n\nThank you for your patience! 🙏";
     }
 
     messages.scrollTop = messages.scrollHeight;
@@ -1993,6 +2032,8 @@ Thank you for your patience! 🙏";
   function setChatInput(text) {
     document.getElementById('chatInput').value = text;
     document.getElementById('chatInput').focus();
+    // Auto-submit for quick action chips
+    sendMessage();
   }
 
   document.getElementById('chatInput').addEventListener('keypress', e => {
