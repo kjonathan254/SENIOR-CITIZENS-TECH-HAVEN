@@ -1109,11 +1109,55 @@
       font-size: 0.85rem;
     }
   }
+
+  /* ── ACCESSIBILITY: Skip Link ─────────────────── */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--forest);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 10000;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--forest);
+    outline-offset: 2px;
+  }
+
+  /* ── ACCESSIBILITY: Focus States ──────────────── */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .hamburger:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  #tts-hero-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
 </style>
   <link rel="preload" as="image" href="images/homepage-couple-learning.webp" type="image/webp">
   <link rel="preload" as="image" href="images/homepage-family-whatsapp.webp" type="image/webp">
 </head>
 <body>
+
+<!-- ACCESSIBILITY: Skip to Main Content Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -1138,7 +1182,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="home" role="region" aria-label="Homepage hero section">
   <div class="hero-inner">
     <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
       <div class="hero-badge">🇰🇪 Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
@@ -1221,6 +1265,9 @@
 </section>
 
 <!-- ARTICLES -->
+<!-- ACCESSIBILITY: Main Content Landmark -->
+<div id="main-content" role="main">
+
 <section class="articles" id="learn" aria-labelledby="learn-heading">
   <div class="container">
     <div class="section-label">Learn</div>
@@ -1721,10 +1768,40 @@
 </div>
 
 <script>
-  // Mobile nav
+  // Mobile nav with keyboard accessibility
   function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.getElementById('hamburger');
+    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.contains('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
+
+  // Add keyboard support for hamburger menu
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+      hamburger.setAttribute('tabindex', '0');
+      hamburger.setAttribute('role', 'button');
+      hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+      hamburger.setAttribute('aria-expanded', 'false');
+      
+      hamburger.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleMenu();
+        }
+      });
+    }
+
+    // Add keyboard support for TTS button
+    const ttsBtn = document.getElementById('tts-hero-btn');
+    if (ttsBtn) {
+      ttsBtn.setAttribute('tabindex', '0');
+      ttsBtn.setAttribute('role', 'button');
+      ttsBtn.setAttribute('aria-pressed', 'false');
+    }
+  });
 
   // Article filter
   function filterArticles(cat, btn) {
@@ -2124,5 +2201,9 @@ window.addEventListener('scroll', function() {
 window.speechSynthesis.onvoiceschanged = function() {};
 window.addEventListener('beforeunload', stopSpeech);
 </script>
+
+<!-- Close main content landmark -->
+</div>
+
 </body>
 </html>
