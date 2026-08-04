@@ -1,2 +1,1 @@
-(images/1781590442261.webp
-"images/Hero)
+Nothing needs to be added to .gitignore since the only change is adding a single HTML file (`japan-silver-tech-kenya.html`), which is a source/config file and not a build artifact, dependency, or temporary file.
