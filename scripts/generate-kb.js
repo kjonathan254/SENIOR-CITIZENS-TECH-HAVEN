@@ -4,15 +4,18 @@
 const fs = require('fs');
 const path = require('path');
 
+// Use current directory or WORKSPACE_ROOT environment variable
+const workspaceRoot = process.env.WORKSPACE_ROOT || process.cwd();
+
 // Get all HTML files
-const htmlFiles = fs.readdirSync('/workspace').filter(file => file.endsWith('.html'));
+const htmlFiles = fs.readdirSync(workspaceRoot).filter(file => file.endsWith('.html'));
 
 const knowledgeBase = [];
 
 htmlFiles.forEach(file => {
   if (file === '404.html' || file === 'offline.html') return; // Skip error pages
   
-  const filePath = path.join('/workspace', file);
+  const filePath = path.join(workspaceRoot, file);
   const content = fs.readFileSync(filePath, 'utf8');
   
   // Extract title
@@ -156,8 +159,9 @@ const output = {
   entries: uniqueKB
 };
 
-fs.writeFileSync('/workspace/data/elsah-kb.json', JSON.stringify(output, null, 2));
+const outputPath = path.join(workspaceRoot, 'data', 'elsah-kb.json');
+fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
 
 console.log(`✅ Knowledge Base generated successfully!`);
 console.log(`📊 Total Q&A pairs: ${uniqueKB.length}`);
-console.log(`💾 Saved to: /workspace/data/elsah-kb.json`);
+console.log(`💾 Saved to: ${outputPath}`);

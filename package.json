@@ -1,0 +1,32 @@
+{
+  "name": "senior-citizens-tech-haven",
+  "version": "1.0.0",
+  "description": "Digital literacy platform for older Kenyans - Elsah AI assistant and tech guides",
+  "main": "netlify/functions/elsah.js",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required - static site with serverless functions'",
+    "start": "netlify dev",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "seniors",
+    "tech-literacy",
+    "kenya",
+    "ai-assistant",
+    "mpesa",
+    "whatsapp",
+    "netlify",
+    "serverless"
+  ],
+  "author": "Senior Citizens Tech Haven",
+  "license": "MIT",
+  "devDependencies": {
+    "@netlify/functions": "^3.0.0",
+    "netlify-cli": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
