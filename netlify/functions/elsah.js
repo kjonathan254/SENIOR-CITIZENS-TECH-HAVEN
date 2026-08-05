@@ -75,50 +75,198 @@ try {
 }
 
 /**
+ * Calculate Levenshtein Distance between two strings
+ * Measures how many single-character edits needed to change one word into another
+ * Used for fuzzy matching (handling typos)
+ */
+function calculateLevenshteinDistance(str1, str2) {
+  const matrix = [];
+  
+  // Initialize matrix
+  for (let i = 0; i <= str2.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= str1.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  // Fill matrix
+  for (let i = 1; i <= str2.length; i++) {
+    for (let j = 1; j <= str1.length; j++) {
+      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1,     // insertion
+          matrix[i - 1][j] + 1      // deletion
+        );
+      }
+    }
+  }
+  
+  return matrix[str2.length][str1.length];
+}
+
+/**
+ * Normalize text for comparison
+ * - Convert to lowercase
+ * - Remove punctuation
+ * - Trim whitespace
+ */
+function normalizeText(text) {
+  return text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')  // Replace punctuation with space
+    .replace(/\s+/g, ' ')      // Collapse multiple spaces
+    .trim();
+}
+
+/**
+ * Get Swahili and Kenyan slang synonyms for tech terms
+ * Maps local language to English tech terminology
+ */
+function getSwahiliSynonyms() {
+  return {
+    // Money-related
+    'pesa': 'money',
+    'bob': 'money',
+    'shillings': 'money',
+    'cash': 'money',
+    'fedha': 'money',
+    
+    // Phone-related
+    'simu': 'phone',
+    'telephone': 'phone',
+    'mobile': 'phone',
+    'cell': 'phone',
+    
+    // Action verbs
+    'piga': 'call',
+    'ita': 'call',
+    'tuma': 'send',
+    'peleka': 'send',
+    'toa': 'withdraw',
+    'chukua': 'withdraw',
+    'lipa': 'pay',
+    'maliza': 'pay',
+    'fungua': 'open',
+    'funga': 'close',
+    'weka': 'put',
+    'ondoa': 'remove',
+    
+    // General tech
+    'screen': 'display',
+    'onyesha': 'show',
+    'ficha': 'hide',
+    'andika': 'write',
+    'soma': 'read',
+    'jibu': 'answer',
+    'swali': 'question',
+    'saedhi': 'help',
+    'msaidie': 'help',
+    
+    // Common misspellings/variations
+    'whatsap': 'whatsapp',
+    'watsap': 'whatsapp',
+    'wasap': 'whatsapp',
+    'mpesa': 'm-pesa',
+    'm pesa': 'm-pesa',
+    'ecitizen': 'e-citizen',
+    'e citizen': 'e-citizen'
+  };
+}
+
+/**
  * Search local knowledge base for matching questions
- * Uses keyword matching on topics and question text
+ * Uses fuzzy matching, Swahili synonyms, and smart scoring
  */
 function searchKnowledgeBase(userQuestion) {
   if (!knowledgeBase || !knowledgeBase.entries) {
     return null;
   }
   
-  const normalizedQuestion = userQuestion.toLowerCase().trim();
-  const questionWords = normalizedQuestion.split(/\s+/).filter(word => word.length > 3);
+  const normalizedQuestion = normalizeText(userQuestion);
+  const questionWords = normalizedQuestion.split(/\s+/).filter(word => word.length > 2);
+  const synonyms = getSwahiliSynonyms();
   
-  // Find best match based on keyword overlap
+  // Expand question words with synonyms
+  const expandedWords = [];
+  questionWords.forEach(word => {
+    expandedWords.push(word);
+    if (synonyms[word]) {
+      expandedWords.push(synonyms[word]);
+    }
+  });
+  
   let bestMatch = null;
   let bestScore = 0;
   
   for (const entry of knowledgeBase.entries) {
     let score = 0;
+    const normalizedEntryQuestion = normalizeText(entry.question);
+    const entryWords = normalizedEntryQuestion.split(/\s+/).filter(word => word.length > 2);
     
-    // Check if question words match entry topics
+    // Check topic matches
     entry.topics.forEach(topic => {
-      if (normalizedQuestion.includes(topic.toLowerCase())) {
-        score += 3;
+      const normalizedTopic = normalizeText(topic);
+      if (normalizedQuestion.includes(normalizedTopic)) {
+        score += 5; // Topic match is strong
       }
+      
+      // Fuzzy match for topics
+      questionWords.forEach(qWord => {
+        if (qWord.length > 3) {
+          const distance = calculateLevenshteinDistance(qWord, normalizedTopic);
+          if (distance <= 2 && distance > 0) {
+            score += 3; // Close match (typo)
+          }
+        }
+      });
     });
     
-    // Check if question words match entry question
-    const entryWords = entry.question.toLowerCase().split(/\s+/).filter(word => word.length > 3);
-    questionWords.forEach(word => {
-      if (entry.question.toLowerCase().includes(word)) {
-        score += 1;
+    // Check question word matches with scoring
+    expandedWords.forEach(word => {
+      // Exact match in entry question
+      if (normalizedEntryQuestion.includes(word)) {
+        score += 3;
+      }
+      
+      // Fuzzy match for individual words
+      if (word.length > 3) {
+        entryWords.forEach(eWord => {
+          const distance = calculateLevenshteinDistance(word, eWord);
+          if (distance === 0) {
+            score += 3; // Exact word match
+          } else if (distance <= 2) {
+            score += 2; // Close match (typo tolerance)
+          }
+        });
       }
     });
     
     // Exact phrase match gets highest priority
-    if (entry.question.toLowerCase().includes(normalizedQuestion)) {
-      score += 10;
+    if (normalizedEntryQuestion.includes(normalizedQuestion) || 
+        normalizedQuestion.includes(normalizedEntryQuestion)) {
+      score += 15;
     }
     
-    if (score > bestScore && score >= 3) {
+    // Synonym boost - if user used Swahili/slang and we matched English equivalent
+    questionWords.forEach(qWord => {
+      if (synonyms[qWord]) {
+        const englishEquivalent = synonyms[qWord];
+        if (normalizedEntryQuestion.includes(englishEquivalent)) {
+          score += 4; // Bonus for cross-language understanding
+        }
+      }
+    });
+    
+    if (score > bestScore && score >= 5) {
       bestScore = score;
       bestMatch = entry;
     }
   }
   
+  console.log(`🔍 Search score: ${bestScore} for query "${userQuestion.substring(0, 30)}..."`);
   return bestMatch;
 }
 
