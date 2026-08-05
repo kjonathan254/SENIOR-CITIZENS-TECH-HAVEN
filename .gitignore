@@ -1,1 +1,3 @@
-Nothing needs to be added to .gitignore since the changes only include source/config files (.js, .toml, .md) without any build artifacts, dependencies, or temporary files that should be ignored.
+```
+.env.local
+```
