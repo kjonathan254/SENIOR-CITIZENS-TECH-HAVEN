@@ -88,14 +88,14 @@ htmlFiles.forEach(file => {
   if (content.toLowerCase().includes('mpesa') || content.toLowerCase().includes('m-pesa')) {
     qaPairs.push({
       question: 'How do I reverse M-Pesa?',
-      answer: 'To reverse an M-Pesa transaction: 1) Dial *334# 2) Select "My Account" 3) Choose "Reverse Transaction" 4) Enter details. If you need help, call us at 0115 258 958.',
+      answer: 'To reverse an M-Pesa transaction: 1) Dial *334# 2) Select "My Account" 3) Choose "Reverse Transaction" 4) Enter details. If you need help, call us at ${process.env.HELPLINE_NUMBER || '0115 258 958'}.',
       source: file,
       topics: ['mpesa', 'reverse', 'transaction', 'money']
     });
     
     qaPairs.push({
       question: 'Is this M-Pesa message real?',
-      answer: 'Never trust SMS messages asking for your PIN. Official M-Pesa messages come from 334 or similar short codes. When in doubt, call Safaricom on 100 or our helpline 0115 258 958.',
+      answer: 'Never trust SMS messages asking for your PIN. Official M-Pesa messages come from 334 or similar short codes. When in doubt, call Safaricom on 100 or our helpline ${process.env.HELPLINE_NUMBER || '0115 258 958'}.',
       source: file,
       topics: ['mpesa', 'scam', 'sms', 'pin', 'safety']
     });
@@ -105,7 +105,7 @@ htmlFiles.forEach(file => {
   if (content.toLowerCase().includes('whatsapp')) {
     qaPairs.push({
       question: 'How do I increase font size on WhatsApp?',
-      answer: 'On WhatsApp: Go to Settings > Chats > Font Size > Large. On your phone: Settings > Display > Font Size. Call us at 0115 258 958 if you need help!',
+      answer: 'On WhatsApp: Go to Settings > Chats > Font Size > Large. On your phone: Settings > Display > Font Size. Call us at ${process.env.HELPLINE_NUMBER || '0115 258 958'} if you need help!',
       source: file,
       topics: ['whatsapp', 'font', 'size', 'display']
     });
@@ -122,7 +122,7 @@ htmlFiles.forEach(file => {
   if (content.toLowerCase().includes('ecitizen')) {
     qaPairs.push({
       question: 'How do I login to eCitizen?',
-      answer: 'Visit ecitizen.go.ke, click Login, enter your ID number and password. If you forgot your password, use "Forgot Password" link. Need help? Call 0115 258 958.',
+      answer: 'Visit ecitizen.go.ke, click Login, enter your ID number and password. If you forgot your password, use "Forgot Password" link. Need help? Call ${process.env.HELPLINE_NUMBER || '0115 258 958'}.',
       source: file,
       topics: ['ecitizen', 'login', 'id', 'password']
     });
