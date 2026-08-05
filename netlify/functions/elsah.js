@@ -435,32 +435,6 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
       history.forEach(msg => {
         if (msg.role && msg.content) {
           messages.push({ role: msg.role, content: msg.content });
-
-  // Get client IP address for rate limiting
-  const clientIP = event.headers['x-forwarded-for']?.split(',')[0]?.trim() 
-                || event.headers['client-ip'] 
-                || 'unknown';
-
-  // Check rate limit before processing
-  const rateLimitResult = checkRateLimit(clientIP);
-  
-  if (!rateLimitResult.allowed) {
-    const waitMinutes = Math.ceil((rateLimitResult.resetTime - Date.now()) / 60000);
-    console.warn(`⚠️ Rate limit exceeded for IP: ${clientIP}`);
-    return {
-      statusCode: 429,
-      headers: {
-        ...headers,
-        'Retry-After': String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000))
-      },
-      body: JSON.stringify({ 
-        error: `You've made too many requests recently. Please wait ${waitMinutes} minute(s) before trying again.`,
-        source: 'rate-limit',
-        suggestion: `Take a break and browse our guides, or call us at ${HELPLINE_NUMBER} for help.`
-      })
-    };
-  }
-
         }
       });
     }
