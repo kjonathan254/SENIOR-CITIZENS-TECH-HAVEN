@@ -6,6 +6,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// Get helpline number from environment variable (configured in netlify.toml or .env)
+const HELPLINE_NUMBER = process.env.HELPLINE_NUMBER || '0115 258 958';
+
 // Load knowledge base at startup (cached in memory)
 let knowledgeBase = null;
 try {
@@ -119,7 +122,7 @@ exports.handler = async (event, context) => {
           statusCode: 200,
           headers,
           body: JSON.stringify({ 
-            reply: `⚠️ **Important Safety Alert**\n\nI noticed you might be sharing your ${description}. Please **never share** your ${name}, ID number, passwords, or bank details with anyone - including me!\n\nI am an AI and cannot keep secrets. If someone asked you to send this information, it might be a scam.\n\n💡 **What to do instead:**\n- Delete any messages containing personal numbers\n- Never share your M-Pesa PIN with anyone\n- Call your family before sending money to unfamiliar numbers\n- For help, call our helpline: 0115 258 958\n\nYou can ask me tech questions without sharing personal details. How else can I help you today?`,
+            reply: `⚠️ **Important Safety Alert**\n\nI noticed you might be sharing your ${description}. Please **never share** your ${name}, ID number, passwords, or bank details with anyone - including me!\n\nI am an AI and cannot keep secrets. If someone asked you to send this information, it might be a scam.\n\n💡 **What to do instead:**\n- Delete any messages containing personal numbers\n- Never share your M-Pesa PIN with anyone\n- Call your family before sending money to unfamiliar numbers\n- For help, call our helpline: ${HELPLINE_NUMBER}\n\nYou can ask me tech questions without sharing personal details. How else can I help you today?`,
             source: 'safety-warning',
             confidence: 'high'
           })
@@ -178,7 +181,7 @@ exports.handler = async (event, context) => {
         body: JSON.stringify({ 
           error: 'Elsah is taking a short break. Please try again in a few minutes.',
           source: 'error',
-          suggestion: 'You can browse our free guides or call us on 0115 258 958 for help.'
+          suggestion: 'You can browse our free guides or call us on ${HELPLINE_NUMBER} for help.'
         })
       };
     }
@@ -197,7 +200,7 @@ Your personality:
 - Always reassure users that mistakes are normal and fixable
 - If asked about scams, emphasize: never share M-Pesa PIN, never send money without calling family first
 - Use occasional Swahili phrases (Habari, Asante, Pole) when appropriate
-- If you don't know something, suggest calling the helpline: 0115 258 958
+- If you don't know something, suggest calling the helpline: ${HELPLINE_NUMBER}
 
 You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, health apps, and general technology questions.`
       }
@@ -255,7 +258,7 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
         statusCode: 502,
         headers,
         body: JSON.stringify({ 
-          error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on 0115 258 958 for immediate help. Thank you for your patience! 🙏',
+          error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on ${HELPLINE_NUMBER} for immediate help. Thank you for your patience! 🙏',
           source: 'groq-error'
         })
       };
@@ -285,7 +288,7 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
         statusCode: 500,
         headers,
         body: JSON.stringify({ 
-          error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on 0115 258 958 for immediate help. Thank you for your patience! 🙏',
+          error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on ${HELPLINE_NUMBER} for immediate help. Thank you for your patience! 🙏',
           source: 'no-reply'
         })
       };
@@ -307,7 +310,7 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
       statusCode: 500,
       headers,
       body: JSON.stringify({ 
-        error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on 0115 258 958 for immediate help. Thank you for your patience! 🙏',
+        error: 'Elsah is taking a short break right now, but she will be back soon! In the meantime, you can browse our free guides below or call us on ${HELPLINE_NUMBER} for immediate help. Thank you for your patience! 🙏',
         source: 'error'
       })
     };
