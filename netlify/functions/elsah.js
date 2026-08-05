@@ -6,6 +6,57 @@
 const fs = require('fs');
 const path = require('path');
 
+// Simple in-memory rate limiting store (per IP address)
+// Stores: { ip: { count: number, resetTime: timestamp } }
+const rateLimitStore = new Map();
+
+// Rate limit configuration: 10 requests per minute per IP
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
+const RATE_LIMIT_MAX_REQUESTS = 10; // max requests per window
+
+/**
+ * Check if an IP address has exceeded the rate limit
+ * Returns: { allowed: boolean, remaining: number, resetTime: number }
+ */
+function checkRateLimit(ipAddress) {
+  const now = Date.now();
+  const existing = rateLimitStore.get(ipAddress);
+  
+  // If no existing record or window has expired, start fresh
+  if (!existing || now > existing.resetTime) {
+    const newRecord = {
+      count: 1,
+      resetTime: now + RATE_LIMIT_WINDOW_MS
+    };
+    rateLimitStore.set(ipAddress, newRecord);
+    return {
+      allowed: true,
+      remaining: RATE_LIMIT_MAX_REQUESTS - 1,
+      resetTime: newRecord.resetTime
+    };
+  }
+  
+  // Window still active
+  if (existing.count >= RATE_LIMIT_MAX_REQUESTS) {
+    // Rate limit exceeded
+    return {
+      allowed: false,
+      remaining: 0,
+      resetTime: existing.resetTime
+    };
+  }
+  
+  // Increment counter
+  existing.count++;
+  rateLimitStore.set(ipAddress, existing);
+  
+  return {
+    allowed: true,
+    remaining: RATE_LIMIT_MAX_REQUESTS - existing.count,
+    resetTime: existing.resetTime
+  };
+}
+
 // Get helpline number from environment variable (configured in netlify.toml or .env)
 const HELPLINE_NUMBER = process.env.HELPLINE_NUMBER || '0115 258 958';
 
@@ -94,6 +145,31 @@ exports.handler = async (event, context) => {
     };
   }
   
+  // Get client IP address for rate limiting
+  const clientIP = event.headers['x-forwarded-for']?.split(',')[0]?.trim() 
+                || event.headers['client-ip'] 
+                || 'unknown';
+
+  // Check rate limit before processing
+  const rateLimitResult = checkRateLimit(clientIP);
+  
+  if (!rateLimitResult.allowed) {
+    const waitMinutes = Math.ceil((rateLimitResult.resetTime - Date.now()) / 60000);
+    console.warn(`⚠️ Rate limit exceeded for IP: ${clientIP}`);
+    return {
+      statusCode: 429,
+      headers: {
+        ...headers,
+        'Retry-After': String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000))
+      },
+      body: JSON.stringify({ 
+        error: `You've made too many requests recently. Please wait ${waitMinutes} minute(s) before trying again.`,
+        source: 'rate-limit',
+        suggestion: `Take a break and browse our guides, or call us at ${HELPLINE_NUMBER} for help.`
+      })
+    };
+  }
+
   try {
     // Parse the incoming message
     const { message, history, stream } = JSON.parse(event.body);
@@ -211,6 +287,32 @@ You help with: smartphones, M-Pesa, WhatsApp, email, online safety, eCitizen, he
       history.forEach(msg => {
         if (msg.role && msg.content) {
           messages.push({ role: msg.role, content: msg.content });
+
+  // Get client IP address for rate limiting
+  const clientIP = event.headers['x-forwarded-for']?.split(',')[0]?.trim() 
+                || event.headers['client-ip'] 
+                || 'unknown';
+
+  // Check rate limit before processing
+  const rateLimitResult = checkRateLimit(clientIP);
+  
+  if (!rateLimitResult.allowed) {
+    const waitMinutes = Math.ceil((rateLimitResult.resetTime - Date.now()) / 60000);
+    console.warn(`⚠️ Rate limit exceeded for IP: ${clientIP}`);
+    return {
+      statusCode: 429,
+      headers: {
+        ...headers,
+        'Retry-After': String(Math.ceil((rateLimitResult.resetTime - Date.now()) / 1000))
+      },
+      body: JSON.stringify({ 
+        error: `You've made too many requests recently. Please wait ${waitMinutes} minute(s) before trying again.`,
+        source: 'rate-limit',
+        suggestion: `Take a break and browse our guides, or call us at ${HELPLINE_NUMBER} for help.`
+      })
+    };
+  }
+
         }
       });
     }
