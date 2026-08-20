@@ -340,7 +340,7 @@
       min-height: 100vh;
       background:
         linear-gradient(145deg, rgba(10,22,40,0.88) 0%, rgba(15,32,68,0.88) 40%, rgba(26,53,102,0.85) 70%, rgba(15,32,68,0.92) 100%),
-        url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1920&q=80');
+        url('images/hero-kenyan-senior-1.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -348,6 +348,18 @@
       padding: 100px 2rem 4rem;
       position: relative;
       overflow: hidden;
+      transition: background-image 1s ease-in-out;
+    }
+    .hero-slideshow {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      z-index: 0;
+    }
+    .hero-slideshow.active {
+      opacity: 0.15;
     }
     .hero::before {
       content: '';
@@ -358,7 +370,7 @@
     }
     .hero-parallax {
       position: absolute; inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80');
+      background-image: url('images/hero-kenyan-senior-2.jpg');
       background-size: cover;
       background-position: center;
       opacity: 0.15;
@@ -1257,20 +1269,18 @@
 
 <!-- HERO -->
 <section class="hero" id="home" role="region" aria-label="Homepage hero section">
+  <div class="hero-slideshow active" style="background-image: url('images/hero-kenyan-senior-1.jpg');"></div>
+  <div class="hero-slideshow" style="background-image: url('images/hero-kenyan-senior-2.jpg');"></div>
+  <div class="hero-slideshow" style="background-image: url('images/hero-kenyan-senior-3.jpg');"></div>
   <div class="hero-inner">
     <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-      <div class="hero-badge">🇰🇪 Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
-      <button id="tts-hero-btn" onclick="toggleHeroTTS()" style="background:transparent; color:rgba(255,255,255,0.85); border:2px solid rgba(255,255,255,0.5); border-radius:6px; padding:0.4rem 0.9rem; font-family:'Source Serif 4',serif; font-size:0.78rem; font-weight:500; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:0.35rem; letter-spacing:0.02em; line-height:1;">
-        <span id="tts-hero-icon" style="font-size:0.9rem;">🔊</span>
-        <span id="tts-hero-text">Listen</span>
-      </button>
+      <div class="hero-badge">Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
     </div>
     <h1>Digital Literacy for Older Adults in Kenya</h1>
     <p class="hero-tagline">Senior Citizens Tech Haven helps you learn at your pace, with dignity and confidence.</p>
     <p class="hero-intro">
       Welcome to your trusted home for digital literacy guidance. Whether you're using a smartphone for the first time, learning M-Pesa, staying safe online, or curious about AI — we'll walk with you, step by step, in plain language.
     </p>
-    <div class="hero-ctas">
     <div class="hero-images" style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:700px; margin:2rem auto 2.5rem;">
       <div style="border-radius:14px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.3);">
         <img src="images/homepage-couple-learning.webp" alt="Kenyan senior couple smiling while learning to use a smartphone together" style="width:100%; height:auto; display:block;" loading="eager" />
@@ -1280,17 +1290,11 @@
       </div>
     </div>
 
-      <a href="#learn" class="btn-primary">📚 Start Learning</a>
-      <a href="./elsah-ai.html" class="btn-outline">✨ Learn About Elsah AI</a>
+    <div class="hero-ctas">
+      <a href="#learn" class="btn-primary">Start Learning</a>
+      <a href="./elsah-ai.html" class="btn-outline">Learn About Elsah AI</a>
     </div>
   </div>
-    <div class="hero-tts" style="margin-top:1.25rem; display:flex; align-items:center; justify-content:center; gap:0.6rem;">
-      <button id="tts-hero-btn" onclick="toggleHeroTTS()" style="background:rgba(255,255,255,0.1); color:#fff; border:1.5px solid rgba(255,255,255,0.35); border-radius:50px; padding:0.5rem 1rem; font-family:'Source Serif 4',serif; font-size:0.8rem; font-weight:500; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:0.4rem; backdrop-filter:blur(4px); letter-spacing:0.02em;">
-        <span id="tts-hero-icon" style="font-size:0.95rem;">🔊</span>
-        <span id="tts-hero-text">Listen to This Page</span>
-      </button>
-      <span style="color:rgba(255,255,255,0.45); font-size:0.72rem; font-weight:300;">⏱️ ~5 min read</span>
-    </div>
   <div class="hero-scroll">
     <span class="scroll-arrow">↓</span>
     Scroll to explore
@@ -2749,6 +2753,20 @@ window.addEventListener('scroll', function() {
 
 window.speechSynthesis.onvoiceschanged = function() {};
 window.addEventListener('beforeunload', stopSpeech);
+
+// Hero Slideshow - Auto-transition every 6 seconds
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.hero-slideshow');
+  let currentSlide = 0;
+  
+  if (slides.length > 0) {
+    setInterval(function() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 6000);
+  }
+});
 </script>
 
 <!-- Close main content landmark -->
