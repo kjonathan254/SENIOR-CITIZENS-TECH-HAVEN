@@ -339,7 +339,11 @@
     .hero {
       min-height: 100vh;
       background:
-        linear-gradient(145deg, #0a1628 0%, #0f2044 40%, #1a3566 70%, #0f2044 100%);
+        linear-gradient(145deg, rgba(10,22,40,0.88) 0%, rgba(15,32,68,0.88) 40%, rgba(26,53,102,0.85) 70%, rgba(15,32,68,0.92) 100%),
+        url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       display: flex; align-items: center;
       padding: 100px 2rem 4rem;
       position: relative;
@@ -348,7 +352,18 @@
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(74,127,212,0.15) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 70% 50%, rgba(74,127,212,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 30% 80%, rgba(201,150,42,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-parallax {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      transform: translateZ(0);
+      will-change: transform;
     }
     .hero-inner {
       max-width: 780px;
@@ -502,7 +517,7 @@
     }
     .offer-card p { font-size: 0.92rem; color: var(--mid-grey); line-height: 1.7; }
 
-    /* ── ARTICLES ────────────────────────────────── */
+        /* ── ARTICLES ────────────────────────────────── */
     .articles { background: var(--warm-white); }
     .articles-tabs {
       display: flex; gap: 0.5rem; flex-wrap: wrap;
@@ -521,54 +536,113 @@
     }
     .articles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2.5rem;
     }
     .article-card {
-      border-radius: 10px; overflow: hidden;
+      border-radius: 12px; overflow: hidden;
       background: #fff;
       border: 1px solid var(--soft-grey);
-      transition: transform 0.25s, box-shadow 0.25s;
+      transition: transform 0.3s, box-shadow 0.3s;
       display: flex; flex-direction: column;
       transform: translateZ(0);
       will-change: transform;
       position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     }
-    .article-card:hover { transform: translateY(-4px) translateZ(0); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+    .article-card:hover { 
+      transform: translateY(-6px) translateZ(0); 
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12); 
+    }
+    .article-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .article-card:hover .article-card-image {
+      transform: scale(1.05);
+    }
+    .article-card-image-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
     .article-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .article-category {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--leaf);
-      margin-bottom: 0.5rem;
+      display: inline-block;
+      font-size: 0.68rem; 
+      font-weight: 700; 
+      letter-spacing: 0.12em;
+      text-transform: uppercase; 
+      padding: 0.3rem 0.75rem;
+      border-radius: 50px;
+      margin-bottom: 0.75rem;
+      align-self: flex-start;
     }
+    .article-category.getting-started { background: #e3f2fd; color: #1976d2; }
+    .article-category.safety { background: #ffebee; color: #c62828; }
+    .article-category.health { background: #e8f5e9; color: #2e7d32; }
+    .article-category.finance { background: #fff3e0; color: #ef6c00; }
+    .article-category.ai { background: #f3e5f5; color: #7b1fa2; }
+    .article-category.tools { background: #eceff1; color: #546e7a; }
     .article-card h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem; font-weight: 700;
-      color: var(--charcoal); line-height: 1.35;
+      font-size: 1.15rem; 
+      font-weight: 700;
+      color: var(--charcoal); 
+      line-height: 1.4;
       margin-bottom: 0.75rem;
     }
-    .article-card p { font-size: 0.88rem; color: var(--mid-grey); line-height: 1.65; flex: 1; }
+    .article-card p { 
+      font-size: 0.9rem; 
+      color: var(--mid-grey); 
+      line-height: 1.65; 
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
     .article-card-footer {
       padding: 1rem 1.5rem;
       border-top: 1px solid var(--soft-grey);
       display: flex; align-items: center; justify-content: space-between;
+      background: #fafafa;
     }
     .article-read {
-      font-size: 0.82rem; font-weight: 600; color: var(--forest);
-      text-decoration: none; display: flex; align-items: center; gap: 0.3rem;
-      transition: gap 0.2s;
+      font-size: 0.82rem; 
+      font-weight: 600; 
+      color: var(--forest);
+      text-decoration: none; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.3rem;
+      transition: gap 0.2s, color 0.2s;
     }
-    .article-read:hover { gap: 0.6rem; }
+    .article-read:hover { 
+      gap: 0.6rem;
+      color: var(--gold);
+    }
     .has-audio {
-      font-size: 0.72rem; color: var(--mid-grey);
-      display: flex; align-items: center; gap: 0.3rem;
+      font-size: 0.7rem; 
+      color: var(--mid-grey);
+      display: flex; 
+      align-items: center; 
+      gap: 0.3rem;
     }
     .new-badge {
-      position: absolute; top: 0.75rem; right: 0.75rem;
-      background: var(--gold); color: var(--forest);
-      font-size: 0.62rem; font-weight: 800;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 0.25rem 0.6rem; border-radius: 50px;
+      position: absolute; 
+      top: 0.75rem; 
+      right: 0.75rem;
+      background: var(--gold); 
+      color: var(--forest);
+      font-size: 0.62rem; 
+      font-weight: 800;
+      letter-spacing: 0.12em; 
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem; 
+      border-radius: 50px;
       z-index: 2;
     }
 
@@ -1285,20 +1359,357 @@
     </div>
 
     <div class="articles-grid" id="articlesGrid">
-
-      <!-- ══ NEW: DIGITAL DIVIDE RESEARCH REPORT ══ -->
-
-      <div class="article-card" data-category="health" style="position:relative; border-color:#c9962a;">
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=250&q=80" alt="The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap" class="article-card-image" loading="lazy">
+        </div>
         <div class="article-card-body">
-          <div class="article-category">Digital Divide</div>
+          <span class="article-category health">Research</span>
           <h3>The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap</h3>
-          <p>Kenya has 92.9% smartphone penetration but no official data on internet use among the 45+ age group. Thirty years of US aging research (HRS) suggests Kenya can compress a 12-year adoption curve — if training, not infrastructure, becomes the priority.</p>
+          <p>Kenya has 92.9% smartphone penetration but no official data on internet use among the 45+ age group. Thirty years of US aging research suggests Kenya can compress a 12-year adoption curve.</p>
         </div>
         <div class="article-card-footer">
-          <a href="./digital-divide-then-vs-now.html" class="article-read" aria-label="Read: The Digital Divide, Then vs. Now">Read More →</a>
-          <span class="has-audio"> Research Report</span>
+          <a href="./digital-divide-then-vs-now.html" class="article-read" aria-label="Read: The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap">Read More →</a>
         </div>
       </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d25?w=400&h=250&q=80" alt="Make Your Phone Work for You: 5 Settings Every Senior Should Turn On" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Getting Started</span>
+          <h3>Make Your Phone Work for You: 5 Settings Every Senior Should Turn On</h3>
+          <p>Larger text, high contrast, voice typing, Emergency SOS, and a simpler home screen — five changes that take minutes and make a real difference.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./phone-settings-seniors.html" class="article-read" aria-label="Read: Make Your Phone Work for You: 5 Settings Every Senior Should Turn On">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=250&q=80" alt="Understanding Smartphones & Tablets: A Beginner's Guide" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Getting Started</span>
+          <h3>Understanding Smartphones & Tablets: A Beginner's Guide</h3>
+          <p>Learn the basics of your first smartphone — what the buttons do, how to make calls, and how to stay connected with family.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./smartphones-tablets-guide.html" class="article-read" aria-label="Read: Understanding Smartphones & Tablets: A Beginner's Guide">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=400&h=250&q=80" alt="Setting Up Your First Email Account: Step-by-Step" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Getting Started</span>
+          <h3>Setting Up Your First Email Account: Step-by-Step</h3>
+          <p>A friendly walkthrough to create your Gmail account, understand your inbox, and communicate online safely.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./email-account-guide.html" class="article-read" aria-label="Read: Setting Up Your First Email Account: Step-by-Step">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=250&q=80" alt="The Tech Revolution: Not Just for the Young" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Getting Started</span>
+          <h3>The Tech Revolution: Not Just for the Young</h3>
+          <p>Discover why technology is for every generation — and how seniors across Kenya are embracing it with confidence.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./tech-revolution-guide.html" class="article-read" aria-label="Read: The Tech Revolution: Not Just for the Young">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&q=80" alt="How to Use eCitizen Kenya Step by Step — A Guide for Older Adults" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Government Services</span>
+          <h3>How to Use eCitizen Kenya Step by Step — A Guide for Older Adults</h3>
+          <p>Access your passport, birth certificate, driving licence, KRA PIN and more from your phone. No more long queues. Updated for 2026.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./ecitizen-kenya-guide.html" class="article-read" aria-label="Read: How to Use eCitizen Kenya Step by Step — A Guide for Older Adults">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=250&q=80" alt="WhatsApp for Seniors in Kenya: Voice Notes, Video Calls & Staying Safe in 2026" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">WhatsApp Guide</span>
+          <h3>WhatsApp for Seniors in Kenya: Voice Notes, Video Calls & Staying Safe in 2026</h3>
+          <p>A simple, honest guide — no complicated language, no fear, just clear steps for staying connected with family and community using WhatsApp.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./whatsapp-mastery-seniors-kenya.html" class="article-read" aria-label="Read: WhatsApp for Seniors in Kenya: Voice Notes, Video Calls & Staying Safe in 2026">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400&h=250&q=80" alt="Facebook Groups for Kenyan Seniors: Finding Community Online" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Social Media</span>
+          <h3>Facebook Groups for Kenyan Seniors: Finding Community Online</h3>
+          <p>Join local groups, reconnect with old friends, and discover communities of interest. A gentle introduction to Facebook for older adults.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./facebook-groups-guide.html" class="article-read" aria-label="Read: Facebook Groups for Kenyan Seniors: Finding Community Online">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="safety">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da535f45f?w=400&h=250&q=80" alt="2026 Online Safety Tips for Older Adults in Kenya" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category safety">Online Safety</span>
+          <h3>2026 Online Safety Tips for Older Adults in Kenya</h3>
+          <p>The latest scams targeting Kenyans — and exactly how to protect yourself, your M-Pesa, and your personal information.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./whatsapp-safety-settings.html" class="article-read" aria-label="Read: 2026 Online Safety Tips for Older Adults in Kenya">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="safety">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=250&q=80" alt="SIM Swap Fraud Protection: How to Keep Your Phone Number Safe" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category safety">Online Safety</span>
+          <h3>SIM Swap Fraud Protection: How to Keep Your Phone Number Safe</h3>
+          <p>SIM swap fraud is rising in Kenya. Learn the warning signs and how to protect your phone number and M-Pesa account.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./sim-swap-fraud-protection-guide.html" class="article-read" aria-label="Read: SIM Swap Fraud Protection: How to Keep Your Phone Number Safe">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="safety">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1620714223084-8fcaccfdfd8d?w=400&h=250&q=80" alt="How to Reverse M-Pesa Transactions: Complete Guide for Seniors" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category safety">M-Pesa Safety</span>
+          <h3>How to Reverse M-Pesa Transactions: Complete Guide for Seniors</h3>
+          <p>Sent money to the wrong number? Here's exactly what to do step-by-step to reverse an M-Pesa transaction safely.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./reverse-mpesa.html" class="article-read" aria-label="Read: How to Reverse M-Pesa Transactions: Complete Guide for Seniors">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="finance">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1563986768494-4dee27a6ffc4?w=400&h=250&q=80" alt="How to Send Money with M-Pesa: A Senior's Complete Guide" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category finance">M-Pesa Guide</span>
+          <h3>How to Send Money with M-Pesa: A Senior's Complete Guide</h3>
+          <p>Master M-Pesa with this step-by-step guide. Send money, pay bills, and withdraw cash safely and confidently.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./mpesa-send-money-guide.html" class="article-read" aria-label="Read: How to Send Money with M-Pesa: A Senior's Complete Guide">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="getting-started">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff23?w=400&h=250&q=80" alt="Best Affordable Smartphones for Seniors in Kenya 2026" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category getting-started">Buying Guide</span>
+          <h3>Best Affordable Smartphones for Seniors in Kenya 2026</h3>
+          <p>Looking for a senior-friendly phone? We review the best budget smartphones with large screens, simple interfaces, and loud speakers available in Kenya.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./affordable-smartphones-seniors-kenya.html" class="article-read" aria-label="Read: Best Affordable Smartphones for Seniors in Kenya 2026">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&q=80" alt="A Guide to Health & Wellness Tools for Seniors" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category health">Health Tech</span>
+          <h3>A Guide to Health & Wellness Tools for Seniors</h3>
+          <p>From fitness trackers to virtual doctor consultations — technology that helps you live a healthier, more independent life.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./health-wellness-tools.html" class="article-read" aria-label="Read: A Guide to Health & Wellness Tools for Seniors">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=250&q=80" alt="The Impact of Technology on Seniors' Mental Health" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category health">Mental Wellness</span>
+          <h3>The Impact of Technology on Seniors' Mental Health</h3>
+          <p>How staying connected digitally reduces loneliness, keeps your mind sharp, and improves emotional wellbeing.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./tech-mental-health.html" class="article-read" aria-label="Read: The Impact of Technology on Seniors' Mental Health">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&q=80" alt="Kenya Senior Digital Health Readiness Index 2026" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category health">Research Report</span>
+          <h3>Kenya Senior Digital Health Readiness Index 2026</h3>
+          <p>A research-based report scoring Kenya 2.8/10 on digital health readiness for older adults — covering digital literacy, internet access, telemedicine, AI healthcare, and accessibility.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./kenya-digital-health-readiness.html" class="article-read" aria-label="Read: Kenya Senior Digital Health Readiness Index 2026">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f28a?w=400&h=250&q=80" alt="Africa's Aging Population: How Technology is Transforming Healthcare for Families" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category health">Africa Aging</span>
+          <h3>Africa's Aging Population: How Technology is Transforming Healthcare for Families</h3>
+          <p>As Africa's population ages, technology is stepping in to fill healthcare gaps. Discover innovations helping Kenyan families care for elderly relatives.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./africa-aging-population-healthcare-technology-families.html" class="article-read" aria-label="Read: Africa's Aging Population: How Technology is Transforming Healthcare for Families">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="health">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=250&q=80" alt="What Kenya Can Learn from Japan's Silver Tech Revolution" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category health">Global Insights</span>
+          <h3>What Kenya Can Learn from Japan's Silver Tech Revolution</h3>
+          <p>Japan leads the world in elderly technology. Here are the lessons Kenya can apply to support our growing senior population.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./japan-silver-tech-kenya.html" class="article-read" aria-label="Read: What Kenya Can Learn from Japan's Silver Tech Revolution">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="finance">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da535f45f?w=400&h=250&q=80" alt="Empowering Seniors Through Financial Technology" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category finance">FinTech</span>
+          <h3>Empowering Seniors Through Financial Technology</h3>
+          <p>Navigate mobile banking, M-Pesa, and digital payments safely — practical guidance tailored for Kenyan seniors.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./financial-technology-guide.html" class="article-read" aria-label="Read: Empowering Seniors Through Financial Technology">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="finance">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&q=80" alt="Start a Digital Business at 50+: Kenya's Senior Success Guide" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category finance">Digital Business</span>
+          <h3>Start a Digital Business at 50+: Kenya's Senior Success Guide</h3>
+          <p>It's never too late to start. A practical blueprint for Kenyan seniors who want to earn income using digital tools.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./digital-business-50-plus.html" class="article-read" aria-label="Read: Start a Digital Business at 50+: Kenya's Senior Success Guide">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="finance">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=250&q=80" alt="M-Shwari for Seniors: Save and Borrow Safely from Your Phone" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category finance">Mobile Banking</span>
+          <h3>M-Shwari for Seniors: Save and Borrow Safely from Your Phone</h3>
+          <p>Learn how to use M-Shwari to save money, earn interest, and access small loans — all from your M-Pesa menu.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./m-shwari-savings.html" class="article-read" aria-label="Read: M-Shwari for Seniors: Save and Borrow Safely from Your Phone">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="tools">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1589254065878-42c9da9e2f58?w=400&h=250&q=80" alt="Voice-to-Text Guide: Type Without Typing for Kenyan Seniors" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category tools">Accessibility</span>
+          <h3>Voice-to-Text Guide: Type Without Typing for Kenyan Seniors</h3>
+          <p>Struggling with small keyboards? Voice-to-text lets you dictate messages, emails, and documents. Here's how to set it up.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./voice-to-text-guide.html" class="article-read" aria-label="Read: Voice-to-Text Guide: Type Without Typing for Kenyan Seniors">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="ai">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&q=80" alt="The Rise of AI: How Kenyans Can Harness This Revolution" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category ai">AI Basics</span>
+          <h3>The Rise of AI: How Kenyans Can Harness This Revolution</h3>
+          <p>A clear, jargon-free explanation of what Artificial Intelligence is and how it can benefit ordinary Kenyans right now.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./ai-rise-kenya-guide.html" class="article-read" aria-label="Read: The Rise of AI: How Kenyans Can Harness This Revolution">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="ai">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="The AI Advantage: Smart Growth for Kenyan Businesses" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category ai">AI for Business</span>
+          <h3>The AI Advantage: Smart Growth for Kenyan Businesses</h3>
+          <p>How AI tools are helping small businesses, farmers, and entrepreneurs across Kenya work smarter and grow faster.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./ai-advantage-kenya-business.html" class="article-read" aria-label="Read: The AI Advantage: Smart Growth for Kenyan Businesses">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="ai">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="Meet Elsah: Your Personal AI Tech Companion for Seniors" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category ai">Elsah AI</span>
+          <h3>Meet Elsah: Your Personal AI Tech Companion for Seniors</h3>
+          <p>Elsah is an AI assistant built specifically for Kenyan seniors. Ask her any tech question and get simple, warm answers in plain language.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./elsah-ai.html" class="article-read" aria-label="Read: Meet Elsah: Your Personal AI Tech Companion for Seniors">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="tools">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=400&h=250&q=80" alt="The Empty Room — A Reflection on Technology and Loneliness" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category tools">Reflection</span>
+          <h3>The Empty Room — A Reflection on Technology and Loneliness</h3>
+          <p>A thought-provoking read about connection, isolation, and how technology can either bridge or widen the gap for older adults.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./the-empty-room.html" class="article-read" aria-label="Read: The Empty Room — A Reflection on Technology and Loneliness">Read More →</a>
+        </div>
+      </div>
+      <div class="article-card" data-category="tools">
+        <div class="article-card-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="SCTH Content Generator — AI Writing Tool" class="article-card-image" loading="lazy">
+        </div>
+        <div class="article-card-body">
+          <span class="article-category tools">AI Tool</span>
+          <h3>SCTH Content Generator — AI Writing Tool</h3>
+          <p>An AI-powered tool built for Senior Citizens Tech Haven — generate platform-specific content, guides, and social posts tailored for Kenyan seniors.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="./scth-content-generator.html" class="article-read" aria-label="Read: SCTH Content Generator — AI Writing Tool">Read More →</a>
+        </div>
+      </div></div>
 
       <!-- ══ GETTING STARTED ══ -->
 
