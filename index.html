@@ -338,9 +338,7 @@
     /* ── HERO ────────────────────────────────────── */
     .hero {
       min-height: 100vh;
-      background:
-        linear-gradient(145deg, rgba(10,22,40,0.88) 0%, rgba(15,32,68,0.88) 40%, rgba(26,53,102,0.85) 70%, rgba(15,32,68,0.92) 100%),
-        url('images/hero-kenyan-senior-1.jpg');
+      background: linear-gradient(145deg, rgba(10,22,40,0.88) 0%, rgba(15,32,68,0.88) 40%, rgba(26,53,102,0.85) 70%, rgba(15,32,68,0.92) 100%);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -348,18 +346,17 @@
       padding: 100px 2rem 4rem;
       position: relative;
       overflow: hidden;
-      transition: background-image 1s ease-in-out;
     }
     .hero-slideshow {
       position: absolute; inset: 0;
       background-size: cover;
       background-position: center;
       opacity: 0;
-      transition: opacity 1s ease-in-out;
-      z-index: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: 1;
     }
     .hero-slideshow.active {
-      opacity: 0.15;
+      opacity: 1;
     }
     .hero::before {
       content: '';
@@ -367,15 +364,7 @@
       background: radial-gradient(ellipse at 70% 50%, rgba(74,127,212,0.15) 0%, transparent 60%),
                   radial-gradient(ellipse at 30% 80%, rgba(201,150,42,0.1) 0%, transparent 50%);
       pointer-events: none;
-    }
-    .hero-parallax {
-      position: absolute; inset: 0;
-      background-image: url('images/hero-kenyan-senior-2.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.15;
-      transform: translateZ(0);
-      will-change: transform;
+      z-index: 2;
     }
     .hero-inner {
       max-width: 780px;
@@ -1390,7 +1379,7 @@
     <div class="articles-grid" id="articlesGrid">
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=250&q=80" alt="The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap" class="article-card-image" loading="lazy">
+          <img src="images/digital-divide-then-vs-now-og.jpg" alt="The Digital Divide: Then vs. Now — What 30 Years of Aging Data Tells Us About Kenya's Senior Tech Gap" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Research</span>
@@ -1403,7 +1392,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d25?w=400&h=250&q=80" alt="Make Your Phone Work for You: 5 Settings Every Senior Should Turn On" class="article-card-image" loading="lazy">
+          <img src="images/phone-settings/hero.webp" alt="Make Your Phone Work for You: 5 Settings Every Senior Should Turn On" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Getting Started</span>
@@ -1416,7 +1405,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=250&q=80" alt="Understanding Smartphones & Tablets: A Beginner's Guide" class="article-card-image" loading="lazy">
+          <img src="images/smartphone-basics.jpg" alt="Understanding Smartphones & Tablets: A Beginner's Guide" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Getting Started</span>
@@ -1429,7 +1418,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=400&h=250&q=80" alt="Setting Up Your First Email Account: Step-by-Step" class="article-card-image" loading="lazy">
+          <img src="images/Email setup.jpg" alt="Setting Up Your First Email Account: Step-by-Step" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Getting Started</span>
@@ -1442,7 +1431,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=250&q=80" alt="The Tech Revolution: Not Just for the Young" class="article-card-image" loading="lazy">
+          <img src="images/homepage-couple-learning.webp" alt="The Tech Revolution: Not Just for the Young" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Getting Started</span>
@@ -1455,7 +1444,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&q=80" alt="How to Use eCitizen Kenya Step by Step — A Guide for Older Adults" class="article-card-image" loading="lazy">
+          <img src="images/eCitizen guide.jpg" alt="How to Use eCitizen Kenya Step by Step — A Guide for Older Adults" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Government Services</span>
@@ -1468,7 +1457,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=250&q=80" alt="WhatsApp for Seniors in Kenya: Voice Notes, Video Calls & Staying Safe in 2026" class="article-card-image" loading="lazy">
+          <img src="images/whatsapp-seniors-kenya-hero.jpg" alt="WhatsApp for Seniors in Kenya: Voice Notes, Video Calls & Staying Safe in 2026" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">WhatsApp Guide</span>
@@ -1481,7 +1470,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400&h=250&q=80" alt="Facebook Groups for Kenyan Seniors: Finding Community Online" class="article-card-image" loading="lazy">
+          <img src="images/facebook-groups.jpg" alt="Facebook Groups for Kenyan Seniors: Finding Community Online" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Social Media</span>
@@ -1494,7 +1483,7 @@
       </div>
       <div class="article-card" data-category="safety">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da535f45f?w=400&h=250&q=80" alt="2026 Online Safety Tips for Older Adults in Kenya" class="article-card-image" loading="lazy">
+          <img src="images/m-shwari.jpg" alt="2026 Online Safety Tips for Older Adults in Kenya" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category safety">Online Safety</span>
@@ -1507,7 +1496,7 @@
       </div>
       <div class="article-card" data-category="safety">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=250&q=80" alt="SIM Swap Fraud Protection: How to Keep Your Phone Number Safe" class="article-card-image" loading="lazy">
+          <img src="images/sim-swap-hero.webp" alt="SIM Swap Fraud Protection: How to Keep Your Phone Number Safe" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category safety">Online Safety</span>
@@ -1520,7 +1509,7 @@
       </div>
       <div class="article-card" data-category="safety">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1620714223084-8fcaccfdfd8d?w=400&h=250&q=80" alt="How to Reverse M-Pesa Transactions: Complete Guide for Seniors" class="article-card-image" loading="lazy">
+          <img src="images/mpesa-reversal-guide-hero.webp" alt="How to Reverse M-Pesa Transactions: Complete Guide for Seniors" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category safety">M-Pesa Safety</span>
@@ -1533,7 +1522,7 @@
       </div>
       <div class="article-card" data-category="finance">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1563986768494-4dee27a6ffc4?w=400&h=250&q=80" alt="How to Send Money with M-Pesa: A Senior's Complete Guide" class="article-card-image" loading="lazy">
+          <img src="images/mpesa-send-money.jpg" alt="How to Send Money with M-Pesa: A Senior's Complete Guide" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category finance">M-Pesa Guide</span>
@@ -1546,7 +1535,7 @@
       </div>
       <div class="article-card" data-category="getting-started">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff23?w=400&h=250&q=80" alt="Best Affordable Smartphones for Seniors in Kenya 2026" class="article-card-image" loading="lazy">
+          <img src="images/smartphones-hero.jpg.webp" alt="Best Affordable Smartphones for Seniors in Kenya 2026" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category getting-started">Buying Guide</span>
@@ -1559,7 +1548,7 @@
       </div>
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&q=80" alt="A Guide to Health & Wellness Tools for Seniors" class="article-card-image" loading="lazy">
+          <img src="images/health-tools.jpg" alt="A Guide to Health & Wellness Tools for Seniors" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Health Tech</span>
@@ -1572,7 +1561,7 @@
       </div>
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=250&q=80" alt="The Impact of Technology on Seniors' Mental Health" class="article-card-image" loading="lazy">
+          <img src="images/mental-health.jpg" alt="The Impact of Technology on Seniors' Mental Health" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Mental Wellness</span>
@@ -1585,7 +1574,7 @@
       </div>
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&q=80" alt="Kenya Senior Digital Health Readiness Index 2026" class="article-card-image" loading="lazy">
+          <img src="images/digital-health-index.jpg" alt="Kenya Senior Digital Health Readiness Index 2026" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Research Report</span>
@@ -1598,7 +1587,7 @@
       </div>
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f28a?w=400&h=250&q=80" alt="Africa's Aging Population: How Technology is Transforming Healthcare for Families" class="article-card-image" loading="lazy">
+          <img src="images/africa-aging-population.jpg" alt="Africa's Aging Population: How Technology is Transforming Healthcare for Families" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Africa Aging</span>
@@ -1611,7 +1600,7 @@
       </div>
       <div class="article-card" data-category="health">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=250&q=80" alt="What Kenya Can Learn from Japan's Silver Tech Revolution" class="article-card-image" loading="lazy">
+          <img src="images/japan-silver-tech.jpg" alt="What Kenya Can Learn from Japan's Silver Tech Revolution" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category health">Global Insights</span>
@@ -1624,7 +1613,7 @@
       </div>
       <div class="article-card" data-category="finance">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da535f45f?w=400&h=250&q=80" alt="Empowering Seniors Through Financial Technology" class="article-card-image" loading="lazy">
+          <img src="images/m-shwari.jpg" alt="Empowering Seniors Through Financial Technology" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category finance">FinTech</span>
@@ -1637,7 +1626,7 @@
       </div>
       <div class="article-card" data-category="finance">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&q=80" alt="Start a Digital Business at 50+: Kenya's Senior Success Guide" class="article-card-image" loading="lazy">
+          <img src="images/digital-business.jpg" alt="Start a Digital Business at 50+: Kenya's Senior Success Guide" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category finance">Digital Business</span>
@@ -1650,7 +1639,7 @@
       </div>
       <div class="article-card" data-category="finance">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=250&q=80" alt="M-Shwari for Seniors: Save and Borrow Safely from Your Phone" class="article-card-image" loading="lazy">
+          <img src="images/paradox-mpesa-hands.webp" alt="M-Shwari for Seniors: Save and Borrow Safely from Your Phone" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category finance">Mobile Banking</span>
@@ -1663,7 +1652,7 @@
       </div>
       <div class="article-card" data-category="tools">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1589254065878-42c9da9e2f58?w=400&h=250&q=80" alt="Voice-to-Text Guide: Type Without Typing for Kenyan Seniors" class="article-card-image" loading="lazy">
+          <img src="images/voice-to-text-hero.webp" alt="Voice-to-Text Guide: Type Without Typing for Kenyan Seniors" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category tools">Accessibility</span>
@@ -1676,7 +1665,7 @@
       </div>
       <div class="article-card" data-category="ai">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&q=80" alt="The Rise of AI: How Kenyans Can Harness This Revolution" class="article-card-image" loading="lazy">
+          <img src="images/homepage-family-whatsapp.webp" alt="The Rise of AI: How Kenyans Can Harness This Revolution" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category ai">AI Basics</span>
@@ -1689,7 +1678,7 @@
       </div>
       <div class="article-card" data-category="ai">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="The AI Advantage: Smart Growth for Kenyan Businesses" class="article-card-image" loading="lazy">
+          <img src="images/scth-workshop-community.webp" alt="The AI Advantage: Smart Growth for Kenyan Businesses" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category ai">AI for Business</span>
@@ -1702,7 +1691,7 @@
       </div>
       <div class="article-card" data-category="ai">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="Meet Elsah: Your Personal AI Tech Companion for Seniors" class="article-card-image" loading="lazy">
+          <img src="images/scth-workshop-community.webp" alt="Meet Elsah: Your Personal AI Tech Companion for Seniors" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category ai">Elsah AI</span>
@@ -1715,7 +1704,7 @@
       </div>
       <div class="article-card" data-category="tools">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=400&h=250&q=80" alt="The Empty Room — A Reflection on Technology and Loneliness" class="article-card-image" loading="lazy">
+          <img src="images/homepage-couple-learning.webp" alt="The Empty Room — A Reflection on Technology and Loneliness" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category tools">Reflection</span>
@@ -1728,7 +1717,7 @@
       </div>
       <div class="article-card" data-category="tools">
         <div class="article-card-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1677442135137-0a0e7c9f8e6e?w=400&h=250&q=80" alt="SCTH Content Generator — AI Writing Tool" class="article-card-image" loading="lazy">
+          <img src="images/scth-workshop-community.webp" alt="SCTH Content Generator — AI Writing Tool" class="article-card-image" loading="lazy">
         </div>
         <div class="article-card-body">
           <span class="article-category tools">AI Tool</span>
