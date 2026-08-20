@@ -1105,7 +1105,7 @@
     transform: translateX(4px);
   }
   .elsah-popup-suggestion::before {
-    content: "💬 ";
+    content: "";
     margin-right: 0.4rem;
   }
   .elsah-popup-footer {
@@ -1260,7 +1260,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#privacy">Privacy</a></li>
-    <li><a href="./elsah-ai.html" class="ask-elsah">✨ Elsah AI</a></li>
+    <li><a href="./elsah-ai.html" class="ask-elsah">Elsah AI</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1273,23 +1273,12 @@
   <div class="hero-slideshow" style="background-image: url('images/hero-kenyan-senior-2.jpg');"></div>
   <div class="hero-slideshow" style="background-image: url('images/hero-kenyan-senior-3.jpg');"></div>
   <div class="hero-inner">
-    <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-      <div class="hero-badge">Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
-    </div>
+    <div class="hero-badge">Built for Kenya's Seniors · Est. 2024 · Rebuilt 2026</div>
     <h1>Digital Literacy for Older Adults in Kenya</h1>
     <p class="hero-tagline">Senior Citizens Tech Haven helps you learn at your pace, with dignity and confidence.</p>
     <p class="hero-intro">
       Welcome to your trusted home for digital literacy guidance. Whether you're using a smartphone for the first time, learning M-Pesa, staying safe online, or curious about AI — we'll walk with you, step by step, in plain language.
     </p>
-    <div class="hero-images" style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:700px; margin:2rem auto 2.5rem;">
-      <div style="border-radius:14px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.3);">
-        <img src="images/homepage-couple-learning.webp" alt="Kenyan senior couple smiling while learning to use a smartphone together" style="width:100%; height:auto; display:block;" loading="eager" />
-      </div>
-      <div style="border-radius:14px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.3);">
-        <img src="images/homepage-family-whatsapp.webp" alt="Young Kenyan woman helping elderly parents use WhatsApp on smartphone" style="width:100%; height:auto; display:block;" loading="eager" />
-      </div>
-    </div>
-
     <div class="hero-ctas">
       <a href="#learn" class="btn-primary">Start Learning</a>
       <a href="./elsah-ai.html" class="btn-outline">Learn About Elsah AI</a>
@@ -1309,32 +1298,68 @@
     <p class="section-intro">Simple, honest, Kenya-focused guidance — for seniors, their families, caregivers, and institutions supporting them.</p>
     <div class="offers-grid">
       <div class="offer-card">
-        <span class="offer-icon"> </span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 18.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"/>
+            <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="M4.93 4.93l1.41 1.41"/>
+            <path d="M17.66 17.66l1.41 1.41"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="M4.93 19.07l1.41-1.41"/>
+            <path d="M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </span>
         <h3>Easy-to-Follow Guides</h3>
         <p>Step-by-step articles on smartphones, M-Pesa, email, WhatsApp, eCitizen and more — written in plain language.</p>
       </div>
       <div class="offer-card">
-        <span class="offer-icon"> </span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </span>
         <h3>Online Safety First</h3>
         <p>Learn to spot scams, protect your M-Pesa PIN, stay safe on WhatsApp, and navigate the internet with confidence.</p>
       </div>
       <div class="offer-card">
-        <span class="offer-icon"> </span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </span>
         <h3>Health & Wellness Tech</h3>
         <p>Discover apps and devices that help you monitor your health, book doctor appointments, and stay active.</p>
       </div>
       <div class="offer-card">
-        <span class="offer-icon"> </span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </span>
         <h3>Ask Elsah — AI Assistant</h3>
         <p>Our AI companion answers your tech questions in simple, warm language. Available 24/7, no judgement, no rush. <a href="./elsah-ai.html">Learn what Elsah can help with</a>.</p>
       </div>
       <div class="offer-card">
-        <span class="offer-icon">🎧</span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="10 8 16 12 10 16 10 8"/>
+          </svg>
+        </span>
         <h3>Podcast Episodes</h3>
         <p>Prefer listening? Our podcast covers tech topics tailored for seniors — on Spotify, in your own time.</p>
       </div>
       <div class="offer-card">
-        <span class="offer-icon"> </span>
+        <span class="offer-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/>
+            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>
+          </svg>
+        </span>
         <h3>Civic Corner</h3>
         <p>Connected with SautiSahihi — fact-checking, civic education, and staying informed as a Kenyan citizen.</p>
       </div>
@@ -1737,7 +1762,7 @@
         </div>
         <div class="article-card-footer">
           <a href="./smartphones-tablets-guide.html" class="article-read" aria-label="Read: Understanding Smartphones and Tablets">Read More →</a>
-          <span class="has-audio">🎧 Audio available</span>
+          <span class="has-audio"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Audio available</span>
         </div>
       </div>
 
@@ -1749,7 +1774,7 @@
         </div>
         <div class="article-card-footer">
           <a href="./email-account-guide.html" class="article-read" aria-label="Read: Setting Up Your First Email Account">Read More →</a>
-          <span class="has-audio">🎧 Audio available</span>
+          <span class="has-audio"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Audio available</span>
         </div>
       </div>
 
@@ -1785,7 +1810,7 @@
         </div>
         <div class="article-card-footer">
           <a href="whatsapp-safety-settings.html" class="article-read" aria-label="Read: 2026 Online Safety Tips">Read More →</a>
-          <span class="has-audio">🎧 Audio available</span>
+          <span class="has-audio"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Audio available</span>
         </div>
       </div>
 
@@ -1847,7 +1872,7 @@
         </div>
         <div class="article-card-footer">
           <a href="./ai-rise-kenya-guide.html" class="article-read" aria-label="Read: The Rise of AI in Kenya">Read More →</a>
-          <span class="has-audio">🎧 Audio available</span>
+          <span class="has-audio"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Audio available</span>
         </div>
       </div>
 
@@ -1950,7 +1975,7 @@
           <button onclick="setChatInput('How do I reverse an M-Pesa transaction?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">↩️ Reverse M-Pesa</button>
           <button onclick="setChatInput('Is this SMS message a scam?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">⚠️ Check SMS Scam</button>
           <button onclick="setChatInput('How do I increase font size on my phone?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">📱 Larger Text</button>
-          <button onclick="setChatInput('How do I use WhatsApp safely?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">💬 WhatsApp Safety</button>
+          <button onclick="setChatInput('How do I use WhatsApp safely?')" style="padding:0.4rem 0.8rem;font-size:0.75rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;color:#fff;cursor:pointer;">WhatsApp Safety</button>
         </div>
         <div class="chat-loading" id="chatLoading">
           <div class="dot"></div><div class="dot"></div><div class="dot"></div>
@@ -2013,7 +2038,7 @@
       </div>
     </div>
     <div class="podcast-cta">
-      <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank" class="btn-primary">🎧 Follow on Spotify</a>
+      <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Follow on Spotify</a>
     </div>
   </div>
 </section>
@@ -2041,7 +2066,7 @@
               <span class="stat-label">Founded</span>
             </div>
             <div class="stat">
-              <span class="stat-num">🇰🇪</span>
+              <span class="stat-num">KE</span>
               <span class="stat-label">Kenya-Focused</span>
             </div>
           </div>
@@ -2074,29 +2099,43 @@
         <p>Whether you're a senior with a tech question, a family member looking for resources, or an institution wanting to partner — reach out. We're here.</p>
         <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
             <span>0115 258 958 &nbsp;/&nbsp; 0711 707 229</span>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
             <span>kjonath92@gmail.com</span>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
             <span>Nakuru, Kenya</span>
           </div>
         </div>
         <div class="social-row">
           <a href="https://x.com/FinallyKayvoh" target="_blank" class="social-btn">𝕏 Twitter / X</a>
           <a href="http://www.linkedin.com/in/kevin-jonathan-otieno" target="_blank" class="social-btn">in LinkedIn</a>
-          <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank" class="social-btn">🎧 Spotify</a>
+          <a href="https://open.spotify.com/show/7C3P56j0C3fyJTrDQzV6Pk" target="_blank" class="social-btn">Spotify Podcast</a>
         </div>
       </div>
       <div class="contact-sauti">
-        <h3>🏛️ SautiSahihi — Civic Edition</h3>
+        <h3>SautiSahihi — Civic Edition</h3>
         <p>Senior Citizens Tech Haven is part of a growing ecosystem. SautiSahihi is our civic tech platform — featuring AI-powered fact-checking, multilingual support (Kiswahili, Dholuo, Gĩkũyũ, Kikamba), and civic education for Kenyan seniors.</p>
         <p>Both platforms share the same mission: no Kenyan senior should be left behind — digitally or civically.</p>
-        <a href="./elsah-ai.html" class="btn-primary" style="font-size:0.9rem; padding: 0.7rem 1.6rem;">✨ Learn About Elsah AI</a>
+        <a href="./elsah-ai.html" class="btn-primary" style="font-size:0.9rem; padding: 0.7rem 1.6rem;">Learn About Elsah AI</a>
       </div>
     </div>
   </div>
