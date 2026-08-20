@@ -1937,7 +1937,7 @@
             <div class="elsah-status"><span class="status-dot"></span> Online — Ready to help</div>
           </div>
         </div>
-        <div class="chat-messages" id="chatMessages">
+        <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat conversation with Elsah AI assistant">
           <div class="chat-msg elsah">Habari! I'm Elsah. I'm here to help you with any technology questions. What would you like to learn today? 😊</div>
           <div class="chat-msg user">How do I send money using M-Pesa?</div>
           <div class="chat-msg elsah">Great question! Here's how to send money on M-Pesa: Go to your phone's M-Pesa menu → Select "Send Money" → Enter the recipient's phone number → Type the amount → Enter your PIN → Press OK. That's it! The money arrives instantly. Would you like me to explain any of these steps in more detail?</div>
@@ -2501,16 +2501,16 @@ if ('serviceWorker' in navigator) {
         Welcome to Senior Citizens Tech Haven! I'm here to help you with any technology questions — in simple, friendly language. What would you like to learn today?
       </div>
       <div class="elsah-popup-suggestions">
-        <button class="elsah-popup-suggestion" onclick="askElsah('How do I send money on M-Pesa?')">
+        <button class="elsah-popup-suggestion" onclick="askElsah('How do I send money on M-Pesa?')" aria-label="Ask: How do I send money on M-Pesa?">
           How do I send money on M-Pesa?
         </button>
-        <button class="elsah-popup-suggestion" onclick="askElsah('How do I make WhatsApp video calls?')">
+        <button class="elsah-popup-suggestion" onclick="askElsah('How do I make WhatsApp video calls?')" aria-label="Ask: How do I make WhatsApp video calls?">
           How do I make WhatsApp video calls?
         </button>
-        <button class="elsah-popup-suggestion" onclick="askElsah('How do I spot a scam message?')">
+        <button class="elsah-popup-suggestion" onclick="askElsah('How do I spot a scam message?')" aria-label="Ask: How do I spot a scam message?">
           How do I spot a scam message?
         </button>
-        <button class="elsah-popup-suggestion" onclick="askElsah('How do I make my phone text bigger?')">
+        <button class="elsah-popup-suggestion" onclick="askElsah('How do I make my phone text bigger?')" aria-label="Ask: How do I make my phone text bigger?">
           How do I make my phone text bigger?
         </button>
       </div>
@@ -2527,7 +2527,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- Floating trigger button (appears after popup is closed) -->
-<button class="elsah-float-trigger" id="elsahFloatTrigger" onclick="openElsahPopup()">
+<button class="elsah-float-trigger" id="elsahFloatTrigger" onclick="openElsahPopup()" aria-label="Chat with Elsah AI assistant">
   <span class="pulse"></span>
   💬 Ask Elsah
 </button>

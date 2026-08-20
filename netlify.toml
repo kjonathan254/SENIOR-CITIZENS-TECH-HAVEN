@@ -2,6 +2,10 @@
   command = ""
   publish = "."
 
+# Environment variables for functions
+[build.environment]
+  HELPLINE_NUMBER = "0115 258 958"
+
 [build.processing]
   skip_processing = true
 
