@@ -1,5 +1,5 @@
 // Senior Citizens Tech Haven — Service Worker (v6)
-const CACHE_NAME = 'seniors-tech-haven-v6';
+const CACHE_NAME = 'seniors-tech-haven-v7';
 
 const PRECACHE_URLS = [
   '/',

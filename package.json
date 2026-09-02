@@ -8,7 +8,7 @@
     "dev": "netlify dev",
     "build": "echo 'No build step required - static site with serverless functions'",
     "start": "netlify dev",
-    "test": "node tests/sensitive-data.test.js"
+    "test": "node --test tests/rate-limit.test.cjs && node tests/sensitive-data.test.js"
   },
   "keywords": [
     "seniors",

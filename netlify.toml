@@ -1,14 +1,17 @@
+# Netlify configuration — Senior Citizens Tech Haven
+# Static site + serverless functions (Elsah AI, content generator)
+
 [build]
   command = ""
   publish = "."
 
-# Environment variables for functions
 [build.environment]
   HELPLINE_NUMBER = "0115 258 958"
 
 [build.processing]
   skip_processing = true
 
+# ── Function redirects ──
 [[redirects]]
   from = "/api/elsah"
   to = "/.netlify/functions/elsah"
@@ -19,13 +22,12 @@
   to = "/.netlify/functions/content-generator"
   status = 200
 
-# Cache HTML files
+# ── Cache headers ──
 [[headers]]
   for = "*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Cache CSS/JS long-term
 [[headers]]
   for = "*.css"
   [headers.values]
@@ -36,7 +38,6 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache images long-term
 [[headers]]
   for = "*.webp"
   [headers.values]
@@ -52,7 +53,16 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache manifest/service worker
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/*.json"
   [headers.values]
@@ -63,11 +73,12 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Security Headers
+# ── Security headers (applied to every response) ──
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(self), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://www.google.com https://ssl.google-analytics.com https://api.groq.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://api.groq.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"

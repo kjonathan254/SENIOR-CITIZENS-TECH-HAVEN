@@ -1,1 +1,19 @@
-Nothing should be ignored based on the provided file changes. The only modified file is 'index.html', which is a source/config file and should not be added to .gitignore.
+# Secrets — never commit real environment files
+.env
+.env.local
+.env.*.local
+
+# Dependencies — Netlify installs these at build time
+node_modules/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local dev
+*.log
+local/
