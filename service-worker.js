@@ -1,14 +1,14 @@
 // Senior Citizens Tech Haven — Service Worker (v6)
-const CACHE_NAME = 'seniors-tech-haven-v7';
+const CACHE_NAME = 'seniors-tech-haven-v8';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/offline.html',
   '/manifest.json',
-  '/icon/icon-192x192.png',
-  '/icon/icon-512x512.png',
-  '/favicon.ico'
+  '/icon/icon-192x192.png?v=2',
+  '/icon/icon-512x512.png?v=2',
+  '/favicon.ico?v=2'
 ];
 
 const PRECACHE_IMAGES = [
@@ -74,7 +74,7 @@ self.addEventListener('fetch', event => {
         }
         return networkResponse;
       }).catch(() => {
-        if (req.destination === 'image') return caches.match('/icon/icon-192x192.png');
+        if (req.destination === 'image') return caches.match('/icon/icon-192x192.png?v=2');
         return new Response('', { status: 504, statusText: 'Offline' });
       });
     })
