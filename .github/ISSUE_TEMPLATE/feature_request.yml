@@ -1,0 +1,35 @@
+name: Content or feature suggestion
+description: Suggest a new guide, topic, or site improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What should the site do, teach, or cover that it does not today?
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who benefits and how
+      description: Which seniors does this help, and with which real-world task (e.g. eCitizen, M-Pesa, scam avoidance)?
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Suggestion type
+      options:
+        - New article / guide
+        - Improve an existing article
+        - New site feature
+        - Accessibility
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: sources
+    attributes:
+      label: Sources or references
+      description: Optional — links we could verify facts against.

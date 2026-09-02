@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question about using the site
+    url: https://seniorcitizenstechhaven.netlify.app/elsah-ai.html
+    about: Ask Elsah, our AI assistant — it answers from the same knowledge base the site is built on.
