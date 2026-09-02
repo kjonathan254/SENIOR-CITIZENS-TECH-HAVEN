@@ -537,7 +537,7 @@
   <div class="header-badge">Private Tool</div>
 </header>
 
-<main class="main">
+<main id="main-content" class="main">
   <div class="page-intro">
     <h1>Generate <span>content</span><br/>in seconds.</h1>
     <p>Pick a content type, add your topic, and let AI do the heavy lifting.<br/>You review, refine, and publish.</p>
@@ -829,7 +829,7 @@ No hashtags unless they are highly relevant.`;
     section.style.display = 'block';
     const typeLabels = { article: 'Article', newsletter: 'Newsletter', social: 'Social' };
     list.innerHTML = generationHistory.map((item, i) => `
-      <div class="history-item" onclick="loadHistory(${i})">
+      <div class="history-item" data-index="${i}" role="button" tabindex="0">
         <div class="history-meta">
           <span class="history-type">${typeLabels[item.type]}${item.platform ? ' · ' + item.platform : ''}</span>
           <span class="history-time">${item.time}</span>
@@ -850,6 +850,16 @@ No hashtags unless they are highly relevant.`;
 
   // Init
   document.getElementById('platformRow').style.display = 'none';
+  // Delegated click/keyboard handler for history items (CSP-safe: no inline onclick)
+  document.getElementById('historyList').addEventListener('click', (e) => {
+    const item = e.target.closest('.history-item');
+    if (item) loadHistory(Number(item.dataset.index));
+  });
+  document.getElementById('historyList').addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const item = e.target.closest('.history-item');
+    if (item) { e.preventDefault(); loadHistory(Number(item.dataset.index)); }
+  });
   renderHistory();
 </script>
 </body>
